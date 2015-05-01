@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+  		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<div class="mobile-form-header">
+			<div class="mobile-header-menu">
+				<a class="menu-logo" href="#1" title="На главную">Pink</a>
+				<a class="menu_btn" href="#2" title="Открыть меню"></a>
+			</div>
+			<div class="mobile-header-submenu open">
+				<a class="submenu-logo" href="#1" title="На главную">Pink</a>
+				<a class="submenu-btn" href="#3" title="Закрыть меню"></a>
+				<ul>
+					<li><a href="#10" title="Информация о нас">Информация</a></li>
+					<li><a href="#11" title="Наши возможности">Возможности</a></li>
+					<li><a href="#12" title="Отзывы о нас">Отзывы</a></li>
+					<li><a href="#13" title="Стоимость услуг">Стоимость</a></li>
+				</ul>
+			</div>
+			<h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
+		</div>
+		<div class="mobile-form-content">
+			<p>Поделитесь своей историей и получите шас выиграть ценный приз - 1000 миль на вашу бонусную карту!
+			</p>
+			<form action="/echo" method="post" action="">
+				<div class="user-info">
+				    <label for="name">Имя:<sup>*</sup></label> 
+				    <input id="name" type="text" name="name" value="Введите ваше имя" required>
+				    <label for="last-name">Фамилия:<sup>*</sup></label> 
+				    <input id="last-name" type="text" name="last-name" value="Укажите фамилию" required>
+					<label for="patronymic">Отчество:<sup>*</sup></label> 
+				    <input id="patronymic" type="text" name="patronymic" value="Ну и отчество тоже" required>
+				</div>
+				<div class="type-application">
+					<span>С каким приложением путешествовали?<sup>*</sup></span>
+					<label><input type="radio" name="ios" value="IOS" checked>Pink для IOS</label>
+					<label><input type="radio" name="android" value="Android">Pink на  Android</label>
+					<label><input type="radio" name="Windows phone" value="Windows">Windows Phone</label>
+				</div>
+				<div class="more-about-trip">
+					<span>Когда вы путешествовали?<sup>*</sup></span>
+					<input id="chek-out" type="text" name="chek-out" value="1 апреля 2015" required>
+					<label for="chek-out">Дата выезда</label>
+					<a class="minus">-</a>
+					<input id="trip-lasting" type="text" name="trip-lasting" value="10 дней">
+					<a class="plus">+</a>
+					<label for="trip-lasting">Продолжительность</label>
+					<input id="return-date" type="text" name="return-date" value="1 апреля 2015">
+					<label for="return-date">Дата возвращения</label>
+				</div>
+				<div class="travelers">
+					<div class="travelers-count">
+						<label for="count">Количество попутчиков<sup>*</sup></label>
+						<a class="minus to-left">-</a>
+						<input id="count" type="text" name="count" value="2 чел">
+						<a class="plus">+</a>
+					</div>
+					<div class="travelers-names">
+						<div class="first-traveler">
+							<span class="to-left">№</span>
+							<label for="traveler-name">Имя:<sup>*</sup></label>
+							<input id="traveler-name" type="text" name="traveler-name" value="Введите ваше имя">
+							<label for="traveler-nick">Прозвище:</label>
+							<input id="traveler-nick" type="text" name="traveler-nick" value="Ну как же без этого!">
+						</div>
+						<div class="second-traveler">
+							<span class="to-left">№</span>
+							<label for="traveler-name">Имя:<sup>*</sup></label>
+							<input id="traveler-name" type="text" name="traveler-name" value="Введите ваше имя">
+							<label for="traveler-nick">Прозвище:</label>
+							<input id="traveler-nick" type="text" name="traveler-nick" value="Ну как же без этого!">
+						</div>
+					</div>
+				</div>
+				<div class="travel-achivements">
+					<span>Ваши безбашенные достижения в путешествии</span>
+					<input id="selfie" type="checkbox" name="made selfie" checked>
+					<label for="selfie">Сделал селфи с акулой</label>
+					<input id="burn" type="checkbox" name="burn on the beach" checked>
+					<label for="burn">Обгорел на пляже</label>
+					<input id="norris" type="checkbox" name="Chak Norris">
+					<label for="norris">Видел Чака Норриса</label>
+					<input id="shopping" type="checkbox" name="bought souvenirs">
+					<label for="shopping">Накупил сувениров</label>
+					<input id="touch" type="checkbox" name="touch tower" checked>
+					<label for="touch">Удержал башню</label>
+					<input id="hotel" type="checkbox" name="crash hotel">
+					<label for="hotel">Разгромил отель</label>
+				</div>
+				<div class="travel-photo">
+					<span>Ваши фотографии из поездки</span>
+					<input id="photo" type="submit" name="photo" value="Загрузить фото">
+					<ul>
+						<li class="hight-tower">
+							<img src="http://placehold.it/100x100" width="" height="" alt="">
+							<a class="close" href="#41" title="button-close"></a>
+						</li>
+						<li class="brige">
+							<img src="http://placehold.it/100x100" width="" height="" alt="">
+							<a class="close" href="#42" title="button-close"></a>
+						</li>
+						<li class="tokio">
+							<img src="http://placehold.it/100x100" width="" height="" alt="">
+							<a class="close" href="#43" title="button-close"></a>
+						</li>
+						<li class="china">
+							<img src="http://placehold.it/100x100" width="" height="" alt="">
+							<a class="close" href="#44" title="button-close"></a>
+						</li>
+						<li class="sunset">
+							<img src="http://placehold.it/100x100" width="" height="" alt="">
+							<a class="close" href="#45" title="button-close"></a>
+						</li>
+						<li class="megapolis">
+							<img src="http://placehold.it/100x100" width="" height="" alt="">
+							<a class="close" href="#46" title="button-close"></a>
+						</li>
+						<li class="bike">
+							<img src="http://placehold.it/100x100" width="" height="" alt="">
+							<a class="close" href="#47" title="button-close"></a>
+						</li>
+						<li class="ship">
+							<img src="http://placehold.it/100x100" width="" height="" alt="">
+							<a class="close" href="#48" title="button-close"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="sending-form">
+					<input id="send" type="submit" name="sending-form" value="Отправить форму">
+					<span><sup>*</sup>- Обязательные поля</span>
+				</div>
+			</form>
+		</div>
+		<div class="mobile-post-footer">
+			<img class="mobile-logo-glasses" src="http://placehold.it/150x50" width="" height="" alt="Pink icon">
+			<div class="social-buttons">
+				<a href="#34" title="Твиттер">Т</a>
+				<a href="#35" title="Фейсбук">Ф</a>
+				<a href="#36" title="Какая-то видюха">">"</a>
+			</div>
+			<div class="mobile-blog-develop">
+				<span>Разработано</span>
+			</div>
+		</div>
+	</body>
+</html>
