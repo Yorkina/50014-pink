@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="ru">
 
 	<head>
-  		<meta charset="utf-8">
+		<meta charset="utf-8">
+		<title>HTML Academy: Pink</title>
 	</head>
 
 	<body>
-		<div class="mobile-header">
+		<div class="mobile-index-header">
 			<div class="mobile-header-menu">
 				<a class="menu-logo" href="#1" title="На главную">Pink</a>
-				<a class="menu_btn" href="#2" title="Открыть меню"></a>
+				<a class="menu-btn" href="#2" title="Открыть меню"></a>
 			</div>
 			<div class="mobile-header-submenu open">
 				<a class="submenu-logo" href="#1" title="На главную">Pink</a>
@@ -25,7 +26,7 @@
 		</div>
 		<div class="mobile-content">
 			<div class="mobile-content-download">
-				<a class="download_btn">Скачать приложение</a>
+				<a class="download-btn" href="5">Скачать приложение</a>
 				<div class="download-logo-line">
 					<a href="#14" title="Apple"><img src="http://placehold.it/50x50" width="" height="" alt="Apple icon"></a>
 					<a href="#15" title="Android"><img src="http://placehold.it/50x50" width="" height="" alt="Android icon"></a>
@@ -48,32 +49,46 @@
 			</div>
 			<div class="mobile-content-slider">
 				<div class="content-slider">
-                    <input type="radio" id="btn-1" name="r-toggle" checked>
-                    <input type="radio" id="btn-2" name="r-toggle">
-                    <input type="radio" id="btn-3" name="r-toggle">
-                    <div class="content-slider-toggle">
-                        <label for="btn-1"></label>
-                        <label for="btn-2"></label>
-                        <label for="btn-3"></label>
-                    </div>
-                    <div class="content-slides">
-                    	<div class="content-slide">
-                    		<span class="slide-user-name">Николай Петров</span>
-                    		<p>"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
-                    	</div>
-                    </div>
-                </div>
+					<input type="radio" id="btn-1" name="r-toggle" checked>
+					<input type="radio" id="btn-2" name="r-toggle">
+					<input type="radio" id="btn-3" name="r-toggle">
+					<div class="content-slider-toggle">
+						<label for="btn-1"></label>
+						<label for="btn-2"></label>
+						<label for="btn-3"></label>
+					</div>
+					<div class="content-slides">
+						<div class="content-slide">
+							<span class="slide-user-name">Николай Петров</span>
+							<p>"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="mobile-content-prices-slider">
-				<div class="prices-slider">
-					<input type="radio" id="btn-price-1" name="r-toggle" checked>
-                    <input type="radio" id="btn-price-2" name="r-toggle">
-                    <input type="radio" id="btn-price-3" name="r-toggle">
-                    <div class="prices-slider-toggle">
-                        <label for="btn-price-1"></label>
-                        <label for="btn-price-2"></label>
-                        <label for="btn-price-3"></label>
-                    </div>
+				<div class="slider-slide-middle">
+					<div class="prices-slider-heder">
+						<span class="tarif">Стандарт</span>
+						<span class="price">3,99 USD</span>
+					</div>
+					<ul class="prices-slider-menu">
+						<li><a href="20" title="Выбор фильтра">Розовый фиьтр</a></li>
+						<li><a href="21" title="Выбор смайлов">Смайлики</a></li>
+						<li><a href="22" title="Возможность комментировать">Комментарии</a></li>
+					</ul>
+				</div>
+				<div class="slider-slide-first">
+					<div class="prices-slider-heder">
+						<span class="tarif">Стандарт</span>
+						<span class="price">3,99 USD</span>
+					</div>
+					<ul class="prices-slider-menu">
+						<li><a href="20" title="Выбор фильтра">Розовый фиьтр</a></li>
+						<li><a href="21" title="Выбор смайлов">Смайлики</a></li>
+						<li><a href="22" title="Возможность комментировать">Комментарии</a></li>
+					</ul>
+				</div>
+				<div class="slider-slide-last">
 					<div class="prices-slider-heder">
 						<span class="tarif">Стандарт</span>
 						<span class="price">3,99 USD</span>
@@ -85,6 +100,11 @@
 					</ul>
 				</div>
 			</div>
+			<ul class="price-slider-toggle">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
 		</div>
 		<div class="mobile-footer">
 			<div class="mobile-footer-contacts">
