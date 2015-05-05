@@ -7,117 +7,119 @@
 	</head>
 
 	<body>
-		<div class="mobile-index-header">
-			<div class="mobile-header-menu">
-				<a class="menu-logo" href="#1" title="На главную">Pink</a>
-				<a class="menu-btn" href="#2" title="Открыть меню"></a>
+		<div class="mobile-header mobile-header--full-view">
+			<div class="mobile-header__menu-line">
+				<a class="mobile-header__logo-link" href="#1" title="На главную">Pink</a>
+				<a class="mobile-header__menu-open-btn" href="#2" title="Открыть меню"></a>
 			</div>
-			<div class="mobile-header-submenu open">
-				<a class="submenu-logo" href="#1" title="На главную">Pink</a>
-				<a class="submenu-btn" href="#3" title="Закрыть меню"></a>
-				<ul>
+			<div class="mobile-header__menu">
+				<!--Может mobile-headline__logo попробовать абсолютно спозиционировать и дать z-index 1000,например(не очень помню, как вся эта слоистость работает, но так как меню надо позиционировать точно, а лого можно положить не текстом, а все-таки на бэкграунд, то оно, имея приоритет по индексу, должно оказаться выше и лечь как надо)? Тогда не будет дубля лого:
+				<a class="mobile-headline__logo" href="#1" title="На главную">Pink</a>
+				-->
+				<a class="close-btn close-btn--menu-size" href="#3" title="Закрыть меню"></a>
+				<ul class="mobile-header__list">
 					<li><a href="#10" title="Информация о нас">Информация</a></li>
 					<li><a href="#11" title="Наши возможности">Возможности</a></li>
 					<li><a href="#12" title="Отзывы о нас">Отзывы</a></li>
 					<li><a href="#13" title="Стоимость услуг">Стоимость</a></li>
 				</ul>
 			</div>
-			<h1>Взгляните на жизнь иначе!</h1>
+			<h1 class="mobile-header__slogan">Взгляните на жизнь иначе!</h1>
 		</div>
 		<div class="mobile-content">
-			<div class="mobile-content-download">
-				<a class="download-btn" href="5">Скачать приложение</a>
-				<div class="download-logo-line">
-					<a href="#14" title="Apple"><img src="http://placehold.it/50x50" width="" height="" alt="Apple icon"></a>
-					<a href="#15" title="Android"><img src="http://placehold.it/50x50" width="" height="" alt="Android icon"></a>
-					<a href="#16" title="Window"><img src="http://placehold.it/50x50" width="" height="" alt="Window icon"></a>
+			<div class="mobile-content__download">
+				<a class="download-application-btn" href="5">Скачать приложение</a>
+				<div class="mobile-content__logo-line">
+					<a class="logo-apple" href="#14" title="Apple"><img src="http://placehold.it/50x50" width="" height="" alt="Apple icon"></a>
+					<a class="logo-android" href="#15" title="Android"><img src="http://placehold.it/50x50" width="" height="" alt="Android icon"></a>
+					<a class="logo-windows" href="#16" title="Window"><img  src="http://placehold.it/50x50" width="" height="" alt="Window icon"></a>
 				</div>
-				<span>Доступно для IPhone, IPad, Android, Windows Phone, OS X, Windows 8</span>
+				<div class="mobile-content__phone-types">Доступно для IPhone, IPad, Android, Windows Phone, OS X, Windows 8</div>
 			</div>
-			<div class="mobile-content-promo-slogan">
+			<div class="mobile-content__promo-slogan">
 				<h2>Устали от серости мегаполиса?</h2>
 				<h2>Нам есть что вам предложить!</h2>
 			</div>
-			<div class="mobile-content-promo-text">
-				<h3>Поднимает настроение</h3>
-				<p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-				<h3>Меняет мир вокруг</h3>
-				<p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-				<h3>Заводит новых друзей</h3>
-				<p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+			<div class="mobile-content__promo-info">
+				<h3 class="mobile-content__promo-header">Поднимает настроение</h3>
+				<p class="mobile-content__promo-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+				<h3 class="mobile-content__promo-header">Меняет мир вокруг</h3>
+				<p class="mobile-content__promo-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+				<h3 class="mobile-content__promo-header">Заводит новых друзей</h3>
+				<p class="mobile-content__promo-descr">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
 
 			</div>
-			<div class="mobile-content-slider">
-				<div class="content-slider">
+			<div class="mobile-content__slider">
+				<div class="mobile-content__radio-buttons">
 					<input type="radio" id="btn-1" name="r-toggle" checked>
 					<input type="radio" id="btn-2" name="r-toggle">
 					<input type="radio" id="btn-3" name="r-toggle">
-					<div class="content-slider-toggle">
+					<div class="mobile-content__slider-toggle">
 						<label for="btn-1"></label>
 						<label for="btn-2"></label>
 						<label for="btn-3"></label>
 					</div>
-					<div class="content-slides">
-						<div class="content-slide">
-							<span class="slide-user-name">Николай Петров</span>
-							<p>"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
+					<div class="mobile-content__slides">
+						<div class="mobile-content__slide">
+							<span class="mobile-content__slide-name">Николай Петров</span>
+							<p class="mobile-content__slide-text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="mobile-content-prices-slider">
-				<div class="slider-slide-middle">
-					<div class="prices-slider-heder">
-						<span class="tarif">Стандарт</span>
-						<span class="price">3,99 USD</span>
+			<div class="mobile-content__price-slider">
+				<div class="mobile-content__price-slide">
+					<div class="mobile-content__price-list">
+						<span class="mobile-content__tarif">Стандарт</span>
+						<span class="mobile-content__price">3,99 USD</span>
 					</div>
-					<ul class="prices-slider-menu">
-						<li><a href="20" title="Выбор фильтра">Розовый фиьтр</a></li>
-						<li><a href="21" title="Выбор смайлов">Смайлики</a></li>
-						<li><a href="22" title="Возможность комментировать">Комментарии</a></li>
+					<ul class="mobile-content__table-list">
+						<li ><a class="mobile-content__list-link mobile-content__choose-link" href="20" title="Выбор фильтра">Розовый фильтр</a></li>
+						<li><a class="mobile-content__list-link" href="21" title="Выбор смайлов">Смайлики</a></li>
+						<li><a class="mobile-content__list-link" href="22" title="Возможность комментировать">Комментарии</a></li>
 					</ul>
 				</div>
-				<div class="slider-slide-first">
-					<div class="prices-slider-heder">
-						<span class="tarif">Стандарт</span>
-						<span class="price">3,99 USD</span>
+				<div class="mobile-content__price-slide">
+					<div class="mobile-content__price-list">
+						<span class="mobile-content__tarif">Стандарт</span>
+						<span class="mobile-content__price">3,99 USD</span>
 					</div>
-					<ul class="prices-slider-menu">
-						<li><a href="20" title="Выбор фильтра">Розовый фиьтр</a></li>
-						<li><a href="21" title="Выбор смайлов">Смайлики</a></li>
-						<li><a href="22" title="Возможность комментировать">Комментарии</a></li>
+					<ul class="mobile-content__table-list">
+						<li ><a class="mobile-content__list-link mobile-content__choose-link" href="20" title="Выбор фильтра">Розовый фильтр</a></li>
+						<li><a class="mobile-content__list-link" href="21" title="Выбор смайлов">Смайлики</a></li>
+						<li><a class="mobile-content__list-link" href="22" title="Возможность комментировать">Комментарии</a></li>
 					</ul>
 				</div>
-				<div class="slider-slide-last">
-					<div class="prices-slider-heder">
-						<span class="tarif">Стандарт</span>
-						<span class="price">3,99 USD</span>
+				<div class="mobile-content__price-slide">
+					<div class="mobile-content__price-list">
+						<span class="mobile-content__tarif">Стандарт</span>
+						<span class="mobile-content__price">3,99 USD</span>
 					</div>
-					<ul class="prices-slider-menu">
-						<li><a href="20" title="Выбор фильтра">Розовый фиьтр</a></li>
-						<li><a href="21" title="Выбор смайлов">Смайлики</a></li>
-						<li><a href="22" title="Возможность комментировать">Комментарии</a></li>
+					<ul class="mobile-content__table-list">
+						<li ><a class="mobile-content__list-link mobile-content__choose-link" href="20" title="Выбор фильтра">Розовый фильтр</a></li>
+						<li><a class="mobile-content__list-link" href="21" title="Выбор смайлов">Смайлики</a></li>
+						<li><a class="mobile-content__list-link" href="22" title="Возможность комментировать">Комментарии</a></li>
 					</ul>
 				</div>
 			</div>
-			<ul class="price-slider-toggle">
+			<ul class="mobile-content__price-slider-toggle">
 				<li></li>
 				<li></li>
 				<li></li>
 			</ul>
 		</div>
 		<div class="mobile-footer">
-			<div class="mobile-footer-contacts">
-				<p>Остались вопросы? Свяжитесь с нами!</p>
-				<div class="contacts-heder">
+			<div class="mobile-footer__contacts">
+				<p class="mobile-footer__contacts-header">Остались вопросы? Свяжитесь с нами!</p>
+				<div class="mobile-footer__call-us">
 					<span>Звоните:</span>
 					<span>+7 (812) 555-66-66</span>
 				</div>
-				<div class="contacts-heder">
+				<div class="mobile-footer__write-us">
 					<span>Пишите:</span>
 					<span>mail@htmlacademy.ru</span>
 				</div>
-				<div class="contacts-heder">
+				<div class="mobile-footer__guests">
 					<span>Приезжайте в гости:</span>
 					<span>ул. Большая Конюшенная, 19/8</span>
 				</div>
