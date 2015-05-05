@@ -7,24 +7,23 @@
 	</head>
 
 	<body>
-		<div class="mobile-form-header">
-			<div class="mobile-header-menu">
-				<a class="menu-logo" href="#1" title="На главную">Pink</a>
-				<a class="menu_btn" href="#2" title="Открыть меню"></a>
+		<div class="header header--resize">
+			<div class="header__head-line">
+				<a class="header__logo-link" href="#1" title="На главную">Pink</a>
+				<a class="header__menu-open-btn" href="#2" title="Открыть меню"></a>
 			</div>
-			<div class="mobile-header-submenu open">
-				<a class="submenu-logo" href="#1" title="На главную">Pink</a>
-				<a class="submenu-btn" href="#3" title="Закрыть меню"></a>
-				<ul>
+			<div class="header__menu">
+				<a class="close-btn" href="#3" title="Закрыть меню"></a>
+				<ul class="header__list">
 					<li><a href="#10" title="Информация о нас">Информация</a></li>
 					<li><a href="#11" title="Наши возможности">Возможности</a></li>
 					<li><a href="#12" title="Отзывы о нас">Отзывы</a></li>
 					<li><a href="#13" title="Стоимость услуг">Стоимость</a></li>
 				</ul>
 			</div>
-			<h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
+			<h1 class="header__slogan">Конкурс на самое безбашенное путешествие с Пинк</h1>
 		</div>
-		<div class="mobile-form-content">
+		<div class="form-content">
 			<p>Поделитесь своей историей и получите шас выиграть ценный приз - 1000 миль на вашу бонусную карту!
 			</p>
 			<form action="/echo" method="post">
@@ -45,7 +44,7 @@
 					<input id="w-phone" type="radio" name="Windows phone" placeholder="Windows">
 					<label for="w-phone">Windows Phone</label>
 				</div>
-				<div class="more-about-trip">
+				<div class="travel-duration">
 					<header>Когда вы путешествовали?<sup>*</sup></header>
 					<input id="chek-out" type="text" name="chek-out" placeholder="1 апреля 2015" required>
 					<label for="chek-out">Дата выезда</label>
@@ -57,22 +56,22 @@
 					<label for="return-date">Дата возвращения</label>
 				</div>
 				<div class="travelers">
-					<div class="travelers-count">
+					<div class="travelers__count">
 						<label for="count">Количество попутчиков<sup>*</sup></label>
-						<button class="minus to-left">-</button>
+						<button class="minus">-</button>
 						<input id="count" type="text" name="count" placeholder="2 чел">
 						<button class="plus">+</button>
 					</div>
-					<div class="travelers-names">
-						<div class="first-traveler">
-							<span class="to-left">№</span>
+					<div class="travelers__info-form">
+						<div class="travelers__names">
+							<span>№</span>
 							<label for="traveler-name">Имя:<sup>*</sup></label>
 							<input id="traveler-name" type="text" name="traveler-name" placeholder="Введите ваше имя">
 							<label for="traveler-nick">Прозвище:</label>
 							<input id="traveler-nick" type="text" name="traveler-nick" placeholder="Ну как же без этого!">
 						</div>
-						<div class="second-traveler">
-							<span class="to-left">№</span>
+						<div class="travelers__names">
+							<span>№</span>
 							<label for="traveler-name">Имя:<sup>*</sup></label>
 							<input id="traveler-name" type="text" name="traveler-name" placeholder="Введите ваше имя">
 							<label for="traveler-nick">Прозвище:</label>
@@ -98,74 +97,72 @@
 				<div class="travel-photo">
 					<header>Ваши фотографии из поездки</header>
 					<input id="photo" type="submit" name="photo" placeholder="Загрузить фото">
-					<article>
+					<article class="travel-photo__images">
 						<figure>
 							<img src="http://placehold.it/100x100" width="" height="" alt="">
-							<a class="close" href="#41" title="button-close">&times;</a>
+							<a class="cancel-btn" href="#41" title="cancel-btn">&times;</a>
 							<figcaption>img-1.jpg</figcaption>
 						</figure>
 						<figure>
 							<img src="http://placehold.it/100x100" width="" height="" alt="">
-							<a class="close" href="#42" title="button-close">&times;</a>
+							<a class="cancel-btn" href="#42" title="cancel-btn">&times;</a>
 							<figcaption>img-2.jpg</figcaption>
 						</figure>
 						<figure>
 							<img src="http://placehold.it/100x100" width="" height="" alt="">
-							<a class="close" href="#43" title="button-close">&times;</a>
+							<a class="cancel-btn" href="#43" title="cancel-btn">&times;</a>
 							<figcaption>img-3.jpg</figcaption>
 						</figure>
 						<figure>
 							<img src="http://placehold.it/100x100" width="" height="" alt="">
-							<a class="close" href="#44" title="button-close">&times;</a>
+							<a class="cancel-btn" href="#44" title="cancel-btn">&times;</a>
 							<figcaption>img-4.jpg</figcaption>
 						</figure>
 						<figure>
 							<img src="http://placehold.it/100x100" width="" height="" alt="">
-							<a class="close" href="#45" title="button-close">&times;</a>
+							<a class="cancel-btn" href="#45" title="cancel-btn">&times;</a>
 							<figcaption>img-5.jpg</figcaption>
 						</figure>
 						<figure>
 							<img src="http://placehold.it/100x100" width="" height="" alt="">
-							<a class="close" href="#46" title="button-close">&times;</a>
+							<a class="cancel-btn" href="#46" title="cancel-btn">&times;</a>
 							<figcaption>img-6.jpg</figcaption>
 						</figure>
 						<figure>
 							<img src="http://placehold.it/100x100" width="" height="" alt="">
-							<a class="close" href="#47" title="button-close">&times;</a>
+							<a class="cancel-btn" href="#47" title="cancel-btn">&times;</a>
 							<figcaption>img-7.jpg</figcaption>
 						</figure>
 						<figure>
 							<img src="http://placehold.it/100x100" width="" height="" alt="">
-							<a class="close" href="#48" title="button-close">&times;</a>
+							<a class="cancel-btn" href="#48" title="cancel-btn">&times;</a>
 							<figcaption>img-8.jpg</figcaption>
 						</figure>
 					</article>
 				</div>
-				<div class="sending-form">
-					<form action="/echo" method="post">
-						<input id="send" type="submit" name="sending-form" placeholder="Отправить форму">
-					</form>
+				<div class="form-content__sending-form">
+					<input id="send" type="submit" name="sending-form" placeholder="Отправить форму">
 					<div><sup>*</sup>- Обязательные поля</div>
 				</div>
 			</form>
 		</div>
-		<div class="mobile-post-footer">
-			<img class="mobile-logo-glasses" src="http://placehold.it/150x50" width="" height="" alt="Pink icon">
+		<div class="footer footer--vary">
+			<img class="pink-logo-glasses" src="http://placehold.it/150x50" width="" height="" alt="Pink icon">
 			<div class="social-buttons">
 				<a href="#34" title="Твиттер">Т</a>
 				<a href="#35" title="Фейсбук">Ф</a>
 				<a href="#36" title="Какая-то видюха">">"</a>
 			</div>
-			<div class="mobile-blog-develop">
-				<span>Разработано</span>
+			<div class="footer__about-develop">
+				<header>Разработано</header>
 			</div>
 		</div>
-		<div class="mobile-failure-popup">
+		<div class="failure-popup">
 			<div>Что-то пошло не так!</div>
 			<p>Проверьте поля, вделенные красным, скорее всего вы забыли их заполнить</p>
 			<a href="55">Ok</a>
 		</div>
-		<div class="mobile-request-popup">
+		<div class="request-popup">
 			<div>Ваша заявка отправлена</div>
 			<p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
 			<a href="56">Закрыть окно</a>
