@@ -7,16 +7,12 @@
 	</head>
 
 	<body>
-		<div class="header header--vary">
+		<div class="header header--make-full-size">
 			<div class="header__head-line">
 				<a class="header__logo-link" href="#1" title="На главную">Pink</a>
-				<a class="header__menu-open-btn" href="#2" title="Открыть меню"></a>
+				<a class="header__btn-menu header__btn-menu-opened" href="#2" title="Открыть меню"></a>
 			</div>
 			<div class="header__menu">
-				<!--Может mobile-headline__logo попробовать абсолютно спозиционировать и дать z-index 1000,например(не очень помню, как вся эта слоистость работает, но так как меню надо позиционировать точно, а лого можно положить не текстом, а все-таки на бэкграунд, то оно, имея приоритет по индексу, должно оказаться выше и лечь как надо)? Тогда не будет дубля лого:
-				<a class="mobile-headline__logo" href="#1" title="На главную">Pink</a>
-				-->
-				<a class="close-btn" href="#3" title="Закрыть меню"></a>
 				<ul class="header__list">
 					<li><a href="#10" title="Информация о нас">Информация</a></li>
 					<li><a href="#11" title="Наши возможности">Возможности</a></li>
@@ -28,7 +24,7 @@
 		</div>
 		<div class="content">
 			<div class="content__download">
-				<a class="download-application-btn" href="5">Скачать приложение</a>
+				<a class="btn-download-application" href="5">Скачать приложение</a>
 				<div class="content__logo-line">
 					<a href="#14" title="Apple"><img src="http://placehold.it/50x50" width="" height="" alt="Apple icon"></a>
 					<a href="#15" title="Android"><img src="http://placehold.it/50x50" width="" height="" alt="Android icon"></a>
