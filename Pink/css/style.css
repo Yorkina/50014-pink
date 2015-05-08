@@ -1,0 +1,255 @@
+html,
+body {
+    width: 320px;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+/*header*/
+
+.layout-positioner {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.header {
+    outline: 2px solid black;
+    background-color: #1d2631;
+}
+
+.header__head-line {
+    outline: 2px solid red;
+}
+
+.header__head-line:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.header__logo-link {
+    float: left;
+    display: block;
+    word-wrap: break-word;
+    width: 75px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: #ffffff;
+    outline: 2px solid green;
+}
+
+.header__btn-menu {
+    float: right;
+    width: 20px;
+    height: 20px;
+    outline: 2px solid green;
+}
+
+.header__list {
+    outline: 2px solid red;
+    padding: 0;
+    margin: 0;
+}
+
+.header__list li {
+    list-style: none;
+    text-align: center;
+    outline: 2px solid green;
+}
+
+.header__list a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    color: #ffffff;
+}
+
+.header__slogan {
+    display: block;
+    word-wrap: break-word;
+    font-size: 300;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    outline: 2px solid green;
+}
+
+.header__download {
+    text-align: center;
+    outline: 2px solid red;
+    background-color: #1d2631;
+}
+
+.header__logo-line {
+    font-size: 0;
+    outline: 2px solid green;
+}
+
+.header__logo-line a {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.3%;
+    color: #ffffff;
+    outline: 2px solid green;
+}
+
+.header__phone-types {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #ffffff;
+    outline: 2px solid green;
+}
+
+.btn-download-application {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    outline: 2px solid #ffffff;
+    text-decoration: none;
+}
+/*content*/
+
+.content {
+    outline: 2px solid black;
+    background-color: #f2f2f2;
+}
+
+.content__promo-slogan {
+    outline: 2px solid red;
+}
+
+.content__promo-slogan h2 {
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    word-wrap: break-word;
+    outline: 2px solid green;
+}
+
+.content__promo-info {
+    outline: 2px solid red;
+}
+
+.content__promo-info header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    outline: 2px solid green;
+    text-decoration: none;
+}
+
+.content__promo-info p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    outline: 2px solid green;
+}
+
+.review-slider__input {
+    outline: 2px solid red;
+}
+
+.review-slider__slides {
+    position: relative;
+    height: 200px;
+}
+
+.review-slider__slide {
+    position: absolute;
+}
+
+.review-slider__slide header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    outline: 2px solid green;
+    text-decoration: none;
+}
+
+.review-slider__slide p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    outline: 2px solid green;
+}
+
+.review-slider__toggle,
+.price-slider__toggle {
+    text-align: center;
+}
+
+.price-slider {
+    outline: 2px solid green;
+}
+
+.price-slide td {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.price-slide__tarif header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    height: 50px;
+}
+
+.price-slide__tarif span {
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    height: 50px;
+}
+/*footer*/
+
+.footer {
+    outline: 2px solid black;
+}
+
+.footer__contacts {
+    outline: 2px solid red;
+}
+
+.footer__contacts header {
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.footer__call-us header,
+.footer__write-us header,
+.footer__guests header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    word-wrap: break-word;
+    color: #283645;
+}
+
+.footer__call-us p,
+.footer__write-us a,
+.footer__guests p {
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: center;
+    word-wrap: break-word;
+    color: #d22856;
+}
+
+.footer__write-us a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: lowercase;
+}
