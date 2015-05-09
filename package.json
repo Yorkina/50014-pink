@@ -4,12 +4,7 @@
   "description": "html_academy",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp-browserify": "^0.5.1",
-    "gulp-concat": "^2.5.2",
     "gulp": "^3.8.11",
-    "gulp-styl": "^1.0.3",
-    "tiny-lr": "^0.1.5",
-    "gulp-livereload": "^3.8.0",
     "gulp-less": "*"
   },
   "devDependencies": {
