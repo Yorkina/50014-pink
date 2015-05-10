@@ -57,6 +57,11 @@
   border: @b-size @b-type @b-color;
 }
 
+.div-text-style () {
+  font-size: 1.2rem;
+  color: #d22856;
+}
+
 
 
 html,
@@ -285,7 +290,7 @@ body {
  }
 }
 
-//blog-page
+//blog-content
 .blog-content {
   outline: 2px solid black;
   &__news {
@@ -296,11 +301,11 @@ body {
       color: @offset-color;
     }
     div {
-      font-size: @font-size--extra-small;
-      color: @attention-color;
+      .div-text-style ()
     }
     p {
       font-size: @font-size--small;
+      color: @offset-color;
       outline: 2px solid green;
     }
   }
@@ -317,6 +322,65 @@ body {
     }
     b {
       border-color: @attention-color;
+    }
+  }
+}
+
+//post-content
+.post-content {
+  &__story {
+    border-bottom: 2px solid @border-color;
+    text-align: @text-align;
+    header{
+      font-size: 3rem;
+      color: @offset-color;
+    }
+    div {
+      .div-text-style ();
+      text-transform: @text-transform;
+    }
+    p {
+      font-size: 1.6rem;
+      color: @offset-color;
+    }
+  }
+  &__header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: @offset-color;
+    text-transform: @text-transform;
+  }
+  p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: @offset-color;
+  }
+  &__prehistory {
+    a {
+      color: @attention-color;
+    }
+  }
+  &__hotel-list {
+    li {
+      list-style: none;
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+  blockquote {
+    margin: 0px;
+    padding-left: 20px;
+    border-left: 2px solid @attention-color;
+      i {
+        color:#8a8a8a;
+      }
+  }
+  &__paginator {
+    a {
+      .border-style();
+      .headers-text-style();
+      text-decoration:@text-decoration;
+      color: @offset-color;
     }
   }
 }
