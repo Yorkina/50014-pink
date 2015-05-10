@@ -12,15 +12,42 @@
 @font-size--small: 1.4rem;
 @font-size--big: 2.4rem;
 
-@weight-big-headers: 300;
-@weight-small-headers: 700;
-
-@text-align: center;
-@word-wrap: break-word;
-
 @font-family: 'Open Sans', Arial, sans-serif;
 
+@weight-light: 300;
+@weight-bold: 700;
 
+@text-align: center;
+@text-decoration:none;
+@text-transform:uppercase;
+
+@word-wrap: break-word;
+
+
+.headers-text-style (){
+  font-size: @font-size;
+  font-weight: @weight-bold;
+  text-align: @text-align;
+}
+.big-headers-text-style (){
+  font-size: @font-size--big;
+  font-weight: @weight-light;
+  text-align: @text-align;
+}
+.p-text-style (){
+  font-size: @font-size--small;
+  font-weight: @weight-light;
+  text-align: @text-align;
+}
+.a-decoration (){
+  text-decoration:@text-decoration;
+  text-transform:@text-transform;
+}
+.clearfix () {
+  content:'';
+  display:table;
+  clear:both;
+}
 
 
 
@@ -32,7 +59,7 @@ body {
   font-size: @html-size-base;
   font-family:@font-family;
 }
-/*header*/
+//header
 .layout-positioner {
   width: 280px;
   margin: 0 auto;
@@ -44,9 +71,7 @@ body {
   &__head-line {
     outline: 2px solid red;
     &:after {
-      content:'';
-      display:table;
-      clear:both;
+      .clearfix ();
     }
   }
   &__logo-link {
@@ -54,10 +79,9 @@ body {
     display: block;
     word-wrap: @word-wrap;
     width: 75px;
-    text-decoration: none;
-    text-transform: uppercase;
+    .a-decoration ();
     font-size: @font-size--big;
-    font-weight: @weight-big-headers;
+    font-weight: @weight-light;
     color: @text-color;
     outline: 2px solid green;
   }
@@ -78,9 +102,8 @@ body {
       }
       a {
         font-size: @font-size;
-        font-weight: @weight-small-headers;
-        text-decoration: none;
-        text-transform: uppercase;
+        font-weight: @weight-bold;
+        .a-decoration ();
         display: block;
         color: @text-color;
       }
@@ -88,9 +111,7 @@ body {
   &__slogan {
     display: block;
     word-wrap: @word-wrap;
-    font-size: @weight-big-headers;
-    font-weight: @weight-small-headers;
-    text-align: @text-align;
+    .big-headers-text-style ();
     color: @text-color;
     outline: 2px solid green;
   }
@@ -112,18 +133,16 @@ body {
   }
   &__phone-types {
     font-size: @font-size--small;
-    font-weight: @weight-big-headers;
+    font-weight: @weight-light;
     color: @text-color;
     outline: 2px solid green;
   }
 }
 .btn-download-application {
-  font-size: @font-size;
-  font-weight: @weight-small-headers;
-  text-align: @text-align;
+  .headers-text-style ();
   color: @text-color;
   outline: 2px solid @text-color;
-  text-decoration: none;
+  text-decoration: @text-decoration;
 }
 /*content*/
 .content {
@@ -132,9 +151,7 @@ body {
   &__promo-slogan {
     outline: 2px solid red; 
     h2 {
-      font-size: @font-size--big;
-      font-weight: @weight-big-headers;
-      text-align: center;
+      .big-headers-text-style ();
       display: block;
       word-wrap: @word-wrap;
       outline: 2px solid green;
@@ -143,16 +160,12 @@ body {
   &__promo-info {
   outline: 2px solid red; 
     header {
-      font-size: @font-size;
-      font-weight: @weight-small-headers;
-      text-align: @text-align;
+      .headers-text-style();
       outline: 2px solid green;
       text-decoration: none;
     }
     p {
-      font-size: @font-size--small;
-      font-weight: @weight-big-headers;
-      text-align: @text-align;
+      .p-text-style ();
       outline: 2px solid green;
     }
   }
@@ -167,16 +180,12 @@ body {
 .review-slider__slide {
   position: absolute;
     header {
-      font-size: @font-size;
-      font-weight: @weight-small-headers;
-      text-align: @text-align;
+      .headers-text-style();
       outline: 2px solid green;
       text-decoration: none;
     }
     p {
-      font-size: @font-size--small;
-      font-weight: @weight-big-headers;
-      text-align: @text-align;
+      .p-text-style ();
       outline: 2px solid green;
     }
 }
@@ -189,21 +198,17 @@ body {
 }
 .price-slide td {
   font-size: @font-size--small;
-  font-weight: @weight-big-headers;
+  font-weight: @weight-light;
 }
 .price-slide__tarif {
    header {
-    font-size: @font-size;
-    font-weight: @weight-small-headers;
-    text-align: @text-align;
-    text-transform: uppercase;
+    .headers-text-style();
+    text-transform: @text-transform;
     display:block;
     height: 50px;
   }
   span {
-    font-size: @font-size--big;
-    font-weight: @weight-big-headers;
-    text-align: @text-align;
+    .big-headers-text-style ();
     display:block;
     height: 50px;
   }
@@ -214,9 +219,7 @@ body {
   &__contacts {
     outline: 2px solid red;
       header {
-      font-size: @font-size--big;
-      font-weight: @weight-big-headers;
-      text-align: @text-align;
+      .big-headers-text-style ();
       word-wrap:@word-wrap;
     }
   }
@@ -224,18 +227,14 @@ body {
 .footer__call-us header,
 .footer__write-us header,
 .footer__guests header {
-  font-size: @font-size;
-  font-weight: @weight-small-headers;
-  text-align: @text-align;
+  .headers-text-style();
   word-wrap:@word-wrap;
   color: @offset-color;
 }
 .footer__call-us p,
 .footer__write-us a,
 .footer__guests p {
-  font-size: @font-size--big;
-  font-weight: @weight-big-headers;
-  text-align: @text-align;
+  .big-headers-text-style ();
   word-wrap:@word-wrap;
   color: @attention-color;
 } 
