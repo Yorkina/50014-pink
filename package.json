@@ -8,7 +8,8 @@
     "gulp-less": "*"
   },
   "devDependencies": {
-    "gulp": "^3.8.11"
+    "gulp": "^3.8.11",
+    "gulp-csscomb": "^3.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
