@@ -3,17 +3,17 @@
 
 .headers-text-style (){
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 .big-headers-text-style (){
   font-size: 2.4rem;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 .p-text-style (){
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 .a-decoration (){
@@ -24,6 +24,7 @@
   content:'';
   display:table;
   clear:both;
+  &::after
 }
 .border-style (@b-size: 2px, @b-type: solid, @b-color: #e5e5e5) {
   border: @b-size @b-type @b-color;
@@ -55,9 +56,7 @@ body {
 
   &__head-line {
     outline: 2px solid red;
-    &:after {
-      .clearfix ();
-    }
+    .clearfix ();
   }
   &__logo-link {
     float: left;
