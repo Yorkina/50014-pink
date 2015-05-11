@@ -18,10 +18,11 @@
   text-transform:uppercase;
 }
 .clearfix (){
+  &::after {
   content:'';
   display:table;
   clear:both;
-  &::after
+  }
 }
 .border-style (@b-size: 2px, @b-type: solid, @b-color: #e5e5e5) {
   border: @b-size @b-type @b-color;
