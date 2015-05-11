@@ -52,7 +52,7 @@ body {
       }
       a {
         font-size: @font-size--medium;
-        font-weight: @weight-bold;
+        font-weight: @weight-semi-bold;
         .a-decoration ();
         display: block;
         color: @text-color--contrast;
@@ -296,7 +296,7 @@ body {
   }
   &__header {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
     color: @text-color--headers;
     text-transform: uppercase;
   }
@@ -503,6 +503,41 @@ body {
     text-align: left;
     outline: 2px solid green;
     margin: 0px;
+  }
+}
+.failure-popup {
+  header {
+    .headers-text-style ();
+  }
+  p {
+    .p-text-style ();
+  }
+  button {
+    background-color: #2aab6d;
+    color: @text-color--contrast;
+    border: none;
+    .headers-text-style ();
+    outline: 2px solid #2aab6d;
+    width: 280px;
+    text-transform: uppercase;
+  }
+}
+.request-popup {
+    background-color: @background-color--slider;
+    header {
+    .headers-text-style ();
+  }
+    p {
+    .p-text-style ();
+  }
+  button {
+    background-color: #2aab6d;
+    color: @text-color--contrast;
+    border: none;
+    .headers-text-style ();
+    outline: 2px solid #2aab6d;
+    width: 280px;
+    text-transform: uppercase;
   }
 }
 
