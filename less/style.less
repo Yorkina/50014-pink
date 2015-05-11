@@ -4,7 +4,7 @@
 
 html,
 body {
-  width: 100%;
+  width: 320px;
   margin: 0;
   padding: 0;
   font-size: @html-size-base;
@@ -13,7 +13,7 @@ body {
 }
 //header
 .layout-positioner {
-  width: 100%;
+  width: 280px;
   margin: 0px 15px;
   outline: 2px solid yellow;
 }
@@ -334,7 +334,124 @@ body {
     }
   }
 }
-//form-page
+//form-content 
+.form-content {
+  p{
+    .p-text-style ();
+  }
+  form {
+    outline: 2px solid red;
+  }
+}
+.user-info {
+    width: 100%;
+    outline: 2px solid green;
+  label {
+    display: block;
+    .label-text-style ();
+    padding-left: 20px;
+    text-transform: uppercase;
+    }
+  input[type="text"] {
+    font-size: @html-size-base;
+    font-family:'Open Sans', Arial, sans-serif;
+    display:inline-block;
+    .border-style ();
+    line-height: 30px;
+    padding: 10px;
+    width: 90%;
+    }
+  input::-webkit-input-placeholder {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color:@text-color--headers;
+    }
+  input:-moz-placeholder {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color:@text-color--headers;
+    }
+  }
+.type-application {
+    outline: 2px solid green;
+    background-color: @background-color--slider;
+  header {
+    display: block;
+    .label-text-style ();
+    text-align: center;
+    text-transform: uppercase;
+    }
+  label {
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: block;
+  }
+}
+.travel-duration {
+    outline: 2px solid green;
+  header {
+    display: block;
+    .label-text-style ();
+    text-align: center;
+    text-transform: uppercase;
+  }
+  label {
+    .label-text-style ();
+    text-transform: uppercase;
+    display: block;
+  }
+  input[type="text"] {
+    font-size: @html-size-base;
+    font-family:'Open Sans', Arial, sans-serif;
+    display:inline-block;
+    .border-style ();
+    line-height: 30px;
+    padding: 10px;
+    
+    }
+  input::-webkit-input-placeholder {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color:@text-color--headers;
+  }
+  input:-moz-placeholder {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color:@text-color--headers;
+  }
+}
+.travelers {
+  &__count {
+      outline: 2px solid green;
+      background-color: @background-color--slider;
+    header {
+      display: block;
+      .label-text-style ();
+      text-align: center;
+      text-transform: uppercase;
+    }
+    label {
+      .label-text-style ();
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+  &__info-form {
+    span {
+      float: left;
+      .clearfix ()
+      width: 20%;
+    }
+    label {
+      float: right;
+      .clearfix ()
+      width:70%;
+    }
+  }
+}
+
+
+
 
 
 
