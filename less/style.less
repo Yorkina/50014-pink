@@ -2,6 +2,35 @@
 @import "mixins.less";
 
 
+@text-color: #ffffff;
+@basic-color: #000000;
+@offset-color: #283645;
+@attention-color: #d22856;
+
+@background-color: #ffffff;
+@basic-background-color: #f2f2f2;
+@offset-background-color: #1d2631;
+
+@border-color: #e5e5e5;
+
+@html-size-base: 10px;
+@font-size--big: 2.4rem;
+@font-size: 1.8rem;
+@font-size--small: 1.4rem;
+@font-size--extra-small: 1.2rem;
+
+@font-family: 'Open Sans', Arial, sans-serif;
+
+@weight-light: 300;
+@weight-normal: 400;
+@weight-semi-bold: 600;
+@weight-bold: 700;
+
+
+@text-decoration:none;
+@text-transform:uppercase;
+
+
 
 html,
 body {
@@ -27,7 +56,7 @@ body {
   &__logo-link {
     float: left;
     display: block;
-    word-wrap: @word-wrap;
+    word-wrap: break-word;
     width: 75px;
     .a-decoration ();
     font-size: @font-size--big;
@@ -47,7 +76,7 @@ body {
     margin:0;
       li {
         list-style:none;
-        text-align: @text-align;
+        text-align: center;
         outline: 2px solid green;
       }
       a {
@@ -60,13 +89,13 @@ body {
   }
   &__slogan {
     display: block;
-    word-wrap: @word-wrap;
+    word-wrap: break-word;
     .big-headers-text-style ();
     color: @text-color;
     outline: 2px dotted green;
   }
  &__download {
-    text-align: @text-align;
+    text-align: center;
     outline: 2px solid red;
     background-color: @offset-background-color;
   }
@@ -103,7 +132,7 @@ body {
     h2 {
       .big-headers-text-style ();
       display: block;
-      word-wrap: @word-wrap;
+      word-wrap: break-word;
       outline: 2px solid green;
     }
   }
@@ -159,7 +188,7 @@ body {
 .price-slider {
   outline: 2px solid green;
   &__toggle {
-  text-align: @text-align;
+  text-align: center;
   }
 }
 .price-slide {
@@ -188,36 +217,36 @@ body {
     outline: 2px solid red;
       header {
       .big-headers-text-style ();
-      word-wrap:@word-wrap;
+      word-wrap: break-word;
     }
   }
   &__call-us, &__write-us, &__guests {
     header {
       .headers-text-style();
-      word-wrap:@word-wrap;
+      word-wrap: break-word;
       color: @offset-color;
     }
   }
   &__call-us, &__guests {
     p {
       .big-headers-text-style ();
-      word-wrap:@word-wrap;
+      word-wrap: break-word;
       color: @attention-color;
     }
   }
   &__write-us {
     a {
       .big-headers-text-style ();
-      word-wrap:@word-wrap;
+      word-wrap: break-word;
       color: @attention-color;
       display: block;
-      text-align: @text-align;
+      text-align: center;
       text-decoration: none;
       text-transform: lowercase;
     } 
   }//blog-page-footer
   &--inner-pages {
-    text-align: @text-align;
+    text-align: center;
     a {
       text-decoration:@text-decoration;
       color: @offset-color;
@@ -261,7 +290,7 @@ body {
     border-bottom: none;
   }
   &__paginator {
-    text-align: @text-align;
+    text-align: center;
     a, b {
       .border-style();
       .headers-text-style();
@@ -278,7 +307,7 @@ body {
 .post-content {
   &__story {
     border-bottom: 2px solid @border-color;
-    text-align: @text-align;
+    text-align: center;
     header{
       font-size: 3rem;
       color: @offset-color;
