@@ -4,7 +4,7 @@ var concatCss = require('gulp-concat-css');
 
 
 gulp.task('less', function() {
-	gulp.src('./less/**/*.less')
+	gulp.src('./less/style.less')
 		.pipe(less())
 		.pipe(gulp.dest('./css'));
 });
