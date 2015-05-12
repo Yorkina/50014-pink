@@ -19,32 +19,39 @@ body {
 }
 .header {
   outline: 2px solid black;
-  background-color: @background-color--dark;
+  background-image: url("../img/header-background-img.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
   &__head-line {
-    outline: 2px solid red;
     .clearfix ();
+    background-color: rgba(15, 20, 25, 0.5);
+    padding: 3px 20px;
   }
   &__logo-link {
-    float: left;
+    float: left;  
     display: block;
     word-wrap: break-word;
-    width: 75px;
+    width: 80px;
     .a-decoration ();
-    font-size: @font-size--big;
+    font-size: 3rem;  //big + light
     font-weight: @weight-light;
     color: @text-color--contrast;
-    outline: 2px solid green;
+    letter-spacing: 3px; // letter spacing ??
+    padding: 15px 0px;
   }
   &__btn-menu {
     float:right;
-    width:20px;
-    height:20px;
-    outline: 2px solid green;
+    width:70px;
+    height:42px;
+    background-image: url("../img/menu-open-btn-icon.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
   }
   &__list {
     outline: 2px solid red;
     padding:0;
     margin:0;
+    display: none;
       li {
         list-style:none;
         text-align: center;
@@ -58,17 +65,35 @@ body {
         color: @text-color--contrast;
       }
   }
-  &__slogan {
+  &__slogan { // то ли фон вырезать с рукой сразу, то ли не ясно 
     display: block;
     word-wrap: break-word;
-    .big-headers-text-style ();
+    .big-headers-text-style (); // +line-height
     color: @text-color--contrast;
-    outline: 2px dotted green;
+    line-height: 2.8rem;
+    padding: 4px 11px 345px 11px;
+    background-image: url("../img/background-mobile-img.png");
+    background-repeat: no-repeat;
+    background-position: 94% 100%;
   }
- &__download {
+  &__download {
     text-align: center;
     outline: 2px solid red;
     background-color: @background-color--dark;
+    padding-top: 26px;
+    margin-top: -44px;
+  }
+  &__btn-download {
+    display: inline-block;
+    padding: 16px 15px;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    .headers-text-style ();
+    color: #ffffff;
+    text-decoration: @text-decoration;
+    margin-bottom: 30px;
+    width: 245px;
+    letter-spacing: 0.5px;
   }
   &__logo-line {
     font-size: 0;
