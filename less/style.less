@@ -12,16 +12,13 @@ body {
   line-height: 1;
 }
 //header
-.layout-positioner {
-  width: 280px;
-  margin: 0px 15px;
-  outline: 2px solid yellow;
-}
+
 .header {
   outline: 2px solid black;
   background-image: url("../img/header-background-img.jpg");
   background-position: top center;
   background-repeat: no-repeat;
+  margin-bottom: 44px;
   &__head-line {
     .clearfix ();
     background-color: rgba(15, 20, 25, 0.5);
@@ -71,17 +68,25 @@ body {
     .big-headers-text-style (); // +line-height
     color: @text-color--contrast;
     line-height: 2.8rem;
-    padding: 4px 11px 345px 11px;
-    background-image: url("../img/background-mobile-img.png");
-    background-repeat: no-repeat;
-    background-position: 94% 100%;
+    padding: 5px 20px;
   }
+   h1:after {
+    content: "";
+     display: block;
+     margin: 30px 0px 0px 0px;
+     padding-top: 30px;
+     width: 290px;
+     height: 280px;
+     background-image: url("../img/background-mobile-img.png");
+     background-repeat: no-repeat;
+     background-position: 90%;
+     }
   &__download {
     text-align: center;
     outline: 2px solid red;
     background-color: @background-color--dark;
     padding-top: 26px;
-    margin-top: -44px;
+    margin-top: -45px;
   }
   &__btn-download {
     display: inline-block;
@@ -99,50 +104,90 @@ body {
     font-size: 0;
     outline: 2px solid green;
   }
-  &__logo-line a {
-    display: inline-block;
-    vertical-align: top;
-    width: 33.3%;
-    color: #ffffff;
-    outline: 2px solid green;
+  &__logo-line {
+      a {
+      display: inline-block;
+      vertical-align: top;
+      width: 80px;
+      height: 67px;
+      color: #ffffff;
+    }
+  }
+  &__apple-img {
+    background-image: url("../img/download-apple-icon.png");
+    background-repeat: no-repeat;
+    background-position: 50% 13%;
+  }
+  &__android-img {
+    background-image: url("../img/download-android-icon.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &__windows-img {
+    background-image: url("../img/download-microsoft-icon.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
   &__phone-types {
     font-size: @font-size--small;
     font-weight: @weight-light;
     color: @text-color--contrast;
-    outline: 2px solid green;
+    padding: 13px 15px 28px 15px;
+    line-height: 2.4rem;
+    
   }
-}
-.btn-download-application {
-  .headers-text-style ();
-  color: @text-color--contrast;
-  outline: 2px solid @text-color--contrast;
-  text-decoration: @text-decoration;
 }
 //content
 .content {
   outline: 2px solid black;
   background-color: @background-color--light;
+  margin: 0px 20px;
   &__promo-slogan {
     outline: 2px solid red; 
+    margin-bottom: 57px;
     h2 {
       .big-headers-text-style ();
       display: block;
       word-wrap: break-word;
       outline: 2px solid green;
+      line-height: 2.8rem;
+        &:nth-child(1) {
+        margin-bottom: 30px;
+      }
     }
   }
   &__promo-info {
   outline: 2px solid red; 
+  background-color:@background-color--slider;
+  margin-bottom: 50px;
+    &:before {
+     content: "";
+     display: block;
+     width: 0px;
+     height: 0px;
+     border-bottom: 60px solid transparent;
+     border-left: 280px solid @background-color--light;
+   }
     header {
       .headers-text-style();
       outline: 2px solid green;
       text-decoration: none;
+      letter-spacing: 0.5px; // letter-spacing?
     }
     p {
       .p-text-style ();
       outline: 2px solid green;
+      line-height: 2.4rem;
+      margin-bottom: 35px;
     }
+    &:after{
+     content: "";
+     display: block;
+     margin: 0 auto;
+     width: 156px;
+     height: 280px;
+     background: url(../img/content-iphone-img.png) no-repeat;
+     }
   }
 }
 .review-slider {
@@ -150,7 +195,7 @@ body {
   overflow: hidden;
   &__slides {
     position: relative;
-    height: 200px;
+    height: 120px;
     width: 100%;
     input {
       display: none;
@@ -163,7 +208,6 @@ body {
     position: relative;
     z-index: 1;
     width: 100%;
-    background: @background-color--slider;
     outline: 2px solid green;
     header {
       .headers-text-style();
