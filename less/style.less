@@ -76,11 +76,11 @@ body {
      margin: 30px 0px 0px 0px;
      padding-top: 30px;
      width: 290px;
-     height: 280px;
+     height: 285px;
      background-image: url("../img/background-mobile-img.png");
      background-repeat: no-repeat;
      background-position: 90%;
-     }
+    }
   &__download {
     text-align: center;
     outline: 2px solid red;
@@ -140,11 +140,26 @@ body {
 //content
 .content {
   outline: 2px solid black;
-  background-color: @background-color--light;
-  margin: 0px 20px;
+  position:relative;
+  overflow: hidden;
+    &:before {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 116%;
+    top: -1%;
+    left: -225%;
+    z-index: -1;
+    background-color: @background-color--slider;
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+    } 
   &__promo-slogan {
     outline: 2px solid red; 
-    margin-bottom: 57px;
+    margin: 0px 19px 57px 19px;
     h2 {
       .big-headers-text-style ();
       display: block;
@@ -158,16 +173,7 @@ body {
   }
   &__promo-info {
   outline: 2px solid red; 
-  background-color:@background-color--slider;
   margin-bottom: 50px;
-    &:before {
-     content: "";
-     display: block;
-     width: 0px;
-     height: 0px;
-     border-bottom: 60px solid transparent;
-     border-left: 280px solid @background-color--light;
-   }
     header {
       .headers-text-style();
       outline: 2px solid green;
