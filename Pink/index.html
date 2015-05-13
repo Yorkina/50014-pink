@@ -64,7 +64,7 @@
 							<p>"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
 						</div>
 					</div>
-					<div class="toggle review-slider__toggle">
+					<div class="toggle toggle__review-slider">
 						<label class="toggle__btn--active " for="btn-1"></label>
 						<label class="toggle__btn" for="btn-2"></label>
 						<label class="toggle__btn" for="btn-3"></label>
@@ -74,14 +74,17 @@
 					<table class="price-slide">
 						<tr class="price-slide__tarif">
 							<th>
+								<input type="radio" id="btn-4" name="r-toggle">
 								<header>Стандарт</header>
 								<span>3,99 USD</span>
 							</th>
 							<th class="price-slide__hit">
+								<input type="radio" id="btn-5" name="r-toggle" checked="">
 								<header>Стандарт</header>
 								<span>3,99 USD</span>
 							</th>
 							<th>
+								<input type="radio" id="btn-6" name="r-toggle">
 								<header>Стандарт</header>
 								<span>3,99 USD</span>
 							</th>
@@ -102,15 +105,12 @@
 							<td>Комментарии</td>
 						</tr>
 					</table>
+					<div class="toggle toggle__price-slider">
+					<label class="toggle__btn" for="btn-4"></label>
+					<label class="toggle__btn--active " for="btn-5"></label>
+					<label class="toggle__btn" for="btn-6"></label>
 				</div>
-				<div class="toggle price-slider__toggle">
-					<input type="radio" id="btn-4" name="r-toggle">
-					<label for="btn-4"></label>
-					<input type="radio" id="btn-5" name="r-toggle" checked>
-					<label for="btn-5"></label>
-					<input type="radio" id="btn-6" name="r-toggle">
-					<label for="btn-6"></label>
-				</div>
+			</div>
 		 </div>
 		<div class="footer">
 			<div class="layout-positioner">
