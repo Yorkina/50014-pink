@@ -18,7 +18,7 @@ body {
   background-image: url("../img/header-background-img.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  margin-bottom: 44px;
+  margin-bottom: 24px;
   &__head-line {
     .clearfix ();
     background-color: rgba(15, 20, 25, 0.5);
@@ -86,7 +86,7 @@ body {
     outline: 2px solid red;
     background-color: @background-color--dark;
     padding-top: 26px;
-    margin-top: -45px;
+    margin-top: -50px;
   }
   &__btn-download {
     display: inline-block;
@@ -145,21 +145,17 @@ body {
     &:before {
     content: "";
     position: absolute;
-    width: 300%;
-    height: 116%;
-    top: -1%;
+    width: 275%;
+    height: 114%;
+    top: -11%;
     left: -225%;
     z-index: -1;
     background-color: @background-color--slider;
-    -webkit-transform: rotate(84deg);
-    -moz-transform: rotate(84deg);
-    -ms-transform: rotate(84deg);
-    -o-transform: rotate(84deg);
-    transform: rotate(84deg);
+    transform: rotate(85deg);
     } 
   &__promo-slogan {
     outline: 2px solid red; 
-    margin: 0px 19px 57px 19px;
+    margin: 0px 19px 117px 19px;
     h2 {
       .big-headers-text-style ();
       display: block;
@@ -173,18 +169,20 @@ body {
   }
   &__promo-info {
   outline: 2px solid red; 
-  margin-bottom: 50px;
+  margin: 0px 19px;
+  text-align: center;
     header {
       .headers-text-style();
       outline: 2px solid green;
       text-decoration: none;
       letter-spacing: 0.5px; // letter-spacing?
+       margin-bottom: 15px;
     }
     p {
       .p-text-style ();
       outline: 2px solid green;
       line-height: 2.4rem;
-      margin-bottom: 35px;
+      margin-bottom: 34px;
     }
     &:after{
      content: "";
@@ -198,7 +196,10 @@ body {
 }
 .review-slider {
   width: 100%;
+  height:280px;
+  padding-top: 52px;
   overflow: hidden;
+  background-color: @background-color--light;
   &__slides {
     position: relative;
     height: 120px;
@@ -212,23 +213,41 @@ body {
   }
   &__slide {
     position: relative;
+    height:280px;
     z-index: 1;
     width: 100%;
     outline: 2px solid green;
     header {
       .headers-text-style();
       text-decoration: none;
+      padding-bottom: 20px;
     }
     p {
       .p-text-style ();
+      line-height: 3rem; // line-height
+      margin: 0px 20px;
     }
   }
-  &__toggle {
-    label {
-      background: #eee;
-      padding: 15px;
-      border-radius: 50%;
-    }
+}
+.toggle {
+    position: relative;
+    top:130px;
+    left: 40%;
+  label {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    margin-right: 11px;
+  }
+  &__btn {
+    border: 3px solid @background-color--light;
+    background: @background-color--slider;
+    border-radius: 50%;
+  }
+  &__btn--active {
+    border: 3px solid @background-color--dark;
+    background: @background-color--light;
+    border-radius: 50%;
   }
 }
 .price-slider {
