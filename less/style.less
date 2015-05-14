@@ -11,13 +11,34 @@ body {
   font-family:'Open Sans', Arial, sans-serif;
   line-height: 1;
 }
+
 //header
 
 .header {
-  background-image: url("../img/background-header-img.jpg");
+  background-image: url("../img/header-background-img.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   margin-bottom: 24px;
+  &--make-full-size {
+    margin-bottom: 24px;
+    h1 {
+      display: block;
+      word-wrap: break-word;
+      .big-headers-text-style (); // +line-height
+      color: @text-color--contrast;
+      line-height: 2.8rem;
+      padding: 5px 20px;
+    }
+     h1:after {
+     content: "";
+     background-image: url("../img/index-header-hand-img.png");
+     display: block;
+     margin: 30px 0px 0px -21px;
+     padding-top: 30px;
+     width: 290px;
+     height: 285px;
+    }
+  }
   &__head-line {
     .clearfix ();
     background-color: rgba(15, 20, 25, 0.5);
@@ -45,7 +66,7 @@ body {
     background-position: bottom right;
   }
   &__list {
-    display: block;
+    display: none;
     position: absolute;
     top: 55px;
     left: 0px;
@@ -72,16 +93,8 @@ body {
     .big-headers-text-style (); // +line-height
     color: @text-color--contrast;
     line-height: 2.8rem;
-    padding: 5px 20px;
+    padding: 16px 20px 42px 20px;
   }
-   h1:after {
-    content: "";
-     display: block;
-     margin: 30px 0px 0px 0px;
-     padding-top: 30px;
-     width: 290px;
-     height: 285px;
-    }
   &__download {
     text-align: center;
     outline: 2px solid red;
@@ -375,56 +388,100 @@ body {
   }
   //blog-page-footer
   &--inner-pages {
-    text-align: center;
+    padding: 65px 20px 10px 20px;
     a {
       text-decoration:@text-decoration;
       color: @text-color--headers;
     }
   }
   &__logo-glasses {
-    .headers-text-style ();
+    font-size: 3rem;
+    font-weight: @weight-light;
+    letter-spacing: 3px;
+    position: relative;
+    padding-left: 70px;
+    margin-bottom: 58px;
+    display: block;
+    text-align: center;
+    &:before {
+      content:"";
+      width: 60px;
+      height: 40px;
+      position: absolute;
+      background-image: url("../img/footer-pink-glasses-img.png");
+      background-repeat: no-repeat;
+      left: 24%;
+      top: -40%;
+    }
   }
   &__about-developers {
     .p-text-style();
+    padding-right: 46px;
   }
 }
 .social-buttons {
+  text-align: center;
+  padding-left: 10px;
+  margin-bottom: 68px;
   a {
-  .border-style();
-  border-radius: 50%;
-  color: @text-color--attention;
- }
+    .border-style();
+    border-radius: 50%;
+    color: @text-color--attention;
+    padding: 16px 23px;
+    margin-right: 13px;
+  }
 }
 
 //blog-content
 .blog-content {
-  outline: 2px solid black;
   &__news {
-    border-bottom: 2px solid @border-color;
+    padding: 0px 20px;
     a {
-      .headers-text-style ();
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 2.7rem;
       text-decoration:@text-decoration;
       color: @text-color--headers;
+      letter-spacing: 0.4px;
+      padding: 11px 0px 10px 0px;
+      display: block;
     }
     div {
-      .div-text-style ()
+      .div-text-style ();
+      text-transform: uppercase;
     }
     p {
       font-size: @font-size--small;
       color: @text-color--headers;
-      outline: 2px solid green;
+      padding: 7px 0px 19px 0px;
+      line-height: 2.7rem;
+      border-bottom: 2px solid @border-color;
     }
   }
-  &__news:nth-child(4) {
-    border-bottom: none;
+  &__news:nth-child(3) {
+    padding-top: 4px; 
+    padding-bottom: 9px;
+
+  }
+  &__news {
+    &:nth-child(4) {
+      p {
+        border-bottom: none;
+      }
+    }
   }
   &__paginator {
-    text-align: center;
+    padding: 15px 10px 10px 19px;
+    font-size: 0px;
     a, b {
+      display: inline-block;
       .border-style();
       .headers-text-style();
       text-decoration:@text-decoration;
       color: @text-color--headers;
+      padding: 20px 25px;
+      margin-right: 8px;
+      vertical-align: top;
     }
     b {
       border-color: @text-color--attention;
