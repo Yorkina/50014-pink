@@ -1,0 +1,39 @@
+.headers-text-style (){
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+.big-headers-text-style (){
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-align: center;
+}
+.p-text-style (){
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: left;
+}
+.a-decoration (){
+  text-decoration:none;
+  text-transform:uppercase;
+}
+.clearfix (){
+  &::after {
+  content:'';
+  display:table;
+  clear:both;
+  }
+}
+.border-style (@b-size: 2px, @b-type: solid, @b-color: #e5e5e5) {
+  border: @b-size @b-type @b-color;
+}
+.div-text-style () {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #d22856;
+}
+.label-text-style () {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #d22856;
+}
