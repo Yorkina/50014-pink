@@ -91,68 +91,71 @@
             </div>
             <div class="travel-achivements">
                 <header>Ваши безбашенные достижения в путешествии</header>
-                    <input id="selfie" type="checkbox" name="check" checked> 
+                    <input class="travel-achivements__checkbox" id="selfie" type="checkbox" name="check" checked> 
                      <label for="selfie">Сделал селфи с акулой</label>
-                    <input id="burn" type="checkbox" name="check" checked> 
+                    <input class="travel-achivements__checkbox" id="burn" type="checkbox" name="check" checked> 
                     <label for="burn">Обгорел на пляже</label>
-                    <input id="norris" type="checkbox" name="check"> 
+                    <input class="travel-achivements__checkbox" id="norris" type="checkbox" name="check"> 
                     <label for="norris">Видел Чака Норриса</label>
-                    <input id="shopping" type="checkbox" name="check"> 
+                    <input class="travel-achivements__checkbox" id="shopping" type="checkbox" name="check"> 
                     <label for="shopping">Накупил сувениров</label>
-                    <input id="touch" type="checkbox" name="check" checked> 
+                    <input class="travel-achivements__checkbox" id="touch" type="checkbox" name="check" checked> 
                     <label for="touch">Удержал башню</label>
-                    <input id="hotel" type="checkbox" name="check"> 
+                    <input class="travel-achivements__checkbox" id="hotel" type="checkbox" name="check"> 
                     <label for="hotel">Разгромил отель</label>
             </div>
             <div class="travel-photo">
                 <header>Ваши фотографии из поездки<sup>*</sup></header>
-                <input id="photo" type="file" name="img" accept="image/jpeg,image/png,image/gif" placeholder="Загрузить фото">
+	                <div class="travel-photo__btn-file--wrap">
+	                <input id="photo" type="file" name="img" accept="image/jpeg,image/png,image/gif" placeholder="Загрузить фото">
+	                <label for="photo">Загрузить фото</label>
+                </div>
                 <article class="travel-photo__images">
                     <figure>
-                        <img src="http://placehold.it/70x70" width="" height="" alt="">
-                        <a class="btn-cancel" href="#41" title="cancel-btn">&times;</a>
+                        <img src="http://placehold.it/68x68" width="" height="" alt="">
+                        <a class="travel-photo__btn-cancel" href="#41" title="cancel-btn">&times;</a>
                         <figcaption>img-1.jpg</figcaption>
                     </figure>
                     <figure>
-                        <img src="http://placehold.it/70x70" width="" height="" alt="">
-                        <a class="btn-cancel" href="#42" title="cancel-btn">&times;</a>
+                        <img src="http://placehold.it/68x68" width="" height="" alt="">
+                        <a class="travel-photo__btn-cancel" href="#42" title="cancel-btn">&times;</a>
                         <figcaption>img-2.jpg</figcaption>
                     </figure>
                     <figure>
-                        <img src="http://placehold.it/70x70" width="" height="" alt="">
-                        <a class="btn-cancel" href="#43" title="cancel-btn">&times;</a>
+                        <img src="http://placehold.it/68x68" width="" height="" alt="">
+                        <a class="travel-photo__btn-cancel" href="#43" title="cancel-btn">&times;</a>
                         <figcaption>img-3.jpg</figcaption>
                     </figure>
                     <figure>
-                        <img src="http://placehold.it/70x70" width="" height="" alt="">
-                        <a class="btn-cancel" href="#44" title="cancel-btn">&times;</a>
+                        <img src="http://placehold.it/68x68" width="" height="" alt="">
+                        <a class="travel-photo__btn-cancel" href="#44" title="cancel-btn">&times;</a>
                         <figcaption>img-4.jpg</figcaption>
                     </figure>
                     <figure>
-                        <img src="http://placehold.it/70x70" width="" height="" alt="">
-                        <a class="btn-cancel" href="#45" title="cancel-btn">&times;</a>
+                        <img src="http://placehold.it/68x68" width="" height="" alt="">
+                        <a class="travel-photo__btn-cancel" href="#45" title="cancel-btn">&times;</a>
                         <figcaption>img-5.jpg</figcaption>
                     </figure>
                     <figure>
-                        <img src="http://placehold.it/70x70" width="" height="" alt="">
-                        <a class="btn-cancel" href="#46" title="cancel-btn">&times;</a>
+                        <img src="http://placehold.it/68x68" width="" height="" alt="">
+                        <a class="travel-photo__btn-cancel" href="#46" title="cancel-btn">&times;</a>
                         <figcaption>img-6.jpg</figcaption>
                     </figure>
                     <figure>
-                        <img src="http://placehold.it/70x70" width="" height="" alt="">
-                        <a class="btn-cancel" href="#47" title="cancel-btn">&times;</a>
+                        <img src="http://placehold.it/68x68" width="" height="" alt="">
+                        <a class="travel-photo__btn-cancel" href="#47" title="cancel-btn">&times;</a>
                         <figcaption>img-7.jpg</figcaption>
                     </figure>
                     <figure>
-                        <img src="http://placehold.it/70x70" width="" height="" alt="">
-                        <a class="btn-cancel" href="#48" title="cancel-btn">&times;</a>
+                        <img src="http://placehold.it/68x68" width="" height="" alt="">
+                        <a class="travel-photo__btn-cancel" href="#48" title="cancel-btn">&times;</a>
                         <figcaption>img-8.jpg</figcaption>
                     </figure>
                 </article>
             </div>
             <div class="form-content__sending-form">
-                <input id="send" class="button form-content__button" type="submit" name="sending-form" placeholder="Отправить форму">
-                <div><sup>*</sup>- Обязательные поля</div>
+               <button class="button form-content__button" type="submit">Отправить форму</button>
+                <div><sup>*</sup>--Обязательные поля</div>
             </div>
         </form>
     </div>
