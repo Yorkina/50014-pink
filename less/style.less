@@ -76,6 +76,12 @@ body {
             height: 285px;
         }
     }
+    &--make-middle-size {
+      padding-bottom: 10px;
+       h1 {
+        padding: 16px 20px 30px 20px;
+      }
+    }
     &__head-line {
         .clearfix ();
         background-color: rgba(15, 20, 25, 0.5);
@@ -448,6 +454,7 @@ body {
         margin-bottom: 58px;
         display: block;
         text-align: center;
+        width: 180px;
         &:before {
             content: "";
             width: 60px;
@@ -650,7 +657,11 @@ body {
 //form-content 
 .form-content {
     p {
-        .p-text-style ();
+        font-size: 1.4rem;
+        color: @text-color--headers;
+        text-align: center;
+        line-height: 3rem;
+        padding: 20px 20px 25px 20px;
     }
     form {
         outline: 2px solid red;
@@ -668,13 +679,19 @@ body {
 }
 
 .user-info {
-    width: 100%;
+    width: 88%;
     outline: 2px solid green;
+    padding: 0px 20px;
+    margin-bottom: 25px;
     label {
         display: block;
         .label-text-style ();
-        padding-left: 20px;
+        padding-left: 23px;
+        padding-bottom: 13px;
         text-transform: uppercase;
+        sup {
+          padding-left: 4px;
+        }
     }
     input[type="text"] {
         font-size: @html-size-base;
@@ -682,101 +699,292 @@ body {
         display: inline-block;
         .border-style ();
         line-height: 30px;
-        padding: 10px;
-        width: 90%;
+        padding: 14px;
+        margin-bottom: 23px;
+        width: 88%;
     }
     input::-webkit-input-placeholder {
         font-size: 1.8rem;
         font-weight: 400;
         color: @text-color--headers;
+        padding-left: 5px;
     }
     input:-moz-placeholder {
         font-size: 1.8rem;
         font-weight: 400;
         color: @text-color--headers;
+        padding-left: 5px;
     }
 }
 
 .type-application {
     outline: 2px solid green;
     background-color: @background-color--slider;
+    width:88%;
+    padding: 35px 18px 4px 18px;
+    margin-bottom: 46px;
     header {
         display: block;
         .label-text-style ();
-        text-align: center;
         text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 41px;
+        line-height: 1.4rem;
     }
     label {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         font-weight: 400;
         display: block;
+        line-height: 3rem;
+        margin-bottom: 45px;
     }
+    &__radio {
+      vertical-align: top;
+      margin: 0 3px 0 0;
+      width: 17px;
+      height: 17px;
+      &:not(checked) {
+        position: absolute;
+        opacity: 0;
+      }
+      &:not(checked) + label {
+        position: relative; 
+        padding: 0 0 0 60px;
+      }
+      &:not(checked) + label:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 4px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0px 0px 3px rgba(0,0,0,.2);
+      }
+      &:not(checked) + label:after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 14px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #FFF;
+      }
+      &:checked + label:after {
+        background-color: @text-color--attention;
+    }
+  }
+   &__radio + label {
+   cursor: pointer;
+  }
 }
 
 .travel-duration {
     outline: 2px solid green;
+    padding: 0px 18px 0px 18px;
+    width: 88%;
+    margin-bottom: 52px;
     header {
         display: block;
         .label-text-style ();
         text-align: center;
         text-transform: uppercase;
+        margin-bottom: 43px;
     }
     label {
         .label-text-style ();
         text-transform: uppercase;
+        text-align: center;
         display: block;
+        margin-bottom: 25px;
     }
     input[type="text"] {
         font-size: @html-size-base;
         font-family: 'Open Sans', Arial, sans-serif;
         display: inline-block;
         .border-style ();
-        line-height: 30px;
-        padding: 10px;
+        line-height: 3rem;
+    }
+    button {
+        font-size: @html-size-base;
+        font-family: 'Open Sans', Arial, sans-serif;
+        display: inline-block;
+        .border-style ();
+        padding: 22px 26px;
+        background-color: #fff;
     }
     input::-webkit-input-placeholder {
         font-size: 1.8rem;
         font-weight: 400;
         color: @text-color--headers;
+        padding-left: 5px;
     }
     input:-moz-placeholder {
         font-size: 1.8rem;
         font-weight: 400;
         color: @text-color--headers;
+        padding-left: 5px;
+    }
+    &__trip-info {
+        padding: 14px;
+        margin-bottom: 17px;
+        width: 250px;
+    }
+    &__trip-date {
+        padding: 14px 0px;
+        width: 157px;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    &__btn-minus {
+     margin-right: -4px;
+    }
+    &__btn-plus {
+      margin-left: -5px;
     }
 }
 
 .travelers {
+  background-color: @background-color--slider;
+  padding-bottom:40px;
     &__count {
         outline: 2px solid green;
-        background-color: @background-color--slider;
-        header {
-            display: block;
-            .label-text-style ();
-            text-align: center;
-            text-transform: uppercase;
-        }
+        text-align: center;
+        padding: 32px 0px 32px 0px;
         label {
             .label-text-style ();
             text-transform: uppercase;
             display: block;
+            margin-bottom: 35px;
         }
+        input[type="text"] {
+        font-size: @html-size-base;
+        font-family: 'Open Sans', Arial, sans-serif;
+        display: inline-block;
+        .border-style ();
+        line-height: 3rem;
+    }
+        input::-webkit-input-placeholder {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: @text-color--headers;
+        padding-left: 5px;
+    }
+        input:-moz-placeholder {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: @text-color--headers;
+        padding-left: 5px;
+    }
+        button {
+        font-size: @html-size-base;
+        font-family: 'Open Sans', Arial, sans-serif;
+        display: inline-block;
+        .border-style ();
+        padding: 22px 26px;
+        background-color: #fff;
+    }
+  }
+    &__trip-count {
+        padding: 14px 0px;
+        width: 157px;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    &__btn-minus {
+     margin-right: -5px;
+    }
+    &__btn-plus {
+      margin-left: -5px;
+    }
+    &__info-form {
+    padding: 0px 20px;
     }
     &__names {
-        background-color: @background-color--slider;
+        padding-top: 36px;
         header {
             .clearfix ();
+            padding-bottom: 12px;
+            padding-left: 24px;
+          span {
+              float: left;
+              .label-text-style ();
+              padding-top: 3px;
+          }
+          label {
+              float: left;
+              .label-text-style ();
+              text-transform: uppercase;
+              margin-left: 45px;
+          }
         }
         span {
-            float: left;
-            .label-text-style ();
-            width: 20%;
+          float: left;
+          .label-text-style ();
         }
-        label {
-            float: left;
-            .label-text-style ();
-            width: 70%;
-        }
+        input[type="text"] {
+        font-size: @html-size-base;
+        font-family: 'Open Sans', Arial, sans-serif;
+        display: block;
+        .border-style ();
+        line-height: 3rem;
+        padding: 14px 0px;
+        width: 213px;
+    }
+        input::-webkit-input-placeholder {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: @text-color--headers;
+        padding-left: 17px;
+    }
+        input:-moz-placeholder {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: @text-color--headers;
+        padding-left: 17px;
+    }
+  }
+    &__nick {
+      padding-left: 62px;
+      padding-top: 26px;
+      padding-bottom: 8px;
+    label {
+          float: left;
+          width: 100%;
+          .label-text-style ();
+          text-transform: uppercase;
+          padding-bottom: 12px;
+          padding-left: 20px;
+          }      
+    input[type="text"] {
+        font-size: @html-size-base;
+        font-family: 'Open Sans', Arial, sans-serif;
+        display: block;
+        .border-style ();
+        line-height: 3rem;
+        padding: 14px 0px;
+        width: 213px;
+    }
+        input::-webkit-input-placeholder {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: @text-color--headers;
+        padding-left: 17px;
+    }
+        input:-moz-placeholder {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: @text-color--headers;
+        padding-left: 17px;
+    }
+  }
+    &__form-number {
+       .border-style ();
+        padding: 22px 26px;
+        background-color: #fff;
+        margin-right: -2px;
     }
 }
 
@@ -823,6 +1031,7 @@ body {
 }
 
 .failure-popup {
+  display: none;
     header {
         .headers-text-style ();
     }
@@ -841,6 +1050,7 @@ body {
 }
 
 .request-popup {
+  display:none;
     background-color: @background-color--slider;
     header {
         .headers-text-style ();
