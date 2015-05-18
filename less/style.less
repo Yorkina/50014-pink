@@ -144,6 +144,14 @@ body {
             padding: 18px 86px;
         }
     }
+    &__slogan {
+        display: block;
+        word-wrap: break-word;
+        .big-headers-text-style (); // +line-height
+        color: @text-color--contrast;
+        line-height: 2.8rem;
+        padding: 16px 20px 42px 20px;
+    }
     &__download {
         text-align: center;
         background-color: @background-color--dark;
@@ -224,7 +232,7 @@ body {
         background-color: @background-color--slider;
         transform: rotate(85deg);
         @media @screen-tablet {
-            width: 542%;
+            width: 509%;
             top: 74%;
         }
     }
@@ -335,6 +343,7 @@ body {
     background-color: @background-color--light;
     @media @screen-tablet {
       height: 320px;
+      margin-bottom: 113px;
     }
     &:before {
         content: "";
@@ -411,6 +420,10 @@ body {
     margin-bottom: 36px;
     overflow: hidden;
     position: relative;
+    @media @screen-tablet {
+      margin-bottom: 0px; 
+      height: 293px; 
+    }
 }
 
 .price-slide {
@@ -504,6 +517,9 @@ body {
         position: relative;
         top: 322px;
         text-align: center;
+        @media @screen-tablet {
+            display: none;
+        }
     }
     label {
         display: inline-block;
@@ -532,22 +548,46 @@ body {
     padding-bottom: 210px;
     margin-bottom: 10px;
     margin-top: 50px;
+    @media @screen-tablet {
+       background-image: url("../img/footer-map-tablet-img.jpg"); 
+       background-position: 50% -4%;
+       margin-top: 40px;
+       padding-bottom: 377px;
+    }
     &__contacts {
         position: relative;
         background-color: @background-color--light;
+        @media @screen-tablet {
+            padding: 0px 61px 215px 61px;
+        &:after {
+            .clearfix();
+         }
+        }
         &:after {
             content: "";
             display: block;
             position: absolute;
             border: 160px solid transparent;
             border-top: 44px solid #ffffff;
+            @media @screen-tablet {
+            border: 336px solid transparent;
+            border-top: 69px solid #ffffff;
+            top:100%;
+            left: 2%;
         }
+        }
+
     }
     &__header {
         .big-headers-text-style ();
         word-wrap: break-word;
         line-height: 2.6rem; // - line-height
         margin-bottom: 38px;
+        @media @screen-tablet {
+          font-size: 4rem;
+          line-height: 4.8rem;
+          margin-bottom: 45px;
+        }
     }
     &__call-us,
     &__write-us,
@@ -558,6 +598,9 @@ body {
             color: @text-color--headers;
             letter-spacing: 0.5px;
             padding-bottom: 8px;
+            @media @screen-tablet {
+                padding-bottom: 11px;
+            }
         }
     }
     &__call-us,
@@ -573,21 +616,39 @@ body {
         }
     }
     &__call-us {
+        @media @screen-tablet {
+            float:left;
+            width: 256px;
+        }
+
         a {
             padding-bottom: 26px;
         }
     }
     &__guests {
+        @media @screen-tablet {
+            float:left;
+            width: 579px;
+            padding-top: 21px;
+        }
         a {
             padding: 0px 20px 28px 20px;
             line-height: 2.8rem;
+            @media @screen-tablet {
+                padding: 0px 170px 28px 170px;
+            }
         }
     }
     &__write-us {
+        @media @screen-tablet {
+            float:right;
+            width: 256px;
+        }
         a {
             padding-bottom: 30px;
         }
     }
+
     //blog-page-footer
     &--inner-pages {
         padding: 65px 20px 40px 20px;
@@ -623,6 +684,62 @@ body {
         text-align: center;
         padding-right: 46px;
     }
+  }
+
+.bottom-line {
+        display:none;
+        @media @screen-tablet {
+            display: block;
+            .clearfix();
+            padding-top: 37px;
+        }
+         a {
+            text-decoration: @text-decoration;
+            color: @text-color--headers;
+        }
+        &__logo-glasses {
+            font-size: 3.2rem;
+            font-weight: @weight-normal;
+            letter-spacing: 2.5px;
+            position: relative;
+            padding-left: 57px;
+            display: block;
+            float:left;
+            text-align: center;
+            width: 187px;
+            &:before {
+                content: "";
+                width: 60px;
+                height: 40px;
+                position: absolute;
+                background-image: url("../img/footer-pink-glasses-img.png");
+                background-repeat: no-repeat;
+                left: 17%;
+                top: -33%;
+               }
+          }
+    &__about-developers {
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-align: center;
+        padding-right: 46px;
+        padding-top: 10px;
+        float:right;
+        width: 160px;
+    }
+    &__social-buttons {
+        float: left;
+        margin-top: 13px;
+        margin-left: 7px;
+        width: 189px;
+    a {
+        .border-style();
+        border-radius: 50%;
+        color: @text-color--attention;
+        padding: 16px 23px;
+        margin-right: 13px;
+    }
+  }
 }
 
 .social-buttons {
@@ -678,8 +795,10 @@ body {
     &__paginator {
         padding: 15px 10px 10px 19px;
         font-size: 0px;
-        a, b {
+        div, a, b {
             display: inline-block;
+        }
+        a, b {
             .border-style();
             .headers-text-style();
             text-decoration: @text-decoration;
@@ -690,6 +809,13 @@ body {
         }
         b {
             border-color: @text-color--attention;
+        }
+        div {
+            display: none;
+            @media @screen-tablet {
+                display: inline-block;
+                .headers-text-style();
+            } 
         }
     }
 }
