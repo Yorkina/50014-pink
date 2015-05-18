@@ -1,5 +1,7 @@
 @import 'mixins.less';
 @import 'variables.less';
+@import 'debug.less';
+
 html,
 body {
     width: 100%;
@@ -12,7 +14,6 @@ body {
         width: 700px;
     }
 }
-
 //header
 .header {
     background-image: url("../img/header-background-img.jpg");
@@ -145,7 +146,6 @@ body {
     }
     &__download {
         text-align: center;
-        outline: 2px solid red;
         background-color: @background-color--dark;
         padding-top: 26px;
         margin-top: -50px;
@@ -173,7 +173,6 @@ body {
     }
     &__logo-line {
         font-size: 0;
-        outline: 2px solid green;
         a {
             display: inline-block;
             vertical-align: top;
@@ -230,13 +229,11 @@ body {
         }
     }
     &__promo-slogan {
-        outline: 2px solid red;
         margin: 0px 19px 50px 19px;
         h2 {
             .big-headers-text-style ();
             display: block;
             word-wrap: break-word;
-            outline: 2px solid green;
             line-height: 2.8rem;
             &:nth-child(1) {
                 margin-bottom: 30px;
@@ -255,7 +252,6 @@ body {
         }
     }
     &__promo-info {
-        outline: 2px solid red;
         margin: 0px 19px;
         text-align: center;
         .clearfix ();
@@ -269,7 +265,6 @@ body {
         }
         header {
             .headers-text-style();
-            outline: 2px solid green;
             text-decoration: none;
             letter-spacing: 0.5px; // letter-spacing?
             margin-bottom: 15px;
@@ -286,7 +281,6 @@ body {
             font-size: 1.4rem;
             font-weight: 400;
             text-align: center;
-            outline: 2px solid green;
             line-height: 2.4rem;
             margin-bottom: 34px;
             @media @screen-tablet {
@@ -322,13 +316,11 @@ body {
           font-weight: 600;
           font-size: 3rem;
           line-height: 3.6rem;
-          outline: 2px solid green;
         }
         p {
           font-weight: 600;
           font-size: 3rem;
           line-height: 3.6rem;
-          outline: 2px solid green;
         }
       }
     }
@@ -410,7 +402,7 @@ body {
               padding: 0px 20px 0px 20px;
             }
         }
-     } 
+     }
 }
 
 .price-slider {
@@ -443,7 +435,7 @@ body {
         border-right: 2px solid @background-color--slider;
         background-color: @background-color--dark;
         border-radius: 5px;
-        } 
+        }
         &:first-child {
           display: none;
           @media @screen-tablet {
@@ -470,7 +462,7 @@ body {
           padding-left: 10px;
           text-transform: none;
           }
-        } 
+        }
       }
     &__tarif {
         color: #ffffff;
@@ -822,9 +814,6 @@ body {
         line-height: 3rem;
         padding: 20px 20px 25px 20px;
     }
-    form {
-        outline: 2px solid red;
-    }
     &__sending-form {
         padding: 0px 20px 0px 20px;
         button {
@@ -855,7 +844,6 @@ body {
 
 .user-info {
     width: 88%;
-    outline: 2px solid green;
     padding: 0px 20px;
     margin-bottom: 25px;
     label {
@@ -893,7 +881,6 @@ body {
 }
 
 .type-application {
-    outline: 2px solid green;
     background-color: @background-color--slider;
     width: 88%;
     padding: 35px 18px 4px 18px;
@@ -957,7 +944,6 @@ body {
 }
 
 .travel-duration {
-    outline: 2px solid green;
     padding: 0px 18px 0px 18px;
     width: 88%;
     margin-bottom: 52px;
@@ -1026,7 +1012,6 @@ body {
     padding-bottom: 40px;
     margin-bottom: 47px;
     &__count {
-        outline: 2px solid green;
         text-align: center;
         padding: 32px 0px 32px 0px;
         label {
@@ -1186,7 +1171,6 @@ body {
         margin: 0 3px 0 0;
         width: 17px;
         height: 17px;
-        outline: 2px color red;
         &:not(checked) {
             position: absolute;
             opacity: 0;
@@ -1271,7 +1255,6 @@ body {
         display: inline-block;
         vertical-align: top;
         text-align: left;
-        outline: 2px solid green;
         margin: 15px 15px 12px 20px;
         position: relative;
         img {
