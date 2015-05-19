@@ -1,0 +1,107 @@
+
+.blog-content {
+    @media @screen-tablet {
+            padding-top: 58px;
+        }
+    &__news {
+        padding: 0px 20px;
+        @media @screen-tablet {
+            padding: 0px 30px 0px 102px;
+            margin-bottom: 33px;
+        }
+
+        a {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 2.7rem;
+            text-decoration: @text-decoration;
+            color: @text-color--headers;
+            letter-spacing: 0.4px;
+            padding: 11px 0px 10px 0px;
+            display: block;
+            @media @screen-tablet {
+                font-size: 2.7rem;
+                line-height: 3rem;
+                letter-spacing: 0.5px;
+                padding: 11px 0px 5px 0px;
+            }
+        }
+        div {
+            .div-text-style ();
+            text-transform: uppercase;
+             @media @screen-tablet {
+                font-size: 1.4rem;
+                line-height: 3rem;
+            }
+        }
+        p {
+            font-size: @font-size--small;
+            color: @text-color--headers;
+            padding: 7px 0px 19px 0px;
+            line-height: 2.7rem;
+            border-bottom: 2px solid @border-color;
+             @media @screen-tablet {
+                font-size: 1.8rem;
+                line-height: 3rem;
+                padding: 0px 60px 41px 0px;
+                border-bottom: 2px dotted @border-color;
+            }
+        }
+    }
+    &__news:nth-child(3) {
+        padding-top: 4px;
+        padding-bottom: 9px;
+        @media @screen-tablet {
+            padding: 5px 30px 0px 102px;
+            margin-bottom: 45px;
+        }
+    }
+    &__news {
+        &:nth-child(4) {
+            p {
+                border-bottom: none;
+                @media @screen-tablet {
+                padding-bottom: 10px;
+                }
+            }
+        }
+    }
+    &__paginator {
+        padding: 15px 10px 10px 19px;
+        font-size: 0px;
+        @media @screen-tablet {
+        padding: 15px 10px 10px 43px;
+        }
+        div, a, b {
+            display: inline-block;
+        }
+        a, b {
+            .border-style();
+            .headers-text-style();
+            text-decoration: @text-decoration;
+            color: @text-color--headers;
+            padding: 20px 25px;
+            margin-right: 8px;
+            vertical-align: top;
+            @media @screen-tablet {
+            padding: 20px 25px;
+            margin-right: 10px; 
+            border-radius: 2px;
+            }
+        }
+        b {
+            border-color: @text-color--attention;
+        }
+        div {
+            display: none;
+            @media @screen-tablet {
+                display: inline-block;
+                font-weight: 600;
+                font-size: 1.8rem;
+                line-height: 3rem;
+                text-transform: uppercase;
+                padding: 16px 20px 16px 0px;
+            } 
+        }
+    }
+}
