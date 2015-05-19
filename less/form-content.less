@@ -1,5 +1,4 @@
 
-//form-content ////////////////////////////
 .form-content {
     p {
         font-size: 1.4rem;
@@ -7,6 +6,19 @@
         text-align: center;
         line-height: 3rem;
         padding: 20px 20px 25px 20px;
+        @media @screen-tablet {
+            font-size: 1.8rem;
+            padding: 0px 82px 0px 80px;
+            margin:0px;
+        }
+        &:nth-child(2) {
+            display:none;
+            @media @screen-tablet {
+                display: block;
+                margin-bottom: 41px;
+
+            }
+        }
     }
     &__sending-form {
         padding: 0px 20px 0px 20px;
@@ -40,6 +52,10 @@
     width: 88%;
     padding: 0px 20px;
     margin-bottom: 25px;
+    @media @screen-tablet {
+        padding-left: 41px;
+    }
+
     label {
         display: block;
         .label-text-style ();
@@ -59,6 +75,9 @@
         padding: 14px;
         margin-bottom: 23px;
         width: 88%;
+        @media @screen-tablet {
+            width: 95%;
+        }
     }
     input::-webkit-input-placeholder {
         font-size: 1.8rem;
@@ -79,7 +98,20 @@
     width: 88%;
     padding: 35px 18px 4px 18px;
     margin-bottom: 46px;
-    header {
+    @media @screen-tablet {
+       padding: 10px 0px 4px 37px; 
+       width: 89%;
+       background-color: #ffffff;
+       margin-bottom: 42px;
+    }
+    fieldset {
+        border: none;
+         @media @screen-tablet {
+            border: 2px solid @border-color;
+            padding: 9px 0px 14px 58px;
+        }
+    }
+    legend {
         display: block;
         .label-text-style ();
         text-transform: uppercase;
@@ -117,6 +149,10 @@
             border-radius: 50%;
             background: #fff;
             box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);
+            @media @screen-tablet {
+               box-shadow: 0px 0px 4px rgba(0, 0, 0, .2); 
+            }
+
         }
         &:not(checked) + label:after {
             content: '';
@@ -141,12 +177,29 @@
     padding: 0px 18px 0px 18px;
     width: 88%;
     margin-bottom: 52px;
-    header {
+    @media @screen-tablet {
+       padding: 10px 0px 4px 37px; 
+       width: 89%;
+       background-color: #ffffff;
+       margin-bottom: 51px;
+    }
+    fieldset {
+        border: none;
+         @media @screen-tablet {
+            border: 2px solid @border-color;
+            padding: 9px 0px 7px 58px;
+            .clearfix();
+        }
+    }
+    legend {
         display: block;
         .label-text-style ();
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 43px;
+        @media @screen-tablet {
+          margin-bottom: 27px;  
+        }
     }
     label {
         .label-text-style ();
@@ -154,6 +207,10 @@
         text-align: center;
         display: block;
         margin-bottom: 25px;
+        @media @screen-tablet {
+          margin-bottom: 35px;  
+        }
+
     }
     input[type="text"] {
         font-size: 1.8rem;
@@ -169,6 +226,9 @@
         .border-style ();
         padding: 22px 26px;
         background-color: #fff;
+        @media @screen-tablet {
+            padding: 25px 26px 19px 26px;
+        }
     }
     input::-webkit-input-placeholder {
         font-size: 1.8rem;
@@ -186,18 +246,45 @@
         padding: 14px;
         margin-bottom: 17px;
         width: 250px;
+        @media @screen-tablet {
+          width: 210px;
+          margin-bottom: 18px;
+        }
+
     }
+    .trip-info-wrapper {
+     display: none;
+        @media @screen-tablet {
+        display: block;
+        float:left;
+     }
+     label {
+        text-align: left;
+        padding-left: 22px;
+     }
+   }
     &__trip-date {
-        padding: 11px 0px 17px 0px;
+        padding: 14px 0px 14px 0px;
         width: 157px;
         text-align: center;
         margin-bottom: 18px;
+         @media @screen-tablet {
+          width: 113px;
+        }
+    }
+    .trip-date-wrapper {
+        display: none;
+        @media @screen-tablet {
+        display: block;
+        float:right;
+        padding-right:56px;
+     }
     }
     &__btn-minus {
-        margin-right: -4px;
+       
     }
     &__btn-plus {
-        margin-left: -5px;
+        
     }
 }
 
@@ -205,15 +292,32 @@
     background-color: @background-color--slider;
     padding-bottom: 40px;
     margin-bottom: 47px;
-    &__count {
-        text-align: center;
-        padding: 32px 0px 32px 0px;
-        label {
+    @media @screen-tablet {
+       background-color:#ffffff; 
+       width:89%;
+       padding-left:38px;
+    }
+    fieldset {
+        border: none;
+         @media @screen-tablet {
+            border: 2px solid @border-color;
+        }
+    }
+    legend {
             .label-text-style ();
             text-transform: uppercase;
             display: block;
             margin-bottom: 35px;
+             @media @screen-tablet {
+                text-align: center;
+             }
         }
+    &__count {
+        text-align: center;
+        padding: 32px 0px 32px 0px;
+        @media @screen-tablet {
+                text-align: left;
+             }
         input[type="text"] {
             font-size: 1.8rem;
             font-family: 'Open Sans', Arial, sans-serif;
@@ -359,7 +463,7 @@
         background-color: #fff;
         margin-right: -2px;
     }
-}
+ }
 
 .travel-achivements {
     padding: 0px 20px 0px 20px;
