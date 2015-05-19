@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Pink</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic" rel="stylesheet">
 </head>
 
-<body>
+<body class="debug">
     <div class="header header--make-full-size">
         <div class="header__head-line header__head-line--make-opacity">
             <a class="header__logo-link" href="#1" title="На главную">Pink</a>
@@ -46,16 +47,24 @@
             <header>Заводит новых друзей</header>
             <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
         </div>
+        <div calss="content__promo-effect">
+            <header>Эффект на 24 часа!</header>
+            <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a href="#200">Узнать больше об исследовании</a>
+        </div>
         <div class="review-slider">
             <div class="review-slider__slides">
                 <input type="radio" id="btn-1" name="r-toggle" checked>
                 <div class="review-slider__slide">
+                    <div>25 лет, водитель трамвая</div>
                     <header>Николай Петров</header>
                     <p>"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
                 </div>
                 <input type="radio" id="btn-2" name="r-toggle">
                 <div class="review-slider__slide">
+                    <div>25 лет, водитель трамвая</div>
                     <header>Николай Петров2</header>
+                    <div>25 лет, водитель трамвая</div>
                     <p>"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
                 </div>
                 <input type="radio" id="btn-3" name="r-toggle">
@@ -64,22 +73,23 @@
                     <p>"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
                 </div>
             </div>
-            <div class="toggle toggle__review-slider">
-                <label class="toggle__btn--active " for="btn-1"></label>
-                <label class="toggle__btn" for="btn-2"></label>
-                <label class="toggle__btn" for="btn-3"></label>
-            </div>
+        </div>
+        <div class="toggle toggle__review-slider">
+            <label class="toggle__btn toggle__btn--active" for="btn-1"></label>
+            <label class="toggle__btn" for="btn-2"></label>
+            <label class="toggle__btn" for="btn-3"></label>
         </div>
         <div class="price-slider">
             <table class="price-slide">
                 <tr class="price-slide__tarif">
+                    <th>&nbsp;</th>
                     <th>
                         <input type="radio" id="btn-4" name="r-toggle">
                         <header>Стандарт</header>
                         <span>3,99 USD</span>
                     </th>
                     <th class="price-slide__hit">
-                        <input type="radio" id="btn-5" name="r-toggle" checked="">
+                        <input type="radio" id="btn-5" name="r-toggle" checked>
                         <header>Стандарт</header>
                         <span>3,99 USD</span>
                     </th>
@@ -93,13 +103,16 @@
                     <td>Розовый фильтр</td>
                     <td>Розовый фильтр</td>
                     <td>Розовый фильтр</td>
+                    <td>Розовый фильтр</td>
                 </tr>
                 <tr>
+                    <td>Розовый фильтр</td>
                     <td>Смайлики</td>
                     <td>Смайлики</td>
                     <td>Смайлики</td>
                 </tr>
                 <tr>
+                    <td>Розовый фильтр</td>
                     <td>Комментарии</td>
                     <td>Комментарии</td>
                     <td>Комментарии</td>
@@ -107,7 +120,7 @@
             </table>
             <div class="toggle toggle__price-slider">
                 <label class="toggle__btn" for="btn-4"></label>
-                <label class="toggle__btn--active " for="btn-5"></label>
+                <label class="toggle__btn toggle__btn--active" for="btn-5"></label>
                 <label class="toggle__btn" for="btn-6"></label>
             </div>
         </div>
@@ -129,6 +142,17 @@
             </div>
         </div>
     </div>
+    <div class="bottom-line footer__bottom-line">
+            <a class="bottom-line__logo-glasses" href="#99">PINK</a>
+            <div class="social-buttons bottom-line__social-buttons">
+                <a class="social-buttons__twitter" href="#34" title="Твиттер"></a>
+                <a class="social-buttons__fb" href="#35" title="Фейсбук"></a>
+                <a class="social-buttons__video" href="#36" title="Какая-то видюха"></a>
+            </div>
+            <div class="bottom-line__about-developers">
+                <header>Разработано</header>
+           </div>
+       </div>
 </body>
 
 </html>
