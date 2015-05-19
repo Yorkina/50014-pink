@@ -8,13 +8,15 @@ gulp.task('less', function() {
 	gulp.src('./less/style.less')
 		.pipe(less())
 		.pipe(gulp.dest('./css'))
-		.pipe(autoprefixer({
-          browsers: ['last 2 versions'],
-          cascade: false
-        }))
 		.pipe(reload({
 			stream: true
 		}));
+});
+
+gulp.task('prefix', function () {
+    gulp.src('./css/style.css')
+        .pipe(autoprefixer())
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch', function() {
