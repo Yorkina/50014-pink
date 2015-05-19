@@ -1,0 +1,204 @@
+//post-content
+.post-content {
+    padding-top: 12px;
+    &__story {
+        text-align: center;
+        margin-bottom: 27px;
+        @media @screen-tablet {
+               display: flex;
+               flex-direction: column;
+               overflow:hidden;
+               flex-wrap: wrap;
+               margin-bottom: 48px;
+            }
+        header {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 0.5px; //letter-spacing
+            line-height: 3.5rem;
+            color: @text-color--headers;
+            padding-bottom: 26px;
+            @media @screen-tablet {
+            font-size: 5rem;
+            line-height: 6rem;
+            padding: 41px 40px 0px 41px;
+            letter-spacing: 1px;
+            order:1;
+            }
+        }
+        div {
+            .div-text-style ();
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            @media @screen-tablet {
+               font-size: 1.4rem; 
+               order:3;
+               padding: 0px 28px 0px 28px;
+               background-color: #ffffff;
+               align-self:center;
+               margin-top: -30px;
+            }
+        }
+        p {
+            font-size: 1.6rem;
+            color: @text-color--headers;
+            line-height: 2.7rem;
+            padding: 0px 20px 24px 20px;
+            border-bottom: 2px solid @border-color;
+            @media @screen-tablet {
+               font-size: 2.4rem; 
+               line-height: 4rem;
+               order:2;
+               padding: 0px 20px 40px 18px;
+               border-bottom: 2px dotted @border-color;
+            }
+        }
+    }
+    &__header {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 3rem;
+        color: @text-color--headers;
+        text-transform: uppercase;
+        padding-left: 20px;
+        padding-bottom: 6px;
+        @media @screen-tablet {
+           font-size: 2.4rem;
+            padding-left: 41px;
+            padding-bottom: 4px;
+        }
+    }
+    &__prehistory {
+        margin-bottom: 30px;
+        @media @screen-tablet {
+            margin-bottom: 59px;
+        }
+        a {
+            color: @text-color--attention;
+        }
+        p {
+            .p-text-style ();
+            line-height: 2.7rem;
+            padding: 0px 16px 0px 19px;
+            @media @screen-tablet {
+            font-size: 1.8rem;
+            line-height: 3rem;
+            padding: 0px 33px 0px 40px;
+            }
+        }
+    }
+    &__find-hotel {
+        p {
+            .p-text-style ();
+            line-height: 2.7rem;
+            padding: 0px 16px 13px 19px;
+            @media @screen-tablet {
+            font-size: 1.8rem;
+            line-height: 3rem;
+            padding: 0px 50px 11px 40px;
+            }
+        }
+    }
+    &__hotel-list {
+        @media @screen-tablet {
+        padding-left: 20px;
+        padding-bottom: 30px;
+        }
+        li {
+            list-style: none;
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: 2.7rem;
+            letter-spacing: 0.5px;
+            @media @screen-tablet {
+            font-size: 1.8rem;
+            line-height: 3rem;
+            padding-left: 55px;
+            }
+            &:nth-child(2) {
+                padding: 27px 0px;
+                @media @screen-tablet {
+                   padding: 30px 0px 30px 55px; 
+                }
+            }
+            &:nth-child(3) {
+                padding-bottom: 13px;
+            }
+        }
+    }
+    blockquote {
+        margin: 0px;
+        padding-left: 20px;
+        padding-bottom: 3px;
+        @media @screen-tablet {
+            padding-left: 33px;
+            padding-bottom: 29px;
+        }
+        p {
+            border-left: 2px solid @text-color--attention;
+        }
+    }
+    i {
+        color: #8a8a8a;
+    }
+    &__food {
+        p {
+            .p-text-style ();
+            line-height: 2.7rem;
+            padding: 0px 24px 13px 19px;
+            @media @screen-tablet {
+            font-size: 1.8rem;
+            line-height: 3rem;
+            padding: 0px 50px 11px 40px;
+            }
+        }
+    }
+    &__paginator {
+        font-size: 0px;
+        padding: 9px 0px 0px 19px;
+        @media @screen-tablet {
+            padding: 26px 0px 0px 44px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            overflow:hidden;
+            flex-wrap: wrap;
+        }
+        a {
+            .border-style();
+            .headers-text-style();
+            display: inline-block;
+            text-decoration: @text-decoration;
+            color: @text-color--headers;
+            text-transform: uppercase;
+            vertical-align: top;
+        }
+    }
+    &__btn {
+        margin-right: 18px;
+        margin-bottom: 21px;
+        padding: 20px 38px;
+        @media @screen-tablet {
+        margin-right: 27px;
+        }
+    }
+    &__btn--big {
+        padding: 20px 60px;
+        margin-bottom: 8px;
+        @media @screen-tablet {
+        order:2;
+        margin-bottom: 21px;
+        padding: 20px 67px;
+     }
+    }
+    &__btn--first {
+        @media @screen-tablet {
+        order:1;
+     }
+    }
+    &__btn--last {
+        @media @screen-tablet {
+        order:3;
+     }
+    }
+}
