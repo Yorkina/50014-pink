@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Pink</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic" rel="stylesheet">
 </head>
+
 <body>
     <div class="header header--make-middle-size">
         <div class="header__head-line header__head-line--make-opacity">
@@ -26,6 +28,7 @@
     <div class="form-content">
         <p>Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
         </p>
+        <p>Пожалуйста, заполните форму ниже:</p>
         <form action="/echo" method="post">
             <div class="user-info">
                 <label for="name">Имя:<sup>*</sup></label>
@@ -36,57 +39,69 @@
                 <input id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже" required>
             </div>
             <div class="type-application">
-                <header>С каким приложением путешествовали?<sup>*</sup></header>
-                    <input id="ios" class="type-application__radio" type="radio" name="radio" placeholder="IOS" checked> 
-                    <label for="ios">Pink для IOS</label>
-                    <input id="android" class="type-application__radio" type="radio" name="radio" placeholder="Android"> 
-                    <label for="android">Pink на Android</label>
-                    <input id="w-phone" class="type-application__radio" type="radio" name="radio" placeholder="Windows"><label for="w-phone">Windows Phone</label>
-            </div>
+                <fieldset>
+                    <legend>С каким приложением путешествовали?<sup>*</sup></legend>
+                        <input id="ios" class="type-application__radio" type="radio" name="radio" placeholder="IOS" checked> 
+                        <label for="ios">Pink для IOS</label>
+                        <input id="android" class="type-application__radio" type="radio" name="radio" placeholder="Android"> 
+                        <label for="android">Pink на Android</label>
+                        <input id="w-phone" class="type-application__radio" type="radio" name="radio" placeholder="Windows"><label for="w-phone">Windows Phone</label>
+                </fieldset>
+            </div> 
             <div class="travel-duration">
-                <header>Когда вы путешествовали?<sup>*</sup></header>
-                <input id="check-out" class="travel-duration__trip-info" type="text" name="chek-out" placeholder="1 апреля 2015" required>
-                <label for="chek-out">Дата выезда</label>
-                <button class="travel-duration__btn-minus">+</button>
-                <input id="trip-lasting" class="travel-duration__trip-date" type="text" name="trip-lasting" placeholder="10 дней">
-                <button class="travel-duration__btn-plus">+</button>
-                <label for="trip-lasting">Продолжительность</label>
-                <input id="return-date" class="travel-duration__trip-info" type="text" name="return-date" placeholder="1 апреля 2015">
-                <label for="return-date">Дата возвращения</label>
+                <fieldset>
+                    <legend>Когда вы путешествовали?<sup>*</sup></legend>
+                    <div class="trip-info-wrapper">
+                    <input id="check-out" class="travel-duration__trip-info" type="text" name="chek-out" placeholder="1 апреля 2015" required>
+                    <label for="chek-out">Дата выезда</label>
+                    </div>
+                    <div class="trip-date-wrapper">
+                    <button class="travel-duration__btn-minus">+</button><!--
+                    --><input id="trip-lasting" class="travel-duration__trip-date" type="text" name="trip-lasting" placeholder="10 дней"><!--
+                    --><button class="travel-duration__btn-plus">+</button>
+                    <label for="trip-lasting">Продолжительность</label>
+                     </div>
+                     <div class="trip-info-wrapper">
+                    <input id="return-date" class="travel-duration__trip-info" type="text" name="return-date" placeholder="1 апреля 2015">
+                    <label for="return-date">Дата возвращения</label>
+                    </div>
+                </fieldset>
             </div>
             <div class="travelers">
-                <div class="travelers__count">
-                    <label for="count">Количество попутчиков<sup>*</sup></label>
-                    <button class="travelers__btn-minus">+</button>
-                    <input id="count" class="travelers__trip-count" type="text" name="count" placeholder="2 чел">
-                    <button class="travelers__btn-plus">+</button>
-                </div>
-                <div class="travelers__info-form">
-                    <div class="travelers__names">
-                        <header>
-                            <span>№</span>
-                            <label for="traveler-name">Имя:<sup>*</sup></label>
-                        </header>
-                        <span class="travelers__form-number">1</span>
-                        <input id="traveler-name" type="text" name="traveler-name" placeholder="Введите ваше имя">
+                <fieldset>
+                     <legend >Количество попутчиков<sup>*</sup></legend>
+                    <div class="travelers__count">
+                            <button class="travelers__btn-minus">+</button>
+                            <input id="count" class="travelers__trip-count" type="text" name="count" placeholder="2 чел">
+                            <button class="travelers__btn-plus">+</button>
                     </div>
-                    <div class="travelers__nick">
-                        <label for="traveler-nick">Прозвище:</label>
-                        <input id="traveler-nick" type="text" name="traveler-nick" placeholder="Ну как же без этого!">
+                    <div class="travelers__info-form">
+                        <div class="travelers__names">
+                            <header>
+                                <span>№</span>
+                                <label for="traveler-name">Имя:<sup>*</sup></label>
+                            </header>
+                            <span class="travelers__form-number">1</span>
+                            <input id="traveler-name" type="text" name="traveler-name" placeholder="Введите ваше имя">
+                        </div>
+                        <div class="travelers__nick">
+                            <label for="traveler-nick">Прозвище:</label>
+                            <input id="traveler-nick" type="text" name="traveler-nick" placeholder="Ну как же без этого!">
+                        </div>
+                        <div class="travelers__names">
+                            <header>
+                                <span>№</span>
+                                <label for="traveler-name">Имя:<sup>*</sup></label>
+                            </header>
+                            <span class="travelers__form-number">1</span>
+                            <input id="traveler-name" type="text" name="traveler-name" placeholder="Введите ваше имя">
+                        </div>
+                        <div class="travelers__nick">
+                            <label for="traveler-nick">Прозвище:</label>
+                            <input id="traveler-nick" type="text" name="traveler-nick" placeholder="Ну как же без этого!">
+                        </div>
                     </div>
-                    <div class="travelers__names">
-                        <header>
-                            <span>№</span>
-                            <label for="traveler-name">Имя:<sup>*</sup></label>
-                        </header>
-                        <span class="travelers__form-number">1</span>
-                        <input id="traveler-name" type="text" name="traveler-name" placeholder="Введите ваше имя">
-                    </div>
-                    <div class="travelers__nick">
-                        <label for="traveler-nick">Прозвище:</label>
-                        <input id="traveler-nick" type="text" name="traveler-nick" placeholder="Ну как же без этого!">
-                    </div>
-                </div>
+                 </fieldset>
             </div>
             <div class="travel-achivements">
                 <header>Ваши безбашенные достижения в путешествии</header>
@@ -182,4 +197,3 @@
 </body>
 
 </html>
-
