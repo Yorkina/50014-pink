@@ -1,244 +1,243 @@
 .footer {
-    background-image: url("../img/footer-map-img.jpg");
-    background-color: @background-color--dark;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    padding-bottom: 210px;
-    margin-bottom: 10px;
-    margin-top: 50px;
+  background-image: url("../img/footer-map-img.jpg");
+  background-color: @background-color--dark;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 210px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  @media @screen-tablet {
+    background-image: url("../img/footer-map-tablet-img.jpg");
+    background-position: 50% -4%;
+    margin-top: 40px;
+    margin-bottom: 18px;
+    padding-bottom: 377px;
+  }
+  &__contacts {
+    position: relative;
+    background-color: @background-color--light;
     @media @screen-tablet {
-       background-image: url("../img/footer-map-tablet-img.jpg"); 
-       background-position: 50% -4%;
-       margin-top: 40px;
-       margin-bottom: 18px;
-       padding-bottom: 377px;
+      padding: 0px 61px 215px 61px;
+      .clearfix();
     }
-    &__contacts {
-        position: relative;
-        background-color: @background-color--light;
-        @media @screen-tablet {
-            padding: 0px 61px 215px 61px;
-            .clearfix();
-        }
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            border: 160px solid transparent;
-            border-top: 44px solid #ffffff;
-            @media @screen-tablet {
-            border: 357px solid transparent;
-            border-top: 70px solid #ffffff;
-            top:101%;
-            left: -1%;
-        }
-        }
-    }
-    &__header {
-        .big-headers-text-style ();
-        word-wrap: break-word;
-        line-height: 2.6rem; // - line-height
-        margin-bottom: 38px;
-        color: @text-color--headers;
-        @media @screen-tablet {
-          font-size: 4rem;
-          line-height: 4.8rem;
-          margin-bottom: 45px;
-        }
-    }
-    &__call-us,
-    &__write-us,
-    &__guests {
-        header {
-            .headers-text-style();
-            word-wrap: break-word;
-            color: @text-color--headers;
-            letter-spacing: 0.5px;
-            padding-bottom: 8px;
-            @media @screen-tablet {
-                padding-bottom: 11px;
-            }
-        }
-    }
-    &__call-us,
-    &__guests,
-    &__write-us {
-        a {
-            .big-headers-text-style ();
-            word-wrap: break-word;
-            color: @text-color--attention;
-            display: block;
-            text-align: center;
-            text-decoration: none;
-        }
-    }
-    &__call-us {
-        @media @screen-tablet {
-            float:left;
-            width: 256px;
-        }
-
-        a {
-            padding-bottom: 26px;
-        }
-    }
-    &__guests {
-        @media @screen-tablet {
-            float:left;
-            width: 579px;
-            padding-top: 21px;
-        }
-        a {
-            padding: 0px 20px 28px 20px;
-            line-height: 2.8rem;
-            @media @screen-tablet {
-                padding: 0px 170px 28px 170px;
-            }
-        }
-    }
-    &__write-us {
-        @media @screen-tablet {
-            float:right;
-            width: 256px;
-        }
-        a {
-            padding-bottom: 30px;
-        }
-    }
-
-    //blog-page-footer
-    &--inner-pages {
-        padding: 65px 20px 40px 20px;
-        @media @screen-tablet {
-            .clearfix();
-            padding: 0px 20px 40px 2px;
-        }
-        a {
-            text-decoration: @text-decoration;
-            color: @text-color--headers;
-        }
-    }
-    &__logo-glasses {
-        font-size: 3rem;
-        font-weight: @weight-normal;
-        letter-spacing: 3px;
-        position: relative;
-        padding-left: 70px;
-        margin-bottom: 58px;
-        display: block;
-        text-align: center;
-        width: 210px;
-        @media @screen-tablet {
-            font-size: 3.2rem;
-            letter-spacing: 2.5px;
-            padding-left: 57px;
-            padding-top:30px; 
-            display: block;
-            float:left;
-            text-align: center;
-            width: 187px;
-        }
-        &:before {
-            content: "";
-            width: 60px;
-            height: 40px;
-            position: absolute;
-            background-image: url("../img/footer-pink-glasses-img.png");
-            background-repeat: no-repeat;
-            left: 24%;
-            top: -40%;
-            @media @screen-tablet {
-            left: 17%;
-            top: 29%;
-            }
-        }
-    }
-    &__about-developers {
-        font-size: 1.4rem;
-        font-weight: 400;
-        text-align: center;
-        padding-right: 46px;
-        @media @screen-tablet {
-        padding: 40px 46px 13px 40px;
-        float:right;
-        width: 116px;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 160px solid transparent;
+      border-top: 44px solid #ffffff;
+      @media @screen-tablet {
+        border: 357px solid transparent;
+        border-top: 70px solid #ffffff;
+        top: 101%;
+        left: -1%;
       }
     }
   }
+  &__header {
+    .big-headers-text-style ();
+    word-wrap: break-word;
+    line-height: 2.6rem; // - line-height
+    margin-bottom: 38px;
+    color: @text-color--headers;
+    @media @screen-tablet {
+      font-size: 4rem;
+      line-height: 4.8rem;
+      margin-bottom: 45px;
+    }
+  }
+  &__call-us,
+  &__write-us,
+  &__guests {
+    header {
+      .headers-text-style();
+      word-wrap: break-word;
+      color: @text-color--headers;
+      letter-spacing: 0.5px;
+      padding-bottom: 8px;
+      @media @screen-tablet {
+        padding-bottom: 11px;
+      }
+    }
+  }
+  &__call-us,
+  &__guests,
+  &__write-us {
+    a {
+      .big-headers-text-style ();
+      word-wrap: break-word;
+      color: @text-color--attention;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+  &__call-us {
+    @media @screen-tablet {
+      float: left;
+      width: 256px;
+    }
+    a {
+      padding-bottom: 26px;
+    }
+  }
+  &__guests {
+    @media @screen-tablet {
+      float: left;
+      width: 579px;
+      padding-top: 21px;
+    }
+    a {
+      padding: 0px 20px 28px 20px;
+      line-height: 2.8rem;
+      @media @screen-tablet {
+        padding: 0px 170px 28px 170px;
+      }
+    }
+  }
+  &__write-us {
+    @media @screen-tablet {
+      float: right;
+      width: 256px;
+    }
+    a {
+      padding-bottom: 30px;
+    }
+  }
+  //blog-page-footer
+  &--inner-pages {
+    padding: 65px 20px 40px 20px;
+    @media @screen-tablet {
+      .clearfix();
+      padding: 0px 20px 40px 2px;
+    }
+    a {
+      text-decoration: @text-decoration;
+      color: @text-color--headers;
+    }
+  }
+  &__logo-glasses {
+    font-size: 3rem;
+    font-weight: @weight-normal;
+    letter-spacing: 3px;
+    position: relative;
+    padding-left: 70px;
+    margin-bottom: 58px;
+    display: block;
+    text-align: center;
+    width: 210px;
+    @media @screen-tablet {
+      font-size: 3.2rem;
+      letter-spacing: 2.5px;
+      padding-left: 57px;
+      padding-top: 30px;
+      display: block;
+      float: left;
+      text-align: center;
+      width: 187px;
+    }
+    &:before {
+      content: "";
+      width: 60px;
+      height: 40px;
+      position: absolute;
+      background-image: url("../img/footer-pink-glasses-img.png");
+      background-repeat: no-repeat;
+      left: 24%;
+      top: -40%;
+      @media @screen-tablet {
+        left: 17%;
+        top: 29%;
+      }
+    }
+  }
+  &__about-developers {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    padding-right: 46px;
+    @media @screen-tablet {
+      padding: 40px 46px 13px 40px;
+      float: right;
+      width: 116px;
+    }
+  }
+}
 
 .social-buttons {
-    text-align: center;
-    padding-left: 10px;
-    margin-bottom: 68px;
-    @media @screen-tablet {
-        .clearfix();
-        float: left;
-        margin-top: 13px;
-        margin-left: 7px;
-        width: 189px;
-        margin-bottom: 0px;
-        padding: 29px 10px;
-    }
-    a {
-        .border-style();
-        border-radius: 50%;
-        color: @text-color--attention;
-        padding: 16px 23px;
-        margin-right: 13px;
-    }
+  text-align: center;
+  padding-left: 10px;
+  margin-bottom: 68px;
+  @media @screen-tablet {
+    .clearfix();
+    float: left;
+    margin-top: 13px;
+    margin-left: 7px;
+    width: 189px;
+    margin-bottom: 0px;
+    padding: 29px 10px;
+  }
+  a {
+    .border-style();
+    border-radius: 50%;
+    color: @text-color--attention;
+    padding: 16px 23px;
+    margin-right: 13px;
+  }
 }
+
 .bottom-line {
-        display:none;
-        @media @screen-tablet {
-            display: block;
-            margin-bottom: 10px;
-            .clearfix();
-         a {
-            text-decoration: @text-decoration;
-            color: @text-color--headers;
-        }
-        &__logo-glasses {
-            font-size: 3.2rem;
-            font-weight: @weight-normal;
-            letter-spacing: 2.5px;
-            position: relative;
-            padding-left: 57px;
-            padding-top: 30px;
-            display: block;
-            float:left;
-            text-align: center;
-            width: 187px;
-            &:before {
-                content: "";
-                width: 60px;
-                height: 40px;
-                position: absolute;
-                background-image: url("../img/footer-pink-glasses-img.png");
-                background-repeat: no-repeat;
-                left: 17%;
-                top: 25%;
-               }
-          }
+  display: none;
+  @media @screen-tablet {
+    display: block;
+    margin-bottom: 10px;
+    .clearfix();
+    a {
+      text-decoration: @text-decoration;
+      color: @text-color--headers;
+    }
+    &__logo-glasses {
+      font-size: 3.2rem;
+      font-weight: @weight-normal;
+      letter-spacing: 2.5px;
+      position: relative;
+      padding-left: 57px;
+      padding-top: 30px;
+      display: block;
+      float: left;
+      text-align: center;
+      width: 187px;
+      &:before {
+        content: "";
+        width: 60px;
+        height: 40px;
+        position: absolute;
+        background-image: url("../img/footer-pink-glasses-img.png");
+        background-repeat: no-repeat;
+        left: 17%;
+        top: 25%;
+      }
+    }
     &__about-developers {
-        font-size: 1.4rem;
-        font-weight: 400;
-        text-align: center;
-        padding-right: 46px;
-        padding-top: 39px;
-        float:right;
-        width: 160px;
+      font-size: 1.4rem;
+      font-weight: 400;
+      text-align: center;
+      padding-right: 46px;
+      padding-top: 39px;
+      float: right;
+      width: 160px;
     }
     &__social-buttons {
-        float: left;
-        margin-left: 7px;
-        width: 189px;
-    a {
+      float: left;
+      margin-left: 7px;
+      width: 189px;
+      a {
         .border-style();
         border-radius: 50%;
         color: @text-color--attention;
         padding: 16px 23px;
         margin-right: 13px;
-        }
       }
     }
   }
+}

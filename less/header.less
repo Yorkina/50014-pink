@@ -1,221 +1,221 @@
 .header {
-    background-image: url("../img/header-background-img.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-color: @background-color--dark;
-    margin-bottom: 24px;
-    background-size: cover;
+  background-image: url("../img/header-background-img.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: @background-color--dark;
+  margin-bottom: 24px;
+  background-size: cover;
+  @media @screen-tablet {
+    .clearfix ();
+  }
+  h1 {
+    display: block;
+    word-wrap: break-word;
+    .big-headers-text-style (); // +line-height
+    color: @text-color--contrast;
+    line-height: 2.8rem;
+    padding: 5px 20px;
     @media @screen-tablet {
-        .clearfix ();
+      font-size: 5rem;
+      line-height: 5.8rem;
+      padding: 38px 20px 45px 22px;
+    }
+  }
+  &--make-full-size {
+    margin-bottom: 24px;
+    @media @screen-tablet {
+      margin-bottom: 18px;
+      padding-bottom: 81px;
+      background: url("../img/index-header-hand-tablet-img.png") bottom center no-repeat, url("../img/header-background-tablet-img.jpg") top center no-repeat;
+      background-color: transparent;
     }
     h1 {
-        display: block;
-        word-wrap: break-word;
-        .big-headers-text-style (); // +line-height
-        color: @text-color--contrast;
-        line-height: 2.8rem;
-        padding: 5px 20px;
-        @media @screen-tablet {
-                font-size: 5rem;
-                line-height: 5.8rem;
-                padding: 38px 20px 45px 22px;
-        }
-    }
-    &--make-full-size {
-        margin-bottom: 24px;
-        @media @screen-tablet {
-            margin-bottom: 18px;
-            padding-bottom: 81px;
-            background: url("../img/index-header-hand-tablet-img.png") bottom center no-repeat, url("../img/header-background-tablet-img.jpg") top center no-repeat;
-            background-color: transparent;
-        }
-        h1 {
-            display: block;
-            word-wrap: break-word;
-            .big-headers-text-style (); // +line-height
-            color: @text-color--contrast;
-            line-height: 2.8rem;
-            padding: 5px 20px;
-            @media @screen-tablet {
-                float: left;
-                font-size: 4rem;
-                line-height: 4.8rem;
-                width: 247px;
-                padding: 67px 66px 26px 66px;
-            }
-            &:after {
-            content: "";
-            background-image: url("../img/index-header-hand-img.png");
-            display: block;
-            margin: 30px 0px 0px -21px;
-            padding-top: 30px;
-            width: 290px;
-            height: 285px;
-            border:2px solid red;
-            @media @screen-tablet {
-                width: 0px;
-                height: 0px;
-                opacity: 0;
-                padding:0px;
-                margin:0px;
-                }
-            }
-        }
-    }
-    &--make-middle-size {
-        padding-bottom: 10px;
-         @media @screen-tablet {
-            padding-bottom: 15px;
-            margin-bottom: 93px;
-         }
-        h1 {
-            padding: 16px 20px 30px 20px;
-            @media @screen-tablet {
-                padding: 37px 40px 30px 36px;
-                line-height: 6rem;
-            }
-        }
-    }
-    &__head-line {
-        .clearfix ();
-        background-color: rgba(15, 20, 25, 0.5);
-        padding: 3px 20px;
-        position: relative;
-        @media @screen-tablet {
-            padding: 25px 40px;
-        }
-    }
-    &__logo-link {
+      display: block;
+      word-wrap: break-word;
+      .big-headers-text-style (); // +line-height
+      color: @text-color--contrast;
+      line-height: 2.8rem;
+      padding: 5px 20px;
+      @media @screen-tablet {
         float: left;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        width: 247px;
+        padding: 67px 66px 26px 66px;
+      }
+      &:after {
+        content: "";
+        background-image: url("../img/index-header-hand-img.png");
         display: block;
-        word-wrap: break-word;
-        width: 80px;
-        .a-decoration ();
-        font-size: 3rem; //big + light
-        font-weight: @weight-light;
-        color: @text-color--contrast;
-        letter-spacing: 3px; // letter spacing ??
-        padding: 15px 0px;
+        margin: 30px 0px 0px -21px;
+        padding-top: 30px;
+        width: 290px;
+        height: 285px;
+        border: 2px solid red;
         @media @screen-tablet {
-            position: relative;
-            width: 200px;
-            overflow: hidden;
-            padding: 15px 0px 15px 70px;
-            &:before {
-                content: "";
-                width: 60px;
-                height: 40px;
-                background-image: url("../img/header-white-glasses-icon.png");
-                background-repeat: no-repeat;
-                position: absolute;
-                top: 2px;
-                left: 0px;
-            }
+          width: 0px;
+          height: 0px;
+          opacity: 0;
+          padding: 0px;
+          margin: 0px;
         }
+      }
     }
-    &__btn-menu {
-        float: right;
-        width: 70px;
-        height: 42px;
-        background-image: url("../img/menu-open-btn-icon.png");
+  }
+  &--make-middle-size {
+    padding-bottom: 10px;
+    @media @screen-tablet {
+      padding-bottom: 15px;
+      margin-bottom: 93px;
+    }
+    h1 {
+      padding: 16px 20px 30px 20px;
+      @media @screen-tablet {
+        padding: 37px 40px 30px 36px;
+        line-height: 6rem;
+      }
+    }
+  }
+  &__head-line {
+    .clearfix ();
+    background-color: rgba(15, 20, 25, 0.5);
+    padding: 3px 20px;
+    position: relative;
+    @media @screen-tablet {
+      padding: 25px 40px;
+    }
+  }
+  &__logo-link {
+    float: left;
+    display: block;
+    word-wrap: break-word;
+    width: 80px;
+    .a-decoration ();
+    font-size: 3rem; //big + light
+    font-weight: @weight-light;
+    color: @text-color--contrast;
+    letter-spacing: 3px; // letter spacing ??
+    padding: 15px 0px;
+    @media @screen-tablet {
+      position: relative;
+      width: 200px;
+      overflow: hidden;
+      padding: 15px 0px 15px 70px;
+      &:before {
+        content: "";
+        width: 60px;
+        height: 40px;
+        background-image: url("../img/header-white-glasses-icon.png");
         background-repeat: no-repeat;
-        background-position: bottom right;
-    }
-    &__list {
-        display: none;
         position: absolute;
-        top: 55px;
+        top: 2px;
         left: 0px;
-        padding: 0px;
-        @media @screen-tablet {
-            top:101px;
-            width:100%;
-        }
-        li {
-            list-style: none;
-            text-align: center;
-            border-bottom: 1px solid black;
-            border-top: 1px solid #485361;
-        }
-        a {
-            font-size: @font-size--medium;
-            font-weight: @weight-semi-bold;
-            .a-decoration ();
-            display: block;
-            color: @text-color--contrast;
-            background-color: #283645;
-            padding: 18px 86px;
-        }
+      }
     }
-    &__slogan {
-        display: block;
-        word-wrap: break-word;
-        .big-headers-text-style (); // +line-height
-        color: @text-color--contrast;
-        line-height: 2.8rem;
-        padding: 16px 20px 42px 20px;
+  }
+  &__btn-menu {
+    float: right;
+    width: 70px;
+    height: 42px;
+    background-image: url("../img/menu-open-btn-icon.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+  &__list {
+    display: none;
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    padding: 0px;
+    @media @screen-tablet {
+      top: 101px;
+      width: 100%;
     }
-    &__download {
-        text-align: center;
-        background-color: @background-color--dark;
-        padding-top: 26px;
-        margin-top: -50px;
-        @media @screen-tablet {
-            float: left;
-            width: 362px;
-            text-align: center;
-            background-color: transparent;
-        }
+    li {
+      list-style: none;
+      text-align: center;
+      border-bottom: 1px solid black;
+      border-top: 1px solid #485361;
     }
-    &__btn-download {
-        display: inline-block;
-        padding: 16px 15px;
-        border: 3px solid #ffffff;
-        border-radius: 30px;
-        .headers-text-style ();
-        color: #ffffff;
-        text-decoration: @text-decoration;
-        margin-bottom: 30px;
-        width: 245px;
-        letter-spacing: 0.5px;
-        @media @screen-tablet {
-            margin-bottom: 45px;
-        }
+    a {
+      font-size: @font-size--medium;
+      font-weight: @weight-semi-bold;
+      .a-decoration ();
+      display: block;
+      color: @text-color--contrast;
+      background-color: #283645;
+      padding: 18px 86px;
     }
-    &__logo-line {
-        font-size: 0;
-        a {
-            display: inline-block;
-            vertical-align: top;
-            width: 80px;
-            height: 67px;
-            color: #ffffff;
-        }
+  }
+  &__slogan {
+    display: block;
+    word-wrap: break-word;
+    .big-headers-text-style (); // +line-height
+    color: @text-color--contrast;
+    line-height: 2.8rem;
+    padding: 16px 20px 42px 20px;
+  }
+  &__download {
+    text-align: center;
+    background-color: @background-color--dark;
+    padding-top: 26px;
+    margin-top: -50px;
+    @media @screen-tablet {
+      float: left;
+      width: 362px;
+      text-align: center;
+      background-color: transparent;
     }
-    &__apple-img {
-        background-image: url("../img/download-apple-icon.png");
-        background-repeat: no-repeat;
-        background-position: 50% 13%;
+  }
+  &__btn-download {
+    display: inline-block;
+    padding: 16px 15px;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    .headers-text-style ();
+    color: #ffffff;
+    text-decoration: @text-decoration;
+    margin-bottom: 30px;
+    width: 245px;
+    letter-spacing: 0.5px;
+    @media @screen-tablet {
+      margin-bottom: 45px;
     }
-    &__android-img {
-        background-image: url("../img/download-android-icon.png");
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
+  }
+  &__logo-line {
+    font-size: 0;
+    a {
+      display: inline-block;
+      vertical-align: top;
+      width: 80px;
+      height: 67px;
+      color: #ffffff;
     }
-    &__windows-img {
-        background-image: url("../img/download-microsoft-icon.png");
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
+  }
+  &__apple-img {
+    background-image: url("../img/download-apple-icon.png");
+    background-repeat: no-repeat;
+    background-position: 50% 13%;
+  }
+  &__android-img {
+    background-image: url("../img/download-android-icon.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &__windows-img {
+    background-image: url("../img/download-microsoft-icon.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &__phone-types {
+    font-size: @font-size--small;
+    font-weight: @weight-light;
+    color: @text-color--contrast;
+    padding: 13px 15px 28px 15px;
+    line-height: 2.4rem;
+    @media @screen-tablet {
+      font-size: @font-size--medium;
+      padding: 26px 0px 28px 20px;
     }
-    &__phone-types {
-        font-size: @font-size--small;
-        font-weight: @weight-light;
-        color: @text-color--contrast;
-        padding: 13px 15px 28px 15px;
-        line-height: 2.4rem;
-        @media @screen-tablet {
-            font-size: @font-size--medium;
-            padding: 26px 0px 28px 20px;
-        }
-    }
+  }
 }
