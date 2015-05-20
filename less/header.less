@@ -43,7 +43,7 @@
                 width: 247px;
                 padding: 67px 66px 26px 66px;
             }
-            h1:after {
+            &:after {
             content: "";
             background-image: url("../img/index-header-hand-img.png");
             display: block;
@@ -51,6 +51,7 @@
             padding-top: 30px;
             width: 290px;
             height: 285px;
+            border:2px solid red;
             @media @screen-tablet {
                 width: 0px;
                 height: 0px;
@@ -126,6 +127,10 @@
         top: 55px;
         left: 0px;
         padding: 0px;
+        @media @screen-tablet {
+            top:101px;
+            width:100%;
+        }
         li {
             list-style: none;
             text-align: center;
