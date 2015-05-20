@@ -12,8 +12,11 @@
         background-color: @background-color--slider;
         transform: rotate(85deg);
         @media @screen-tablet {
-            width: 509%;
-            top: 74%;
+            width: 125%;
+            top: 14%;
+            transform: rotate(175deg);
+            left: -4%;
+            height: 30%;
         }
     }
     &__promo-slogan {
@@ -100,33 +103,37 @@
       display:none;
       @media @screen-tablet {
         display: block;
+        .clearfix();
+        padding-top: 89px;
+        padding-bottom: 50px;
+        margin: 0px 31px;
         header {
+          float:right;
           font-weight: 600;
           font-size: 3rem;
           line-height: 3.6rem;
+          letter-spacing: 1px;
+          width: 170px;
+          margin-right: 151px;
+          margin-bottom: 10px;
         }
         p {
-          font-weight: 600;
-          font-size: 3rem;
-          line-height: 3.6rem;
-        }
-      }
-    }
-    &__promo-effect {
-      display:none;
-      @media @screen-tablet {
-        display: block;
-        header {
-          font-weight: 600;
-          font-size: 3rem;
-          line-height: 3.6rem;
-          outline: 2px solid green;
-        }
-        p {
-          font-weight: 600;
-          font-size: 3rem;
-          line-height: 3.6rem;
-          outline: 2px solid green;
+          float:right;
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 2.4rem;
+          width: 305px;
+          margin-right: 15px;
+          margin-top:0px;
+          margin-bottom: 10px;
+          }
+        a {
+          float:right;
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 2.4rem;
+          color: @text-color--attention; 
+          width: 320px; 
         }
       }
     }
@@ -140,7 +147,7 @@
     margin-bottom: 115px;
     background-color: @background-color--light;
     @media @screen-tablet {
-      height: 320px;
+      height: 240px;
       margin-bottom: 113px;
     }
     &:before {
@@ -156,8 +163,12 @@
     }
     &__slides {
         position: relative;
-        height: 120px;
+        height: 280px;
         width: 33.3%;
+        @media @screen-tablet {
+          height:200px;
+          overflow:hidden;
+        }
         input {
             display: none;
         }
@@ -173,6 +184,7 @@
         @media @screen-tablet {
           display: flex;
           flex-direction: column-reverse;
+          height: 200px;
         }
         header {
             .headers-text-style();
