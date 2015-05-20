@@ -2,202 +2,205 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HTML Academy: Pink</title>
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Pink</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic" rel="stylesheet">
 </head>
 
 <body>
-    <div class="header header--make-middle-size">
-        <div class="header__head-line header__head-line--make-opacity">
-            <a class="header__logo-link" href="#1" title="На главную">Pink</a>
-            <a class="header__btn-menu header__btn-menu--opened" href="#2" title="Открыть меню"></a>
-        </div>
-        <div class="header__menu">
-            <ul class="header__list">
-                <li><a href="#10" title="Информация о нас">Информация</a></li>
-                <li><a href="#11" title="Наши возможности">Возможности</a></li>
-                <li><a href="#12" title="Отзывы о нас">Отзывы</a></li>
-                <li><a href="#13" title="Стоимость услуг">Стоимость</a></li>
-            </ul>
-        </div>
-        <h1 class="header__slogan">Конкурс на самое безбашенное путешествие с Пинк</h1>
+  <div class="header header--make-middle-size">
+    <div class="header__head-line header__head-line--make-opacity">
+      <a class="header__logo-link" href="#1" title="На главную">Pink</a>
+      <a class="header__btn-menu header__btn-menu--opened" href="#2" title="Открыть меню"></a>
     </div>
-    <div class="form-content">
-        <p>Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
-        </p>
-        <p>Пожалуйста, заполните форму ниже:</p>
-        <form action="/echo" method="post">
-            <div class="user-info">
-                <label for="name">Имя:<sup>*</sup></label>
-                <input id="name" type="text" name="name" value="" placeholder="Введите ваше имя" required>
-                <label for="last-name">Фамилия:<sup>*</sup></label>
-                <input id="last-name" type="text" name="last-name" value="" placeholder="Укажите фамилию" required>
-                <label for="patronymic">Отчество:<sup>*</sup></label>
-                <input id="patronymic" type="text" name="patronymic" value="" placeholder="Ну и отчество тоже" required>
-            </div>
-            <div class="type-application">
-                <fieldset>
-                    <legend>С каким приложением путешествовали?<sup>*</sup></legend>
-                        <input id="ios" class="type-application__radio" type="radio" name="radio" placeholder="IOS" checked> 
-                        <label for="ios">Pink для IOS</label>
-                        <input id="android" class="type-application__radio" type="radio" name="radio" placeholder="Android"> 
-                        <label for="android">Pink на Android</label>
-                        <input id="w-phone" class="type-application__radio" type="radio" name="radio" placeholder="Windows"><label for="w-phone">Windows Phone</label>
-                </fieldset>
-            </div> 
-            <div class="travel-duration">
-                <fieldset>
-                    <legend>Когда вы путешествовали?<sup>*</sup></legend>
-                    <div class="trip-info-wrapper">
-                        <input id="check-out" class="travel-duration__trip-info" type="text" name="chek-out" value="" placeholder="1 апреля 2015" required>
-                        <label for="check-out">Дата выезда</label>
-                    </div>
-                    <div class="trip-date-wrapper">
-                        <button class="travel-duration__btn-minus">+</button>
-                        <input id="trip-lasting" class="travel-duration__trip-date" type="text" name="trip-lasting" value="" placeholder="10 дней">
-                        <button class="travel-duration__btn-plus">+</button>
-                        <label for="trip-lasting">Продолжительность</label>
-                     </div>
-                     <div class="trip-info-wrapper">
-                        <input id="return-date" class="travel-duration__trip-info" type="text" name="return-date" value=""  placeholder="1 апреля 2015">
-                        <label for="return-date">Дата возвращения</label>
-                    </div>
-                </fieldset>
-            </div>
-            <div class="travelers">
-                <fieldset>
-                     <legend >Количество попутчиков<sup>*</sup></legend>
-                    <div class="travelers__count">
-                            <button class="travelers__btn-minus">+</button>
-                            <input id="count" class="travelers__trip-count" type="text" name="count" value="" placeholder="2 чел">
-                            <button class="travelers__btn-plus">+</button>
-                    </div>
-                    <div class="travelers__info-form">
-                        <div class="travelers__names">
-                            <header>
-                                <span>№</span>
-                                <label for="traveler-name">Имя:<sup>*</sup></label>
-                            </header>
-                            <span class="travelers__form-number">1</span>
-                            <input id="traveler-name" type="text" name="traveler-name" value="" placeholder="Введите ваше имя">
-                            <button class="travelers__name--delete">Удалить</button>
-                        </div>
-                        <div class="travelers__nick">
-                            <label for="traveler-nick">Прозвище:</label>
-                            <input id="traveler-nick" type="text" name="traveler-nick" value="" placeholder="Ну как же без этого!">
-                        </div>
-                        <div class="travelers__names">
-                            <header>
-                                <span>№</span>
-                                <label for="traveler-name">Имя:<sup>*</sup></label>
-                            </header>
-                            <span class="travelers__form-number">2</span>
-                            <input id="traveler-name--second" type="text" name="traveler-name" value="" placeholder="Введите ваше имя">
-                            <button class="travelers__name--delete">Удалить</button>
-                        </div>
-                        <div class="travelers__nick">
-                            <label for="traveler-nick">Прозвище:</label>
-                            <input id="traveler-nick--second" type="text" name="traveler-nick" value="" placeholder="Ну как же без этого!">
-                        </div>
-                    </div>
-                 </fieldset>
-            </div>
-            <div class="travel-achievements">
-                <fieldset>
-                <legend>Ваши безбашенные достижения в путешествии</legend>
-                    <input class="travel-achievements__checkbox" id="selfie" type="checkbox" name="check" checked> 
-                     <label for="selfie">Сделал селфи с акулой</label>
-                    <input class="travel-achievements__checkbox" id="burn" type="checkbox" name="check" checked> 
-                    <label for="burn">Обгорел на пляже</label>
-                    <input class="travel-achievements__checkbox" id="norris" type="checkbox" name="check"> 
-                    <label for="norris">Видел Чака Норриса</label>
-                    <input class="travel-achievements__checkbox" id="shopping" type="checkbox" name="check"> 
-                    <label for="shopping">Накупил сувениров</label>
-                    <input class="travel-achievements__checkbox" id="touch" type="checkbox" name="check" checked> 
-                    <label for="touch">Удержал башню</label>
-                    <input class="travel-achievements__checkbox" id="hotel" type="checkbox" name="check"> 
-                    <label for="hotel">Разгромил отель</label>
-                </fieldset>
-            </div>
-            <div class="travel-photo">
-                <header>Ваши фотографии из поездки<sup>*</sup></header>
-                    <div class="travel-photo__btn-file--wrap">
-                    <input id="photo" type="file" name="img" accept="image/jpeg,image/png,image/gif" placeholder="Загрузить фото">
-                    <label for="photo">Загрузить фото</label>
-                </div>
-                <article class="travel-photo__images">
-                    <figure>
-                        <img src="http://placehold.it/68x68" width="" height="" alt="">
-                        <a class="travel-photo__btn-cancel" href="#41" title="cancel-btn">&times;</a>
-                        <figcaption>img-1.jpg</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="http://placehold.it/68x68" width="" height="" alt="">
-                        <a class="travel-photo__btn-cancel" href="#42" title="cancel-btn">&times;</a>
-                        <figcaption>img-2.jpg</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="http://placehold.it/68x68" width="" height="" alt="">
-                        <a class="travel-photo__btn-cancel" href="#43" title="cancel-btn">&times;</a>
-                        <figcaption>img-3.jpg</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="http://placehold.it/68x68" width="" height="" alt="">
-                        <a class="travel-photo__btn-cancel" href="#44" title="cancel-btn">&times;</a>
-                        <figcaption>img-4.jpg</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="http://placehold.it/68x68" width="" height="" alt="">
-                        <a class="travel-photo__btn-cancel" href="#45" title="cancel-btn">&times;</a>
-                        <figcaption>img-5.jpg</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="http://placehold.it/68x68" width="" height="" alt="">
-                        <a class="travel-photo__btn-cancel" href="#46" title="cancel-btn">&times;</a>
-                        <figcaption>img-6.jpg</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="http://placehold.it/68x68" width="" height="" alt="">
-                        <a class="travel-photo__btn-cancel" href="#47" title="cancel-btn">&times;</a>
-                        <figcaption>img-7.jpg</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="http://placehold.it/68x68" width="" height="" alt="">
-                        <a class="travel-photo__btn-cancel" href="#48" title="cancel-btn">&times;</a>
-                        <figcaption>img-8.jpg</figcaption>
-                    </figure>
-                </article>
-            </div>
-            <div class="form-content__sending-form">
-               <button class="button form-content__button" type="submit">Отправить форму</button>
-                <div><sup>*</sup>--Обязательные поля</div>
-            </div>
-        </form>
+    <div class="header__menu">
+      <ul class="header__list">
+        <li><a href="#10" title="Информация о нас">Информация</a></li>
+        <li><a href="#11" title="Наши возможности">Возможности</a></li>
+        <li><a href="#12" title="Отзывы о нас">Отзывы</a></li>
+        <li><a href="#13" title="Стоимость услуг">Стоимость</a></li>
+      </ul>
     </div>
-    <div class="footer--inner-pages footer--inner-pages-form">
-        <a class="footer__logo-glasses" href="#99">PINK</a>
-        <div class="social-buttons">
-            <a class="social-buttons__twitter" href="#34" title="Твиттер"></a>
-            <a class="social-buttons__fb" href="#35" title="Фейсбук"></a>
-            <a class="social-buttons__video" href="#36" title="Какая-то видюха"></a>
-        </div>
-        <div class="footer__about-developers">
-            <header>Разработано</header>
-        </div>
+    <h1 class="header__slogan">Конкурс на самое безбашенное путешествие с Пинк</h1>
+  </div>
+  <div class="form-content">
+    <p>Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+    </p>
+    <p>Пожалуйста, заполните форму ниже:</p>
+    <form action="/echo" method="post">
+      <div class="user-info">
+        <label for="name">Имя:<sup>*</sup></label>
+        <input id="name" type="text" name="name" value="" placeholder="Введите ваше имя" required>
+        <label for="last-name">Фамилия:<sup>*</sup></label>
+        <input id="last-name" type="text" name="last-name" value="" placeholder="Укажите фамилию" required>
+        <label for="patronymic">Отчество:<sup>*</sup></label>
+        <input id="patronymic" type="text" name="patronymic" value="" placeholder="Ну и отчество тоже" required>
+      </div>
+      <div class="type-application">
+        <fieldset>
+          <legend>С каким приложением путешествовали?<sup>*</sup></legend>
+          <input id="ios" class="type-application__radio" type="radio" name="radio" placeholder="IOS" checked>
+          <label for="ios">Pink для IOS</label>
+          <input id="android" class="type-application__radio" type="radio" name="radio" placeholder="Android">
+          <label for="android">Pink на Android</label>
+          <input id="w-phone" class="type-application__radio" type="radio" name="radio" placeholder="Windows">
+          <label for="w-phone">Windows Phone</label>
+        </fieldset>
+      </div>
+      <div class="travel-duration">
+        <fieldset>
+          <legend>Когда вы путешествовали?<sup>*</sup></legend>
+          <div class="trip-info-wrapper">
+            <input id="check-out" class="travel-duration__trip-info" type="text" name="chek-out" value="" placeholder="1 апреля 2015" required>
+            <label for="check-out">Дата выезда</label>
+          </div>
+          <div class="trip-date-wrapper">
+            <button class="travel-duration__btn-minus">+</button>
+            <input id="trip-lasting" class="travel-duration__trip-date" type="text" name="trip-lasting" value="" placeholder="10 дней">
+            <button class="travel-duration__btn-plus">+</button>
+            <label for="trip-lasting">Продолжительность</label>
+          </div>
+          <div class="trip-info-wrapper">
+            <input id="return-date" class="travel-duration__trip-info" type="text" name="return-date" value="" placeholder="1 апреля 2015">
+            <label for="return-date">Дата возвращения</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="travelers">
+        <fieldset>
+          <legend>Количество попутчиков<sup>*</sup></legend>
+          <div class="travelers__count">
+            <button class="travelers__btn-minus">+</button>
+            <input id="count" class="travelers__trip-count" type="text" name="count" value="" placeholder="2 чел">
+            <button class="travelers__btn-plus">+</button>
+          </div>
+          <div class="travelers__info-form">
+            <div class="travelers__names">
+              <header>
+                <span>№</span>
+                <label for="traveler-name">Имя:<sup>*</sup></label>
+              </header>
+              <span class="travelers__form-number">1</span>
+              <input id="traveler-name" type="text" name="traveler-name" value="" placeholder="Введите ваше имя">
+              <button class="travelers__name--delete">Удалить</button>
+            </div>
+            <div class="travelers__nick">
+              <label for="traveler-nick">Прозвище:</label>
+              <input id="traveler-nick" type="text" name="traveler-nick" value="" placeholder="Ну как же без этого!">
+            </div>
+            <div class="travelers__names">
+              <header>
+                <span>№</span>
+                <label for="traveler-name">Имя:<sup>*</sup></label>
+              </header>
+              <span class="travelers__form-number">2</span>
+              <input id="traveler-name--second" type="text" name="traveler-name" value="" placeholder="Введите ваше имя">
+              <button class="travelers__name--delete">Удалить</button>
+            </div>
+            <div class="travelers__nick">
+              <label for="traveler-nick">Прозвище:</label>
+              <input id="traveler-nick--second" type="text" name="traveler-nick" value="" placeholder="Ну как же без этого!">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="travel-achievements">
+        <fieldset>
+          <legend>Ваши безбашенные достижения в путешествии</legend>
+          <input class="travel-achievements__checkbox" id="selfie" type="checkbox" name="check" checked>
+          <label for="selfie">Сделал селфи с акулой</label>
+          <input class="travel-achievements__checkbox" id="burn" type="checkbox" name="check" checked>
+          <label for="burn">Обгорел на пляже</label>
+          <input class="travel-achievements__checkbox" id="norris" type="checkbox" name="check">
+          <label for="norris">Видел Чака Норриса</label>
+          <input class="travel-achievements__checkbox" id="shopping" type="checkbox" name="check">
+          <label for="shopping">Накупил сувениров</label>
+          <input class="travel-achievements__checkbox" id="touch" type="checkbox" name="check" checked>
+          <label for="touch">Удержал башню</label>
+          <input class="travel-achievements__checkbox" id="hotel" type="checkbox" name="check">
+          <label for="hotel">Разгромил отель</label>
+        </fieldset>
+      </div>
+      <div class="travel-photo">
+        <fieldset>
+          <legend>Ваши фотографии из поездки<sup>*</sup></legend>
+          <div class="travel-photo__btn-file--wrap">
+            <input id="photo" type="file" name="img" accept="image/jpeg,image/png,image/gif" placeholder="Загрузить фото">
+            <label for="photo">Загрузить фото</label>
+          </div>
+          <article class="travel-photo__images">
+            <figure>
+              <img src="http://placehold.it/68x68" width="" height="" alt="">
+              <a class="travel-photo__btn-cancel" href="#41" title="cancel-btn">&times;</a>
+              <figcaption>img-1.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="http://placehold.it/68x68" width="" height="" alt="">
+              <a class="travel-photo__btn-cancel" href="#42" title="cancel-btn">&times;</a>
+              <figcaption>img-2.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="http://placehold.it/68x68" width="" height="" alt="">
+              <a class="travel-photo__btn-cancel" href="#43" title="cancel-btn">&times;</a>
+              <figcaption>img-3.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="http://placehold.it/68x68" width="" height="" alt="">
+              <a class="travel-photo__btn-cancel" href="#44" title="cancel-btn">&times;</a>
+              <figcaption>img-4.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="http://placehold.it/68x68" width="" height="" alt="">
+              <a class="travel-photo__btn-cancel" href="#45" title="cancel-btn">&times;</a>
+              <figcaption>img-5.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="http://placehold.it/68x68" width="" height="" alt="">
+              <a class="travel-photo__btn-cancel" href="#46" title="cancel-btn">&times;</a>
+              <figcaption>img-6.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="http://placehold.it/68x68" width="" height="" alt="">
+              <a class="travel-photo__btn-cancel" href="#47" title="cancel-btn">&times;</a>
+              <figcaption>img-7.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="http://placehold.it/68x68" width="" height="" alt="">
+              <a class="travel-photo__btn-cancel" href="#48" title="cancel-btn">&times;</a>
+              <figcaption>img-8.jpg</figcaption>
+            </figure>
+          </article>
+        </fieldset>
+      </div>
+      <div class="form-content__sending-form">
+        <button class="button form-content__button" type="submit">Отправить форму</button>
+        <div><sup>*</sup>--Обязательные поля</div>
+      </div>
+    </form>
+  </div>
+  <div class="footer--inner-pages footer--inner-pages-form">
+    <a class="footer__logo-glasses" href="#99">PINK</a>
+    <div class="social-buttons">
+      <a class="social-buttons__twitter" href="#34" title="Твиттер"></a>
+      <a class="social-buttons__fb" href="#35" title="Фейсбук"></a>
+      <a class="social-buttons__video" href="#36" title="Какая-то видюха"></a>
     </div>
-    <div class="failure-popup">
-        <header>Что-то пошло не так!</header>
-        <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="button failure-popup__button" type="button">Ok</button>
+    <div class="footer__about-developers">
+      <header>Разработано</header>
     </div>
-    <div class="request-popup">
-        <header>Ваша заявка отправлена</header>
-        <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-        <button class="button request-popup__button" type="button">Закрыть окно</button>
-    </div>
+  </div>
+  <div class="failure-popup">
+    <header>Что-то пошло не так!</header>
+    <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="button failure-popup__button" type="button">Ok</button>
+  </div>
+  <div class="request-popup">
+    <header>Ваша заявка отправлена</header>
+    <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+    <button class="button request-popup__button" type="button">Закрыть окно</button>
+  </div>
 </body>
 
 </html>
