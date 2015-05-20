@@ -431,7 +431,6 @@
             @media @screen-tablet {
                     color: @text-color--headers;
                     font-size: 1.8rem;
-                    background-color: @background-color--slider;
                 }
         }
         input[type="text"] {
@@ -538,6 +537,7 @@
         @media @screen-tablet {
             margin-right: 21px;
             padding: 20px 25px;
+            background-color: @background-color--slider;
         }
     }
 }
@@ -750,11 +750,22 @@
     display: none;
     background-color: @background-color--light;
     box-shadow: 0px 0px 12px #d8d8d8;
+    @media @screen-tablet {
+         width: 420px;
+         top: 912px;
+         left: 120px;
+         padding: 20px 20px 50px 20px;
+    }
     header {
         .headers-text-style ();
         padding-top: 20px;
         letter-spacing: 0.5px;
         padding-bottom: 13px;
+        @media @screen-tablet {
+          font-size: 3rem;
+          line-height: 4rem;
+            padding: 13px 90px 4px 90px;
+        }
     }
     p {
         font-size: 1.4rem;
@@ -762,6 +773,11 @@
         text-align: center;
         line-height: 2.6rem;
         padding-bottom: 21px;
+         @media @screen-tablet {
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          padding: 0px 50px 21px 50px;
+        }
     }
     button {
         color: @text-color--contrast;
@@ -774,6 +790,11 @@
         border-radius: 3px;
         width: 280px;
         background-color: @background-color--sucsses;
+        @media @screen-tablet {
+          width: 300px;
+          padding-left: 13px;
+          margin-left: 60px;
+        }
     }
 }
 
@@ -786,11 +807,22 @@
     display: none;
     background-color: @background-color--slider;
     box-shadow: 0px 10px 20px #d9d8d8;
+    @media @screen-tablet {
+      top: 1379px;
+      left: 120px;
+      width: 462px;
+      padding:0px 0px 50px 0px;
+    }
     header {
         .headers-text-style ();
         padding: 40px 20px 30px 20px;
         letter-spacing: 0.5px;
         background-color: @background-color--light;
+        @media @screen-tablet {
+          font-size: 3rem;
+          line-height: 4rem;
+          padding: 40px 50px 21px 46px;
+        }
     }
     p {
         font-size: 1.4rem;
@@ -801,6 +833,11 @@
         padding: 0px 20px 30px 20px;
         margin-bottom: 48px;
         background-color: @background-color--light;
+         @media @screen-tablet {
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          padding: 0px 74px 35px 70px;
+        }
     }
     button {
         color: @text-color--contrast;
@@ -814,5 +851,10 @@
         margin: 0px 20px;
         width: 280px;
         background-color: @background-color--sucsses;
+        @media @screen-tablet {
+          width: 300px;
+          padding-left: 13px;
+          margin: 0px 20px 0px 80px;
+        }
     }
 }
