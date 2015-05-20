@@ -10,6 +10,7 @@
        background-image: url("../img/footer-map-tablet-img.jpg"); 
        background-position: 50% -4%;
        margin-top: 40px;
+       margin-bottom: 18px;
        padding-bottom: 377px;
     }
     &__contacts {
@@ -17,9 +18,7 @@
         background-color: @background-color--light;
         @media @screen-tablet {
             padding: 0px 61px 215px 61px;
-        &:after {
             .clearfix();
-         }
         }
         &:after {
             content: "";
@@ -28,10 +27,10 @@
             border: 160px solid transparent;
             border-top: 44px solid #ffffff;
             @media @screen-tablet {
-            border: 336px solid transparent;
-            border-top: 69px solid #ffffff;
-            top:100%;
-            left: 2%;
+            border: 357px solid transparent;
+            border-top: 70px solid #ffffff;
+            top:101%;
+            left: -1%;
         }
         }
     }
@@ -40,6 +39,7 @@
         word-wrap: break-word;
         line-height: 2.6rem; // - line-height
         margin-bottom: 38px;
+        color: @text-color--headers;
         @media @screen-tablet {
           font-size: 4rem;
           line-height: 4.8rem;
@@ -166,62 +166,6 @@
     }
   }
 
-.bottom-line {
-        display:none;
-        @media @screen-tablet {
-            display: block;
-            .clearfix();
-            padding-top: 37px;
-        }
-         a {
-            text-decoration: @text-decoration;
-            color: @text-color--headers;
-        }
-        &__logo-glasses {
-            font-size: 3.2rem;
-            font-weight: @weight-normal;
-            letter-spacing: 2.5px;
-            position: relative;
-            padding-left: 57px;
-            display: block;
-            float:left;
-            text-align: center;
-            width: 187px;
-            &:before {
-                content: "";
-                width: 60px;
-                height: 40px;
-                position: absolute;
-                background-image: url("../img/footer-pink-glasses-img.png");
-                background-repeat: no-repeat;
-                left: 17%;
-                top: -33%;
-               }
-          }
-    &__about-developers {
-        font-size: 1.4rem;
-        font-weight: 400;
-        text-align: center;
-        padding-right: 46px;
-        padding-top: 10px;
-        float:right;
-        width: 160px;
-    }
-    &__social-buttons {
-        float: left;
-        margin-top: 13px;
-        margin-left: 7px;
-        width: 189px;
-    a {
-        .border-style();
-        border-radius: 50%;
-        color: @text-color--attention;
-        padding: 16px 23px;
-        margin-right: 13px;
-    }
-  }
-}
-
 .social-buttons {
     text-align: center;
     padding-left: 10px;
@@ -243,3 +187,58 @@
         margin-right: 13px;
     }
 }
+.bottom-line {
+        display:none;
+        @media @screen-tablet {
+            display: block;
+            margin-bottom: 10px;
+            .clearfix();
+         a {
+            text-decoration: @text-decoration;
+            color: @text-color--headers;
+        }
+        &__logo-glasses {
+            font-size: 3.2rem;
+            font-weight: @weight-normal;
+            letter-spacing: 2.5px;
+            position: relative;
+            padding-left: 57px;
+            padding-top: 30px;
+            display: block;
+            float:left;
+            text-align: center;
+            width: 187px;
+            &:before {
+                content: "";
+                width: 60px;
+                height: 40px;
+                position: absolute;
+                background-image: url("../img/footer-pink-glasses-img.png");
+                background-repeat: no-repeat;
+                left: 17%;
+                top: 25%;
+               }
+          }
+    &__about-developers {
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-align: center;
+        padding-right: 46px;
+        padding-top: 39px;
+        float:right;
+        width: 160px;
+    }
+    &__social-buttons {
+        float: left;
+        margin-left: 7px;
+        width: 189px;
+    a {
+        .border-style();
+        border-radius: 50%;
+        color: @text-color--attention;
+        padding: 16px 23px;
+        margin-right: 13px;
+        }
+      }
+    }
+  }
