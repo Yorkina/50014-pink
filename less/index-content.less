@@ -45,14 +45,33 @@
   &__promo-info {
     margin: 0px 19px;
     text-align: center;
+    background-image: url("../img/iphone-case-mobile@1x.png");
+    background-position:  bottom center;
+    background-repeat:  no-repeat;
+    background-size: 170px;
+    @media @retina {
+        background-image: url("../img/iphone-case-mobile@2x.png"),
+                          url("../img/iphone-case-mobile@3x.png");
+    }
     .clearfix ();
     @media @screen-tablet {
-      background-image: url(../img/index-content-tablet-phone-img.png);
-      background-repeat: no-repeat;
-      background-position: 2% -10%;
-      padding-top: 60px;
-      padding-bottom: 50px;
-      margin: 0px 31px;
+        background-image: url("../img/iphone-screen-tablet-3@1x.png"),
+                          url("../img/iphone-screen-tablet-2@1x.png"),
+                          url("../img/iphone-screen-tablet-1@1x.png");
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-position: 3% 28%; 
+            padding-top: 60px;
+            padding-bottom: 50px;
+            margin: 0px 31px;
+            background-size: 268px;
+        @media @retina {
+          background-image: url("../img/iphone-screen-tablet-3@2x.png"),
+                          url("../img/iphone-screen-tablet-2@2x.png"),
+                          url("../img/iphone-screen-tablet-1@2x.png"),
+                          url("../img/iphone-screen-tablet-3@3x.png"),
+                          url("../img/iphone-screen-tablet-2@3x.png"),
+                          url("../img/iphone-screen-tablet-1@3x.png");
+        }
     }
     header {
       .headers-text-style();
@@ -90,23 +109,62 @@
       margin: 0 auto;
       width: 156px;
       height: 280px;
-      background: url(../img/content-iphone-img.png) no-repeat;
+      background-image: url("../img/iphone-screen-mobile-3@1x.png"),
+                  url("../img/iphone-screen-mobile-2@1x.png"), 
+                  url("../img/iphone-screen-mobile-1@1x.png");
+      background-position:  bottom center, bottom center, bottom center;
+      background-repeat:  no-repeat, no-repeat, no-repeat;
+      background-color: transparent;
+      background-size: 150px;
+      @media @retina {
+        background-image: url("../img/iphone-screen-mobile-3@2x.png"),
+                  url("../img/iphone-screen-mobile-2@2x.png"), 
+                  url("../img/iphone-screen-mobile-1@2x.png"),
+                  url("../img/iphone-screen-mobile-3@3x.png"),
+                  url("../img/iphone-screen-mobile-2@3x.png"), 
+                  url("../img/iphone-screen-mobile-1@3x.png");
+      }
       @media @screen-tablet {
         opacity: 0;
         width: 0px;
         height: 0px;
         background: none;
+        }
       }
     }
-  }
   &__promo-effect {
     display: none;
     @media @screen-tablet {
       display: block;
+      position: relative;
       .clearfix();
       padding-top: 89px;
       padding-bottom: 50px;
-      margin: 0px 31px;
+      padding-left:31px;
+      padding-right: 31px;
+      background-color: #ffffff;
+      background-image: url("../img/timer.svg"); //////ТОЛЬКО ОБОДОК????
+      background-repeat: no-repeat;
+      background-position: 9% 100%;
+      background-size: 38%;
+      height: 212px;
+      overflow: hidden;
+      &:after {
+        content:"24";
+        position: absolute;
+        display: block;
+        width: 155px;
+        height: 152px;
+        font-size: 10.4rem;
+        top: 111px;
+        left: 62px;
+        border: 14px solid @text-color--attention;
+        color: @text-color--attention;
+        border-radius: 50%;
+        font-weight: 700;
+        padding-top: 37px;
+        padding-left: 34px;
+      }
       header {
         float: right;
         font-weight: 600;
@@ -154,9 +212,9 @@
     content: "";
     position: absolute;
     width: 150%;
-    height: 104%;
-    top: 39%;
-    left: -200%;
+    height: 45%;
+    top: 87%;
+    left: -19%;
     z-index: -1;
     background-color: @background-color--slider;
     transform: rotate(85deg);
