@@ -31,16 +31,9 @@
   }
   &--make-full-size {
     margin-bottom: 24px;
-    background-image: url("../img/iphone-hand-mobile.png");
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    @media @retina {
-      background-image: url("../img/iphone-hand-mobile@2x.png"), 
-                        url("../img/background-mobile@3x.jpg");
-    }
     @media @screen-tablet {
-      margin-bottom: 18px;
-      padding-bottom: 81px;
+      margin-bottom: 19px;
+      padding-bottom: 80px;
       background-image: url("../img/iphone-hand-tablet@1x.png"), 
                         url("../img/background-tablet@1x.jpg");
       background-position: bottom center, top center;
@@ -143,10 +136,11 @@
   &__btn-menu {
     float: right;
     width: 70px;
-    height: 42px;
-    background-image: url("../img/menu-open-btn-icon.png");////СПРАЙТ
-    background-repeat: no-repeat;
-    background-position: bottom right;
+    height: 49px;
+    svg {
+      padding-left: 19px;
+      padding-top: 14px;
+    }
   }
   &__list {
     display: none;
@@ -185,9 +179,10 @@
   &__download {
     text-align: center;
     background-color: @background-color--dark;
-    padding-top: 26px;
+    padding-top: 27px;
     margin-top: -50px;
     @media @screen-tablet {
+      padding-top: 28px;
       float: left;
       width: 362px;
       text-align: center;
@@ -246,3 +241,4 @@
     }
   }
 }
+
