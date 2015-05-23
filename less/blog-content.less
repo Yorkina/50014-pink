@@ -23,6 +23,19 @@
         line-height: 3rem;
         letter-spacing: 0.5px;
         padding: 11px 0px 5px 0px;
+        position: relative;
+      &:before {
+        content:"";
+        position: absolute;
+        width: 51px;
+        height:50px;
+        top:11px;
+        left: -73px;
+        background-image: url("../img/sprt.svg");
+        background-position: -68px 0px;
+        background-repeat: no-repeat;
+        background-size: 423px;
+       }
       }
     }
     div {
@@ -47,12 +60,14 @@
       }
     }
   }
-  &__news:nth-child(3) {
+  &__news {
+   &:nth-child(3) {
     padding-top: 4px;
     padding-bottom: 9px;
     @media @screen-tablet {
       padding: 5px 30px 0px 102px;
       margin-bottom: 45px;
+      }
     }
   }
   &__news {
