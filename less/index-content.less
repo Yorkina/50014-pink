@@ -20,7 +20,7 @@
     }
   }
   &__promo-slogan {
-    margin: 0px 19px 113px 19px;
+    margin: 0px 19px 118px 19px;
     @media @screen-tablet {
       margin: 0px 19px 53px 19px;
     }
@@ -341,10 +341,10 @@
     font-size: @font-size--small;
     font-weight: @weight-light;
     text-transform: uppercase;
-    position: relative;
     padding-left: 23px;
     line-height: 0px;
-    height: 58px;
+    height: 56px;
+    position: relative;
     border: 2px solid @background-color--slider;
     @media @screen-tablet {
       color: #ffffff;
@@ -356,16 +356,10 @@
         padding-left: 10px;
         text-transform: none;
         height: 13px;
+        &:after {
+          display: none;
+        }
       }
-    }
-    svg {
-      position: absolute;
-      right: 15px;
-      top: 16px;
-       @media @screen-tablet {
-          right: 62px;
-          top: 8px;
-       }
     }
   }
   &__tarif {
@@ -413,6 +407,146 @@
         top: 4px;
         left: -44px;
         font-size: 1.2rem;
+      }
+    }
+  }
+  /////И ТУТ НАЧИНАЕТСЯ ЖЕСТЬ =) И сердцу тревожно в груди, 
+  /////И Ленин такой молодой, и юный октябрь впереди..
+  &__pink-filter {
+    td {
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 50px;
+        right:10px;
+        top:10px;
+        background-image: url("../img/sprt.svg");
+        background-repeat: no-repeat;
+        background-position: -430px -41px;
+        background-size: 500px;
+        @media @screen-tablet {
+          background-position: -360px -30px;
+          background-size: 425px;
+          width: 50px;
+          right:52px;
+          top:1px;
+        }
+      }
+    }
+  }
+  &__smiles { 
+    td { 
+      &:nth-child(1) {
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 50px;
+          height: 50px;
+          right:10px;
+          top:6px;
+          background-image: url("../img/sprt.svg");
+          background-repeat: no-repeat;
+          background-position: -325px -41px;
+          background-size: 485px;
+          @media @screen-tablet {
+          display: none;
+            }
+          }
+      }
+      &:nth-child(2) {
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 50px;
+          height: 50px;
+          right:10px;
+          top:10px;
+          background-image: url("../img/sprt.svg");
+          background-repeat: no-repeat;
+          background-position: -430px -41px;
+          background-size: 500px;
+          @media @screen-tablet {
+          background-position: -277px -39px;
+          background-size: 425px;
+          width:50px;
+          right:52px;
+          top:1px;
+            }
+          }
+        }
+      &:nth-child(3) {
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 50px;
+          height: 50px;
+          right:10px;
+          top:6px;
+          background-image: url("../img/sprt.svg");
+          background-repeat: no-repeat;
+          background-position: -325px -41px;
+          background-size: 485px;
+          @media @screen-tablet {
+          background-position: -277px -39px;
+          background-size: 425px;
+          width:50px;
+          right:52px;
+          top:1px;
+          right:52px;
+          }
+        }
+      }
+      &:nth-child(4) {
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 50px;
+          height: 50px;
+          right:10px;
+          top:6px;
+          background-image: url("../img/sprt.svg");
+          background-repeat: no-repeat;
+          background-position: -325px -41px;
+          background-size: 485px;
+          @media @screen-tablet {
+          background-position: -360px -30px;
+          background-size: 425px;
+          width: 50px;
+          right:52px;
+          top:1px;
+          }
+        }
+      }
+    }
+  }
+  &__comments {
+    td {
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 50px;
+        right:10px;
+        top:6px;
+        background-image: url("../img/sprt.svg");
+        background-repeat: no-repeat;
+        background-position: -325px -41px;
+        background-size: 485px;
+        @media @screen-tablet {
+          background-position: -277px -39px;
+          background-size: 425px;
+          width:50px;
+          right:52px;
+          top:1px;
+          right:52px;
+        }
       }
     }
   }
