@@ -131,7 +131,7 @@
   }
   //blog-page-footer
   &--inner-pages {
-    padding: 65px 20px 40px 20px;
+    padding: 49px 20px 40px 20px;
     @media @screen-tablet {
       .clearfix();
       padding: 0px 20px 40px 2px;
@@ -145,46 +145,46 @@
     font-size: 3rem;
     font-weight: @weight-normal;
     letter-spacing: 3px;
-    position: relative;
-    padding-left: 70px;
-    margin-bottom: 58px;
+    padding: 25px 0px 25px 70px;
+    margin-bottom: 55px;
     display: block;
-    text-align: center;
     width: 210px;
+    background-image: url("../img/logotype-blue-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 147px;
     @media @screen-tablet {
       font-size: 3.2rem;
       letter-spacing: 2.5px;
-      padding-left: 57px;
-      padding-top: 30px;
+      margin-right: 18px;
+      padding:0px 0px 0px 39px;
+      padding-top: 81px;
       display: block;
       float: left;
-      text-align: center;
       width: 187px;
-    }
-    &:before {
-      content: "";
-      width: 60px;
-      height: 40px;
-      position: absolute;
-      background-image: url("../img/footer-pink-glasses-img.png");
-      background-repeat: no-repeat;
-      left: 24%;
-      top: -40%;
-      @media @screen-tablet {
-        left: 17%;
-        top: 29%;
-      }
+      
     }
   }
   &__about-developers {
     font-size: 1.4rem;
     font-weight: 400;
-    text-align: center;
-    padding-right: 46px;
+    padding: 18px 51px 10px 74px;
+    background-image: url("../img/sprt.svg");
+    background-position: 25px 6px;
+    background-repeat: no-repeat;
+    background-size: 430px;
+    display: inline-block;
     @media @screen-tablet {
-      padding: 40px 46px 13px 40px;
+      padding: 43px 46px 9px 40px;
       float: right;
       width: 116px;
+      background-position: 3px 31px;
+      text-align: center;
+    }
+    header {
+      padding: 18px 0px 6px 0px;
+      background-color: #ffffff;
+      display: inline;
     }
   }
 }
@@ -192,7 +192,7 @@
 .social-buttons {
   text-align: center;
   padding-left: 10px;
-  margin-bottom: 68px;
+  margin-bottom: 51px;
   @media @screen-tablet {
     .clearfix();
     float: left;
@@ -208,12 +208,18 @@
     color: @text-color--attention;
     padding: 16px 23px;
     margin-right: 13px;
-    background-image: url("../img/sprite.svg");
+    background-image: url("../img/sprt.svg");
     background-repeat: no-repeat;
-    background-size: 25px;
+    background-size: 360px;
   }
   &__twitter {
-    background-position: 0 0;
+    background-position: -116px -36px;
+  }
+  &__fb {
+    background-position: -60px -36px;
+  }
+  &__video {
+    background-position: -165px -36px;
   }
 }
 
@@ -232,44 +238,36 @@
       font-weight: @weight-normal;
       letter-spacing: 2.5px;
       position: relative;
-      padding-left: 57px;
-      padding-top: 30px;
+      padding-left: 42px;
+      padding-top: 58px;
+      padding-bottom: 20px;
+      margin-right: 16px;
       display: block;
       float: left;
-      text-align: center;
       width: 187px;
-      &:before {
-        content: "";
-        width: 60px;
-        height: 40px;
-        position: absolute;
-        background-image: url("../img/footer-pink-glasses-img.png");
-        background-repeat: no-repeat;
-        left: 17%;
-        top: 25%;
-      }
+      background-image: url("../img/logotype-blue-tablet.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 147px;
     }
     &__about-developers {
       font-size: 1.4rem;
       font-weight: 400;
       text-align: center;
       padding-right: 24px;
-      padding-top: 0px;
+      padding-top: 41px;
+      padding-bottom: 13px;
       float: right;
-      width: 160px;
-      .clearfix();
+      width: 203px;
+      background-image: url("../img/sprt.svg");
+        background-position: 10px 27px;
+        background-repeat: no-repeat;
+        background-size: 430px;
       header {
-        display:inline;
-        float: left;
-        margin-top: 39px;
-        padding-left: 14px;
-
-      }
-      svg {
+        padding-top: 5px;
+        padding-bottom: 5px;
         display: inline;
-        float: right;
-        margin-top: 31px;
-        margin-right: 12px;
+        background-color: #ffffff;
       }
     }
     &__social-buttons {
@@ -286,3 +284,5 @@
     }
   }
 }
+
+
