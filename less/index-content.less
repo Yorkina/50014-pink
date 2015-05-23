@@ -4,23 +4,26 @@
   &:before {
     content: "";
     position: absolute;
-    width: 275%;
-    height: 117%;
-    top: -20%;
-    left: -225%;
+    width: 650px;
+    height: 950px;
+    top: 11%;
+    left: -71px;
     z-index: -1;
-    background-color: @background-color--slider;
-    transform: rotate(85deg);
+    background-color: green;
+    transform: rotate(175deg);
     @media @screen-tablet {
-      width: 125%;
+      width: 1000px;
       top: 14%;
       transform: rotate(175deg);
       left: -4%;
-      height: 30%;
+      height: 1000px;
     }
   }
   &__promo-slogan {
-    margin: 0px 19px 50px 19px;
+    margin: 0px 19px 113px 19px;
+    @media @screen-tablet {
+      margin: 0px 19px 53px 19px;
+    }
     h2 {
       .big-headers-text-style ();
       display: block;
@@ -48,7 +51,7 @@
     background-image: url("../img/iphone-case-mobile@1x.png");
     background-position:  bottom center;
     background-repeat:  no-repeat;
-    background-size: 170px;
+    background-size: 156px;
     @media @retina {
         background-image: url("../img/iphone-case-mobile@2x.png"),
                           url("../img/iphone-case-mobile@3x.png");
@@ -59,10 +62,10 @@
                           url("../img/iphone-screen-tablet-2@1x.png"),
                           url("../img/iphone-screen-tablet-1@1x.png");
             background-repeat: no-repeat, no-repeat, no-repeat;
-            background-position: 3% 28%; 
-            padding-top: 60px;
-            padding-bottom: 50px;
+            background-position: 3% 0%; 
+            padding-bottom: 42px;
             margin: 0px 31px;
+            padding-top: 60px;
             background-size: 268px;
         @media @retina {
           background-image: url("../img/iphone-screen-tablet-3@2x.png"),
@@ -112,10 +115,10 @@
       background-image: url("../img/iphone-screen-mobile-3@1x.png"),
                   url("../img/iphone-screen-mobile-2@1x.png"), 
                   url("../img/iphone-screen-mobile-1@1x.png");
-      background-position:  bottom center, bottom center, bottom center;
-      background-repeat:  no-repeat, no-repeat, no-repeat;
+      background-position: bottom center;
+      background-repeat: no-repeat;
       background-color: transparent;
-      background-size: 150px;
+      background-size: 136px;
       @media @retina {
         background-image: url("../img/iphone-screen-mobile-3@2x.png"),
                   url("../img/iphone-screen-mobile-2@2x.png"), 
@@ -138,7 +141,7 @@
       display: block;
       position: relative;
       .clearfix();
-      padding-top: 89px;
+      padding-top: 94px;
       padding-bottom: 50px;
       padding-left:31px;
       padding-right: 31px;
@@ -146,7 +149,7 @@
       background-image: url("../img/timer.svg"); //////ТОЛЬКО ОБОДОК????
       background-repeat: no-repeat;
       background-position: 9% 100%;
-      background-size: 38%;
+      background-size: 267px;
       height: 212px;
       overflow: hidden;
       &:after {
@@ -156,7 +159,7 @@
         width: 155px;
         height: 152px;
         font-size: 10.4rem;
-        top: 111px;
+        top: 115px;
         left: 62px;
         border: 14px solid @text-color--attention;
         color: @text-color--attention;
@@ -199,7 +202,7 @@
 
 .review-slider {
   width: 300%;
-  height: 280px;
+  height: 247px;
   padding-top: 52px;
   overflow: hidden;
   margin-bottom: 115px;
@@ -211,13 +214,17 @@
   &:before {
     content: "";
     position: absolute;
-    width: 150%;
-    height: 45%;
-    top: 87%;
-    left: -19%;
+    width: 700px;
+    height: 470px;
+    top: 74%;
+    left: -20px;
     z-index: -1;
-    background-color: @background-color--slider;
-    transform: rotate(85deg);
+    background-color: green;
+    transform: rotate(175deg);
+    @media @screen-tablet {
+      width: 1000px;
+      top: 80%;
+    }
   }
   &__slides {
     position: relative;
@@ -298,7 +305,6 @@
   width: 100%;
   position: absolute;
   height: 120px;
-  margin-bottom: 88px;
   transform: translateX(-259px);
   background-color: @background-color--light;
   border-collapse: collapse;
@@ -306,6 +312,7 @@
     width: 67%;
     transform: translateX(0px);
     margin-left: 43px;
+    margin-bottom: 88px;
   }
   th {
     padding: 0px 88px;
@@ -334,15 +341,31 @@
     font-size: @font-size--small;
     font-weight: @weight-light;
     text-transform: uppercase;
-    padding: 15px 0px;
+    position: relative;
+    padding-left: 23px;
+    line-height: 0px;
+    height: 58px;
     border: 2px solid @background-color--slider;
     @media @screen-tablet {
       color: #ffffff;
+      height: 0px;
+      padding: 15px 0px 15px 10px;
+      line-height: 1rem;
       &:first-child {
         color: @background-color--dark;
         padding-left: 10px;
         text-transform: none;
+        height: 13px;
       }
+    }
+    svg {
+      position: absolute;
+      right: 15px;
+      top: 16px;
+       @media @screen-tablet {
+          right: 62px;
+          top: 8px;
+       }
     }
   }
   &__tarif {
@@ -373,13 +396,38 @@
       }
     }
   }
+  &__hit {
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: "ХИТ";
+      left: -41px;
+      top: 12px;
+      position: absolute;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      background-color: #d22856;
+      width: 130px;
+      transform: rotate(-45deg);
+      @media @screen-tablet {
+        top: 4px;
+        left: -44px;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
 
 .toggle {
   &__review-slider {
     position: relative;
     top: -112px;
+    margin-bottom: 21px;
     text-align: center;
+    background-color: #ffffff;
+    @media @screen-tablet {
+      margin-bottom: 0px;
+    }
   }
   &__price-slider {
     position: relative;
