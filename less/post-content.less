@@ -102,6 +102,7 @@
     }
   }
   &__hotel-list {
+    padding:0px;
     @media @screen-tablet {
       padding-left: 20px;
       padding-bottom: 30px;
@@ -115,17 +116,20 @@
       @media @screen-tablet {
         font-size: 1.8rem;
         line-height: 3rem;
-        &:before {
+      }
+      &:before {
           content: "";
           display: inline-block;
           border: 3px solid #d22856;
           background-color: #d22856;
           border-radius: 50%;
-          margin-right: 29px;
+          margin-right: 18px;
           margin-left: 20px;
           margin-bottom: 2px;
+          @media @screen-tablet {
+            margin-right: 29px;
+          }
         }
-      }
       &:nth-child(2) {
         padding: 27px 0px;
         @media @screen-tablet {
