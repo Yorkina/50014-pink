@@ -245,7 +245,7 @@
       letter-spacing: 2.5px;
       position: relative;
       padding-left: 42px;
-      padding-top: 58px;
+      padding-top: 52px;
       padding-bottom: 20px;
       margin-right: 16px;
       display: block;
@@ -261,19 +261,27 @@
       font-weight: 400;
       text-align: center;
       padding-right: 24px;
-      padding-top: 41px;
-      padding-bottom: 13px;
+      padding-top: 33px;
+      padding-bottom: 21px;
       float: right;
       width: 203px;
-      background-image: url("../img/sprt.svg");
-        background-position: 10px 27px;
-        background-repeat: no-repeat;
-        background-size: 430px;
-      header {
+      a {
         padding-top: 5px;
         padding-bottom: 5px;
-        display: inline;
+        display: block;
         background-color: #ffffff;
+        &:after {
+        content: "";
+        width: 30px;
+        height: 36px;
+        display: block;
+        background-image: url("../img/sprt.svg");
+        background-position: -138px -4px;
+        background-repeat: no-repeat;
+        background-size: 400px;
+        margin-left: 155px;
+        margin-top: -24px;
+        } 
       }
     }
     &__social-buttons {
