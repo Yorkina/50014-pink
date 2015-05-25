@@ -16,6 +16,11 @@
       }
       .clearfix ();
     }
+    @media @screen-desktop {
+      background-image: url("../img/background-fullsize.jpg");
+      background-size: 100%;
+      background-position: 0 0;
+    }
   h1 {
     display: block;
     word-wrap: break-word;
@@ -94,6 +99,9 @@
         padding: 37px 40px 30px 36px;
         line-height: 6rem;
       }
+      @media @screen-desktop {
+        padding: 29px 84px 53px 85px;
+      }
     }
   }
   &__head-line {
@@ -104,11 +112,13 @@
     @media @screen-tablet {
       padding: 25px 40px;
     }
+     @media @screen-desktop {
+      padding: 25px 40px 27px 127px;
+     }
   }
   &__logo-link {
     float: left;
     display: block;
-    word-wrap: break-word;
     width: 80px;
     .a-decoration ();
     font-size: 3rem; //big + light
@@ -129,6 +139,10 @@
       background-position: top left;
       background-size: 151px;
     }
+    @media @screen-desktop {
+      position: static;
+      background-image: url("../img/logotype-white-desktop.svg");
+    }
   }
   &__btn-menu {
     float: right;
@@ -141,7 +155,17 @@
     @media @screen-tablet {
       background-position: 11px -86px;
     }
-
+    @media @screen-desktop {
+      display: none;
+    }
+  }
+  &__menu {
+    @media @screen-desktop {
+    float:right;
+    .clearfix();
+     width:695px;
+     margin-top: 20px;
+   }
   }
   &__list {
     display: none;
@@ -153,11 +177,29 @@
       top: 101px;
       width: 100%;
     }
+   @media @screen-desktop {
+      display: inline;
+      position: static;
+     }
     li {
       list-style: none;
       text-align: center;
       border-bottom: 1px solid black;
       border-top: 1px solid #485361;
+       @media @screen-desktop {
+      display: inline-block;
+      padding: 0px;
+      border: none; ////ДА ДА ДА, ДИЗАЙНЕР - МОЛОДЕЦ!!!
+      &:nth-child(2) {
+        margin-left:72px;
+      }
+      &:nth-child(3) {
+        margin-left: 62px;
+      }
+      &:nth-child(4) {
+        margin-left: 64px;
+      }
+     }
     }
     a {
       font-size: @font-size--medium;
@@ -167,6 +209,14 @@
       color: @text-color--contrast;
       background-color: #283645;
       padding: 18px 86px;
+      @media @screen-desktop {
+      display: inline-block;
+      padding: 0px;
+      text-transform: none;
+      font-weight: @weight-light;
+      background-color: transparent;
+      letter-spacing: 0.6px;
+     }
     }
   }
   &__slogan {
