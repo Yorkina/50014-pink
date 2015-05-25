@@ -5,6 +5,7 @@
   }
   @media @screen-desktop {
     padding: 0px 130px;
+    margin-bottom: 13px;
   }
   p {
     font-size: 1.4rem;
@@ -59,6 +60,9 @@
         width: 300px;
         margin-right: 138px;
       }
+      @media @screen-desktop {
+        margin-right: 324px;
+      }
     }
     div {
       font-size: 1.4rem;
@@ -66,6 +70,12 @@
       text-align: center;
       text-transform: uppercase;
       margin-bottom: 11px;
+      span {
+        display: none;
+        @media @screen-desktop {
+          display: inline;
+        }
+      }
       @media @screen-tablet {
         display: inline-block;
       }
@@ -416,10 +426,18 @@
     width: 623px;
     margin-bottom: 56px;
   }
+  @media @screen-desktop {
+    width:942px;
+  }
   fieldset {
     border: none;
     @media @screen-tablet {
       border: 2px solid @border-color;
+    }
+    @media @screen-desktop {
+      width:925px;
+      padding-right: 0px;
+      padding-bottom: 0px;
     }
   }
   legend {
@@ -443,6 +461,9 @@
       padding: 0px 0px 24px 0px;
       margin: 0px 49px;
       display: block;
+    }
+    @media @screen-desktop {
+      margin: 0px 73px 36px 47px;
     }
     input[type="text"] {
       font-size: 1.8rem;
@@ -499,11 +520,23 @@
       padding: 0px 0px 38px 0px;
       margin-left: 49px;
     }
+    @media @screen-desktop {
+       margin-left: 46px;
+       padding: 0px 0px 31px 0px;
+    }
   }
   &__names {
     padding-top: 36px;
     @media @screen-tablet {
       padding-top: 34px;
+    }
+    @media @screen-desktop {
+      display: inline-block;
+      width: 385px;
+      position: relative;
+      margin-right: 16px;
+      margin-bottom: 28px;
+      padding: 0px;
     }
     header {
       .clearfix ();
@@ -576,6 +609,11 @@
         margin-left: 51px;
         padding: 0px;
       }
+      @media @screen-desktop {
+        position: absolute;
+        right: -437px;
+        top: 52px;
+      }
     }
   }
   &__nick {
@@ -585,6 +623,11 @@
     @media @screen-tablet {
       padding-left: 84px;
       padding-bottom: 11px;
+    }
+    @media @screen-desktop {
+      width: 300px;
+      display: inline-block;
+      padding:0px;
     }
     label {
       float: left;
@@ -647,6 +690,9 @@
     padding: 0px;
     margin-bottom: 55px;
   }
+  @media @screen-desktop {
+    width: 942px;
+  }
   fieldset {
     border: none;
     @media @screen-tablet {
@@ -654,6 +700,11 @@
       padding-left: 57px;
       padding-top: 49px;
       padding-bottom: 2px;
+    }
+    @media @screen-desktop {
+      width: 880px;
+      padding: 50px 0px 8px 55px;
+      font-size: 0px;
     }
   }
   legend {
@@ -673,6 +724,14 @@
     display: block;
     line-height: 3rem;
     margin-bottom: 52px;
+    @media @screen-desktop {
+      width: 200px;
+      margin-left: 50px;
+      display: inline-block;
+      &:nth-child(3n) {
+        margin-left: 0px;
+      }
+    }
   }
   &__checkbox {
     vertical-align: top;
@@ -735,12 +794,18 @@
     padding: 0px;
     margin-bottom: 66px;
   }
+  @media @screen-desktop {
+    width:100%;
+  }
   fieldset {
     border: none;
     @media @screen-tablet {
       border: 2px solid @border-color;
       padding: 36px 56px 14px 56px;
       margin-bottom: 14px;
+    }
+    @media @screen-desktop {
+    padding-bottom: 43px;
     }
   }
   legend {
@@ -778,6 +843,13 @@
       padding: 14px 5px 14px 0px;
       width: 490px;
     }
+    @media @screen-desktop {
+      width: 99%;
+      color: #ffffff;
+      background-color: #d22856;
+      border-color: #d22856;
+      border-radius: 5px;
+    }
   }
   &__btn-file--wrap {
     position: relative;
@@ -791,6 +863,9 @@
       padding-bottom: 104px;
       margin-bottom: 50px;
       margin-left: 0px;
+    }
+    @media @screen-desktop {
+      width:100%;
     }
   }
   &__images {
@@ -811,6 +886,16 @@
       }
     @media @screen-tablet {
       margin: 17px 69px 34px 0px;
+    }
+    @media @screen-desktop {
+      margin-right: 55px;
+      margin-bottom: 12px;
+      &:nth-child(3n) {
+        margin-right: 55px;
+      }
+      &:nth-child(5n) {
+        margin-right: 0px;
+      }
     }
     img {
       padding-bottom: 7px;
