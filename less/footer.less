@@ -136,6 +136,9 @@
       .clearfix();
       padding: 0px 20px 40px 2px;
     }
+    @media @screen-desktop {
+      padding: 0px 110px 40px 89px;
+    }
     a {
       text-decoration: @text-decoration;
       color: @text-color--headers;
@@ -162,7 +165,10 @@
       display: block;
       float: left;
       width: 187px;
-      
+    }
+    @media @screen-desktop {
+      margin-right: 174px;
+      background-image: url("../img/logotype-blue-desktop.svg");
     }
   }
   &__about-developers {
@@ -175,10 +181,18 @@
       float: right;
       width: 116px;
     }
+     @media @screen-desktop {
+      width: 136px;
+      padding-top: 24px;
+      font-size: 1.8rem;
+    }
     a {
       padding: 18px 0px 9px 6px;
       background-color: #ffffff;
       display: block;
+      @media @screen-desktop {
+        padding: 13px 0px 9px 0px;
+      }
       &:after {
         content: "";
         width: 30px;
@@ -190,6 +204,12 @@
         background-size: 400px;
         margin-left: 99px;
         margin-top: -25px;
+        @media @screen-desktop {
+          width: 40px;
+          background-size: 416px;
+          margin-left: 118px;
+          margin-top: -23px;
+        }
       } 
     }
   }
@@ -208,6 +228,9 @@
     margin-bottom: 0px;
     padding: 29px 10px;
   }
+   @media @screen-desktop {
+      width: 200px;
+    }
   a {
     .border-style();
     border-radius: 50%;
@@ -217,6 +240,9 @@
     background-image: url("../img/sprt.svg");
     background-repeat: no-repeat;
     background-size: 360px;
+    @media @screen-desktop {
+      border: 3px solid #e5e5e5;
+    }
   }
   &__twitter {
     background-position: -116px -36px;
