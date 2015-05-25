@@ -83,7 +83,7 @@
               </header>
               <span class="travelers__form-number">1</span>
               <input id="traveler-name" type="text" name="traveler-name" value="" placeholder="Введите ваше имя">
-              <button class="travelers__name--delete">Удалить</button>
+              <button class="travelers__name--delete" type="reset">Удалить</button>
             </div>
             <div class="travelers__nick">
               <label for="traveler-nick">Прозвище:</label>
@@ -96,7 +96,7 @@
               </header>
               <span class="travelers__form-number">2</span>
               <input id="traveler-name--second" type="text" name="traveler-name" value="" placeholder="Введите ваше имя">
-              <button class="travelers__name--delete">Удалить</button>
+              <button class="travelers__name--delete" type="reset">Удалить</button>
             </div>
             <div class="travelers__nick">
               <label for="traveler-nick">Прозвище:</label>
@@ -126,8 +126,9 @@
         <fieldset>
           <legend>Ваши фотографии из поездки<sup>*</sup></legend>
           <div class="travel-photo__btn-file--wrap">
-            <input id="photo" type="file" name="img" accept="image/jpeg,image/png,image/gif" placeholder="Загрузить фото">
-            <label for="photo">Загрузить фото</label>
+            <label for="photo">
+            <input id="photo" type="file" name="img" accept="image/jpeg,image/png,image/gif" placeholder="Загрузить фото" multiple>
+            Загрузить фото</label>
           </div>
           <article class="travel-photo__images">
             <figure>
@@ -175,7 +176,7 @@
       </div>
       <div class="form-content__sending-form">
         <button class="button form-content__button" type="submit">Отправить форму</button>
-        <div><sup>*</sup> — Обязательные поля</div>
+        <div><sup>*</sup> — Обязательные <span>для заполнения </span>поля</div>
       </div>
     </form>
   </div>
