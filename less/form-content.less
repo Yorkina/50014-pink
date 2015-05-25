@@ -3,6 +3,9 @@
     margin-bottom: 38px;
     padding: 0px 39px;
   }
+  @media @screen-desktop {
+    padding: 0px 130px;
+  }
   p {
     font-size: 1.4rem;
     color: @text-color--headers;
@@ -14,11 +17,24 @@
       padding: 0px 50px;
       margin: 0px;
     }
-    &:nth-child(2) {
-      display: none;
+    @media @screen-desktop {
+      padding: 0px 75px;
+      margin-bottom: 70px;
+    }
+    span {
+      display: none; ///////////ПОПРАВИТЬ В ТАБЛЕТОШНОЙ ВЕРСИИ
       @media @screen-tablet {
         display: block;
-        margin-bottom: 43px;
+        font-size: 1.8rem;
+        color: @text-color--headers;
+        text-align: center;
+        line-height: 3rem;
+        padding: 0px 50px;
+        margin: 0px;
+      }
+      @media @screen-desktop {
+        padding: 0px;
+        display: inline-block;
       }
     }
   }
@@ -69,6 +85,11 @@
     padding: 0px;
     margin-bottom: 35px;
   }
+  @media @screen-desktop {
+    display: flex;
+    width: 960px;
+    flex-wrap: wrap;
+  }
   label {
     display: block;
     .label-text-style ();
@@ -77,6 +98,11 @@
     text-transform: uppercase;
     sup {
       padding-left: 4px;
+    }
+    @media @screen-desktop {
+      width: 297px;
+      order: 1;
+      flex-shrink: 0;
     }
   }
   input[type="text"] {
@@ -90,6 +116,15 @@
     width: 88%;
     @media @screen-tablet {
       width: 590px;
+    }
+     @media @screen-desktop {
+      width: 267px;
+      margin-right: 21px;
+      flex-shirink: 0;
+      order: 2;
+      &:nth-child(3) {
+        margin-right: 0px;
+      }
     }
   }
   input::-webkit-input-placeholder {
@@ -117,11 +152,18 @@
     margin-bottom: 56px;
     width: 623px;
   }
+  @media @screen-desktop {
+    display:flex;
+    width: 942px;
+  }
   fieldset {
     border: none;
     @media @screen-tablet {
       border: 2px solid @border-color;
       padding: 13px 0px 14px 64px;
+    }
+    @media @screen-desktop {
+      width:100%;
     }
   }
   legend {
@@ -141,7 +183,16 @@
     display: block;
     line-height: 3rem;
     margin-bottom: 45px;
+     @media @screen-desktop {
+      width: 170px;
+      margin-right: 88px;
+      display: inline-block;
+      &:last-child{
+        margin-right: 0px;
+      }
+    }
   }
+
   &__radio {
     vertical-align: top;
     margin: 0 3px 0 0;
@@ -198,12 +249,20 @@
     margin-bottom: 55px;
     width: 623px;
   }
+  @media @screen-desktop {
+    display: flex;
+    width:942px;
+    flex-wrap: wrap;
+  }
   fieldset {
     border: none;
     @media @screen-tablet {
       border: 2px solid @border-color;
       padding: 9px 0px 7px 58px;
       .clearfix();
+    }
+    @media @screen-desktop {
+      width:100%;
     }
   }
   legend {
@@ -225,6 +284,12 @@
     margin-bottom: 25px;
     @media @screen-tablet {
       margin-bottom: 35px;
+    }
+    @media @screen-desktop {
+      margin-bottom: 22px;
+      text-align: left;
+      padding-left: 44px;
+      margin-bottom: 15px;
     }
   }
   input[type="text"] {
@@ -263,6 +328,9 @@
     @media @screen-tablet {
       padding-left: 8px;
     }
+    @media @screen-desktop {
+      padding-left: 5px;
+    }
   }
   &__trip-info {
     padding: 14px;
@@ -272,16 +340,31 @@
       width: 210px;
       margin-bottom: 18px;
     }
+    @media @screen-desktop {
+      width: 207px;
+      margin-bottom: 20px;
+      padding: 14px 19px 12px 8px;
+     }
   }
   .trip-info-wrapper {
     @media @screen-tablet {
       display: block;
       float: left;
+    }
+    @media @screen-desktop {
+      width: 279px;
+      display: inline-block;
+      float: none;
+    }
       label {
+        @media @screen-tablet {
         text-align: left;
         padding-left: 22px;
+        }
+        @media @screen-desktop {
+          padding-left: 19px;
+        }
       }
-    }
   }
   &__trip-date {
     padding: 14px 0px 14px 0px;
@@ -291,6 +374,11 @@
     @media @screen-tablet {
       width: 113px;
     }
+     @media @screen-desktop {
+      width: 118px;
+      margin-bottom: 20px;
+      padding: 14px 8px 14px 0px;
+     }
   }
   .trip-date-wrapper {
      font-size: 0px;
@@ -298,6 +386,12 @@
       display: block;
       float: right;
       padding-right: 57px;
+    }
+    @media @screen-desktop {
+      width: 294px;
+      display: inline-block;
+      float: none;
+      padding: 0px;
     }
   }
   &__btn-minus {
