@@ -74,10 +74,22 @@ console.log("test");
 					figure.appendChild(img);
 					figure.appendChild(cancel);
 					figure.appendChild(caption);
+
+					cancel.onclick = function(event) {
+						event.preventDefault();
+						this.parentNode.remove();
+					}
 				});
 				reader.readAsDataURL(file);
 				}
 			}
+			var closer = document.querySelector(".travel-photo__btn-cancel");
+				closer.onclick = function () {
+					figure.remove();
+					img.remove();
+					cancel.remove();
+					caption.remove();
+				}
 		}
 })();
 
