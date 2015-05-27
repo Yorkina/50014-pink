@@ -91,5 +91,53 @@ console.log("test");
 					caption.remove();
 				}
 		}
+		function Counter(options) {
+			var wrap = document.querySelector(options.wrap);;
+			var countElem = document.querySelector(options.box);
+
+			wrap.onclick = function(event) {
+				event.preventDefault();
+				if(event.target.className == options.minus) {
+					countDecrease();
+				} else if (event.target.className == options.plus) {
+					countIncrease();
+				}
+			}
+
+			function countDecrease() {
+				if (countElem.value != 0) {
+				countElem.value = +countElem.value -1;
+				}
+			}
+
+			function countIncrease() {
+				if (countElem.value != 365) {
+				countElem.value = +countElem.value +1;
+				}
+			}
+
+			this.setCount = function(add) {
+				countElem.value = +add;
+			};
+		}
+
+		var calc = new Counter ({
+			wrap: ".trip-date-wrapper",
+			box: ".travel-duration__trip-date",
+			minus: "travel-duration__btn-minus",
+			plus: "travel-duration__btn-plus"
+
+		});
+
+		calc.setCount(0);
+
+		var calcTravalers = new Counter ({
+			wrap: ".travelers__count",
+			box: ".travelers__trip-count",
+			minus: "travelers__btn-minus",
+			plus: "travelers__btn-plus"
+		});
+
+		calc.setCount(0);
 })();
 
