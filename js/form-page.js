@@ -103,7 +103,14 @@ console.log("test");
 					countIncrease();
 				}
 			}
-
+			countElem.oninput = function(e) {
+				var pattern = /^[^A-Za-zА-Яа-я/]+$/g;
+				if(this.value.match(pattern)) {
+					return;
+				} else {
+					this.value = this.value.replace(/[A-Za-zА-Яа-я]+/,'');
+				}
+			};
 			function countDecrease() {
 				if (countElem.value != 0) {
 				countElem.value = +countElem.value -1;
