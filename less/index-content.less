@@ -5,11 +5,11 @@
     content: "";
     position: absolute;
     width: 650px;
-    height: 950px;
+    height: 940px;
     top: 11%;
     left: -71px;
     z-index: -1;
-    background-color: green;
+    background-color: @background-color--slider;
     transform: rotate(175deg);
     @media @screen-tablet {
       width: 1000px;
@@ -23,6 +23,9 @@
     margin: 0px 19px 118px 19px;
     @media @screen-tablet {
       margin: 0px 19px 53px 19px;
+    }
+    @media @screen-desktop {
+      margin-bottom: 77px;
     }
     h2 {
       .big-headers-text-style ();
@@ -41,6 +44,13 @@
         &:nth-child(2) {
           width: 345px;
           margin: 0px auto;
+        }
+      }
+      @media @screen-desktop {
+        font-size: 5rem;
+        line-height: 6rem;
+        &:nth-child(2) {
+          width: 600px;
         }
       }
     }
@@ -76,11 +86,30 @@
                           url("../img/iphone-screen-tablet-1@3x.png");
         }
     }
+    @media @screen-desktop {
+        background-image: url("../img/iphone-screen-desktop-1@1x.png"),
+                          url("../img/iphone-screen-desktop-2@1x.png"),
+                          url("../img/iphone-screen-desktop-3@1x.png");
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: 12% 0%, 50% 0%, 88% 0%;
+        background-size: 291px;
+        padding-top: 341px;
+        padding-bottom: 18px;
+        @media @retina {
+          background-image: url("../img/iphone-screen-desktop-1@2x.png"),
+                          url("../img/iphone-screen-desktop-2@2x.png"),
+                          url("../img/iphone-screen-desktop-3@2x.png"),
+                          url("../img/iphone-screen-desktop-1@3x.png"),
+                          url("../img/iphone-screen-desktop-2@3x.png"),
+                          url("../img/iphone-screen-desktop-3@3x.png");
+        }
+    }
     header {
       .headers-text-style();
       text-decoration: none;
       letter-spacing: 0.5px; // letter-spacing?
       margin-bottom: 15px;
+      word-wrap: break-word;
       @media @screen-tablet {
         display: block;
         text-align: left;
@@ -89,6 +118,13 @@
         padding-top: 15px;
         margin-bottom: 1px;
       }
+      @media @screen-desktop {
+        font-size: 3rem;
+        text-align: center;
+        float: none;
+        width: 100%;
+        margin-bottom: 24px;
+      }
     }
     p {
       font-size: 1.4rem;
@@ -96,6 +132,7 @@
       text-align: center;
       line-height: 2.4rem;
       margin-bottom: 34px;
+      word-wrap: break-word;
       @media @screen-tablet {
         text-align: left;
         float: right;
@@ -104,6 +141,13 @@
         &:last-child {
           margin-bottom: 0px;
         }
+      }
+      @media @screen-desktop {
+        float: none;
+        width: 100%;
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 3rem;
       }
     }
     &:after {
@@ -135,6 +179,18 @@
         }
       }
     }
+  &__promo-info-block {
+      @media @screen-desktop {
+      display: inline-block;
+      width: 245px;
+      vertical-align: top;
+      font-size: 0px;
+      &:nth-child(2) {
+        margin-left: 72px;
+        margin-right: 72px;
+      }
+    }
+  }
   &__promo-effect {
     display: none;
     @media @screen-tablet {
@@ -152,7 +208,14 @@
       background-size: 267px;
       height: 212px;
       overflow: hidden;
+    }
+    @media @screen-desktop {
+      background-position: 14% 88%;
+      background-size: 301px;
+      background-color: @background-color--slider;
+    }
       &:after {
+        @media @screen-tablet {
         content:"24";
         position: absolute;
         display: block;
@@ -168,7 +231,23 @@
         padding-top: 37px;
         padding-left: 34px;
       }
+       @media @screen-desktop {
+        width: 220px;
+        height: 220px;
+        font-size: 12rem;
+        line-height: 21rem;
+        top: 120px;
+        left: 155px;
+        text-align: center;
+        padding: 0px;
+       }
+    }
+     @media @screen-desktop {
+      padding-top: 139px;
+    }
       header {
+        word-wrap: break-word;
+        @media @screen-tablet {
         float: right;
         font-weight: 600;
         font-size: 3rem;
@@ -178,7 +257,16 @@
         margin-right: 151px;
         margin-bottom: 10px;
       }
+         @media @screen-desktop {
+        font-size: 3rem;
+        float: none;
+        width: 100%;
+        margin-bottom: 21px;
+      }
+    }
       p {
+        word-wrap: break-word;
+        @media @screen-tablet {
         float: right;
         font-weight: 400;
         font-size: 1.4rem;
@@ -188,7 +276,17 @@
         margin-top: 0px;
         margin-bottom: 10px;
       }
+        @media @screen-desktop {
+        float: none;
+        width: 525px;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        margin-bottom: 31px;
+        }
+      }
       a {
+        word-wrap: break-word;
+        @media @screen-tablet {
         float: right;
         font-weight: 400;
         font-size: 1.4rem;
@@ -196,6 +294,17 @@
         color: @text-color--attention;
         width: 320px;
       }
+      @media @screen-desktop {
+        float: none;
+        font-size: 1.8rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  &__promo-effect-block {
+    @media @screen-desktop {
+    float: right;
+    width:674px;
     }
   }
 }
@@ -219,7 +328,7 @@
     top: 74%;
     left: -20px;
     z-index: -1;
-    background-color: green;
+    background-color: @background-color--slider;
     transform: rotate(175deg);
     @media @screen-tablet {
       width: 1000px;
@@ -249,7 +358,7 @@
     @media @screen-tablet {
       display: flex;
       flex-direction: column-reverse;
-      height: 200px;
+      height: 197px;
     }
     header {
       .headers-text-style();
@@ -313,6 +422,7 @@
     transform: translateX(0px);
     margin-left: 43px;
     margin-bottom: 88px;
+    border-radius: 10px;
   }
   th {
     padding: 0px 88px;
@@ -346,12 +456,16 @@
     height: 56px;
     position: relative;
     border: 2px solid @background-color--slider;
+     &:first-child {
+      display: none;
+    }
     @media @screen-tablet {
       color: #ffffff;
       height: 0px;
       padding: 15px 0px 15px 10px;
       line-height: 1rem;
       &:first-child {
+        display: table-cell;
         color: @background-color--dark;
         padding-left: 10px;
         text-transform: none;
@@ -365,7 +479,6 @@
   &__tarif {
     color: #ffffff;
     background-color: @background-color--dark;
-    outline: 2px solid @background-color--slider;
     @media @screen-tablet {
       background-color: @background-color--slider;
     }
