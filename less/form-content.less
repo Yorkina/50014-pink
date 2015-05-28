@@ -45,6 +45,7 @@
       padding: 0px;
     }
     button {
+      cursor: pointer;
       color: @text-color--contrast;
       text-transform: uppercase;
       padding: 20px 15px;
@@ -301,14 +302,18 @@
       margin-bottom: 15px;
     }
   }
+  input[type="data"],
   input[type="text"] {
     font-size: 1.8rem;
     font-family: 'Open Sans', Arial, sans-serif;
     display: inline-block;
     .border-style ();
-    line-height: 3rem;
+    line-height: 30px;
+    padding: 14px;
+    margin-bottom: 17px;
   }
   button {
+    cursor: pointer;
     font-size: @html-size-base;
     font-family: 'Open Sans', Arial, sans-serif;
     display: inline-block;
@@ -327,6 +332,9 @@
     padding-left: 5px;
     @media @screen-tablet {
       padding-left: 8px;
+    }
+    @media @screen-desktop {
+      padding-left: 5px;
     }
   }
   input:-moz-placeholder {
@@ -365,26 +373,26 @@
       display: inline-block;
       float: none;
     }
-      label {
-        @media @screen-tablet {
-        text-align: left;
-        padding-left: 22px;
-        }
-        @media @screen-desktop {
-          padding-left: 19px;
-        }
+    label {
+      @media @screen-tablet {
+      text-align: left;
+      padding-left: 22px;
       }
+      @media @screen-desktop {
+        padding-left: 19px;
+      }
+    }
   }
   &__trip-date {
     padding: 14px 0px 14px 0px;
-    width: 157px;
+    width: 139px;
     text-align: center;
     margin-bottom: 18px;
     @media @screen-tablet {
-      width: 113px;
+      width: 95px;
     }
      @media @screen-desktop {
-      width: 118px;
+      width: 100px;
       margin-bottom: 20px;
       padding: 14px 8px 14px 0px;
      }
@@ -462,7 +470,7 @@
       display: block;
     }
     @media @screen-desktop {
-      margin: 0px 73px 36px 47px;
+      margin: 0px 56px 36px 47px;
     }
     input[type="text"] {
       font-size: 1.8rem;
@@ -490,6 +498,7 @@
       padding-left: 5px;
     }
     button {
+      cursor: pointer;
       font-size: @html-size-base;
       font-family: 'Open Sans', Arial, sans-serif;
       display: inline-block;
@@ -570,10 +579,10 @@
       display: block;
       .border-style ();
       line-height: 3rem;
-      padding: 14px 0px;
-      width: 213px;
+      padding: 14px;
+      width: 187px;
       @media @screen-tablet {
-        width: 293px;
+        width: 267px;
         display: inline-block;
       }
     }
@@ -581,22 +590,23 @@
       font-size: 1.8rem;
       font-weight: 400;
       color: @text-color--headers;
-      padding-left: 17px;
+      padding-left: 5px;
       @media @screen-tablet {
-        padding-left: 20px;
+        padding-left: 5px;
       }
     }
     input:-moz-placeholder {
       font-size: 1.8rem;
       font-weight: 400;
       color: @text-color--headers;
-      padding-left: 17px;
+      padding-left: 5px;
       @media @screen-tablet {
-        padding-left: 20px;
+        padding-left: 5px;
       }
     }
     button {
       display: none;
+      cursor: pointer;
       @media @screen-tablet {
         display: inline-block;
         font-size: 1.3rem;
@@ -645,28 +655,29 @@
       display: block;
       .border-style ();
       line-height: 3rem;
-      padding: 14px 0px;
-      width: 213px;
+      padding: 14px;
+      width: 187px;
       @media @screen-tablet {
-        width: 295px;
+        width: 267px;
+        display: inline-block;
       }
     }
     input::-webkit-input-placeholder {
       font-size: 1.8rem;
       font-weight: 400;
       color: @text-color--headers;
-      padding-left: 17px;
+      padding-left: 5px;
       @media @screen-tablet {
-        padding-left: 22px;
+        padding-left: 5px;
       }
     }
     input:-moz-placeholder {
       font-size: 1.8rem;
       font-weight: 400;
       color: @text-color--headers;
-      padding-left: 17px;
+      padding-left: 5px;
       @media @screen-tablet {
-        padding-left: 22px;
+        padding-left: 5px;
       }
     }
   }
@@ -702,7 +713,7 @@
     }
     @media @screen-desktop {
       width: 880px;
-      padding: 50px 0px 8px 55px;
+      padding: 50px 0px 8px 52px;
       font-size: 0px;
     }
   }
@@ -826,6 +837,7 @@
     display: inline-block;
   }
   label {
+    cursor: pointer;
     position: absolute;
     font-size: 1.8rem;
     font-weight: 600;
@@ -915,6 +927,7 @@
     }
   }
   &__btn-cancel {
+    cursor: pointer;
     position: absolute;
     top: -17px;
     left: 74%;
