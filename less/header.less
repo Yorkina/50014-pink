@@ -46,7 +46,18 @@
       background-color: transparent;
       @media @retina {
         background-image: url("../img/iphone-hand-tablet@2x.png"), 
-                        url("../img/background-tablet@2x.jpg");
+                          url("../img/background-tablet@2x.jpg");
+      }
+    }
+    @media @screen-desktop {
+      padding-bottom: 96px;
+      margin-bottom: 25px;
+      background-image: url("../img/iphone-hand-desktop@1x.png"),
+                        url("../img/background-fullsize.jpg");
+      background-position: bottom right, top center;
+      background-size: 88%, cover;
+      @media @retina {
+        background-image: url("../img/iphone-hand-desktop@2x.png");
       }
     }
     h1 {
@@ -62,6 +73,14 @@
         line-height: 4.8rem;
         width: 247px;
         padding: 67px 66px 20px 66px;
+      }
+      @media @screen-desktop { 
+        font-size: 5rem;
+        line-height: 6rem;
+        width: 300px;
+        margin-right: 400px;
+        margin-left: 64px;
+        padding: 74px 66px 20px 66px;
       }
       &:after {
         content: "";
@@ -239,6 +258,11 @@
       text-align: center;
       background-color: transparent;
     }
+    @media @screen-desktop {
+      padding-top: 49px;
+      width: 362px;
+      margin-left: 100px;
+    }
   }
   &__btn-download {
     display: inline-block;
@@ -253,6 +277,12 @@
     letter-spacing: 0.5px;
     @media @screen-tablet {
       margin-bottom: 45px;
+    }
+    @media @screen-desktop {
+      padding: 15px 25px;
+      letter-spacing: 1px;
+      font-size: 2rem;
+      margin-bottom: 64px;
     }
   }
   &__logo-line {
@@ -290,6 +320,9 @@
       font-size: @font-size--medium;
       padding: 26px 0px 28px 20px;
     }
+     @media @screen-desktop {
+      padding: 45px 0px 28px 0px;
+     }
   }
 }
 
