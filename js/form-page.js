@@ -22,7 +22,7 @@ console.log ("middle");
 		var test = new XMLHttpRequest();
 		var time = (new Date()). getTime();
 
-		test.open("post", "http://simonenko.su/academy/echo" + time);
+		test.open("post", "http://simonenko.ru/academy/echo" + time);
 
 		test.addEventListener("readystatechange", function() {
 			if(test.readyState == 4) {
@@ -83,13 +83,6 @@ console.log("test");
 				reader.readAsDataURL(file);
 				}
 			}
-			var closer = document.querySelector(".travel-photo__btn-cancel");
-				closer.onclick = function () {
-					figure.remove();
-					img.remove();
-					cancel.remove();
-					caption.remove();
-				}
 		}
 		function Counter(options) {
 			var wrap = document.querySelector(options.wrap);;
