@@ -18,6 +18,12 @@
       left: -4%;
       height: 1000px;
     }
+    @media @screen-desktop {
+      width: 1680px;
+      top: 15%;
+      left: -7%;
+      height: 850px;
+    }
   }
   &__promo-slogan {
     margin: 0px 19px 118px 19px;
@@ -210,9 +216,10 @@
       overflow: hidden;
     }
     @media @screen-desktop {
-      background-position: 14% 88%;
+      background-position: 14% 41%;
       background-size: 301px;
       background-color: @background-color--slider;
+      padding-bottom: 110px;
     }
       &:after {
         @media @screen-tablet {
@@ -320,6 +327,16 @@
     height: 240px;
     margin-bottom: 113px;
   }
+  @media @screen-desktop {
+    height: 340px;
+    background-image: url("../img/sprt.svg");
+    background-position: 13% -155%;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    padding-top: 0px;
+    margin-top: 65px;
+    margin-bottom: 157px;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -329,10 +346,14 @@
     left: -20px;
     z-index: -1;
     background-color: @background-color--slider;
-    transform: rotate(175deg);
+    transform: rotate(176deg);
     @media @screen-tablet {
       width: 1000px;
       top: 80%;
+    }
+    @media @screen-desktop {
+      width: 1620px;
+      top: 81%;
     }
   }
   &__slides {
@@ -342,6 +363,11 @@
     @media @screen-tablet {
       height: 200px;
       overflow: hidden;
+    }
+    @media @screen-desktop {
+    padding-top: 110px;
+    display: flex;
+    width: 100%;
     }
     input {
       display: none;
@@ -360,6 +386,9 @@
       flex-direction: column-reverse;
       height: 197px;
     }
+    @media @screen-desktop {
+    justify-content:center;
+    }
     header {
       .headers-text-style();
       text-decoration: none;
@@ -371,6 +400,9 @@
         padding-bottom: 0px;
         letter-spacing: 0.5px;
       }
+      @media @screen-desktop {
+        font-size: 2.4rem;
+      }
     }
     div {
       display: none;
@@ -381,6 +413,9 @@
         text-align: center;
         line-height: 3rem;
         font-weight: 400;
+      }
+      @media @screen-desktop {
+        font-size: 1.8rem;
       }
     }
     p {
@@ -394,6 +429,50 @@
         flex-basis: 125px;
         padding: 0px 20px 0px 20px;
       }
+      @media @screen-desktop {
+        width: 700px;
+        margin: 0 auto;
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+  &__arrow {
+    position: relative;
+  }
+  &__arrow--next {
+    display: none;
+    @media @screen-desktop {
+    cursor: pointer;
+    z-index: 5;
+    display: block;
+    position: absolute;
+    top: -177px;
+    left: 100px;
+    width: 80px;
+    height: 70px;
+    background-image: url("../img/sprt.svg");
+    background-position: -113px -79px;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    }
+  }
+  &__arrow--prev {
+    display: none;
+    @media @screen-desktop {
+    cursor: pointer;
+    z-index: 5;
+    display: block;
+    position: absolute;
+    top: -176px;
+    left: 1017px;
+    width: 80px;
+    height: 70px;
+    background-image: url("../img/sprt.svg");
+    background-position: -169px -80px;
+    background-repeat: no-repeat;
+    background-size: 400px;
     }
   }
 }
@@ -423,6 +502,9 @@
     margin-left: 43px;
     margin-bottom: 88px;
     border-radius: 10px;
+  }
+  @media @screen-desktop {
+    width: 78%;
   }
   th {
     padding: 0px 88px;
@@ -674,6 +756,9 @@
     background-color: #ffffff;
     @media @screen-tablet {
       margin-bottom: 0px;
+    }
+    @media @screen-desktop {
+      display: none;
     }
   }
   &__price-slider {
