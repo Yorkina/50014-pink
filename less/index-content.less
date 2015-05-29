@@ -2,8 +2,7 @@
   position: relative;
   overflow: hidden;
   &:before {
-    content: "";
-    position: absolute;
+    .pseudo-absolute-elem ();
     width: 650px;
     height: 940px;
     top: 11%;
@@ -338,8 +337,7 @@
     margin-bottom: 157px;
   }
   &:before {
-    content: "";
-    position: absolute;
+    .pseudo-absolute-elem ();
     width: 700px;
     height: 470px;
     top: 74%;
@@ -353,7 +351,8 @@
     }
     @media @screen-desktop {
       width: 1620px;
-      top: 81%;
+      height: 533px;
+      top: 78%;
     }
   }
   &__slides {
@@ -487,6 +486,9 @@
     margin-bottom: 0px;
     height: 293px;
   }
+  @media @screen-desktop {
+    height: 375px;
+  }
 }
 
 .price-slide {
@@ -505,6 +507,7 @@
   }
   @media @screen-desktop {
     width: 78%;
+    margin-left: 136px;
   }
   th {
     padding: 0px 88px;
@@ -515,6 +518,9 @@
       border-right: 2px solid @background-color--slider;
       background-color: @background-color--dark;
       border-radius: 5px;
+    }
+    @media @screen-desktop {
+      padding: 0px 60px;
     }
     &:first-child {
       display: none;
@@ -537,27 +543,36 @@
     line-height: 0px;
     height: 56px;
     position: relative;
-    border: 2px solid @background-color--slider;
-     &:first-child {
-      display: none;
-    }
+    border: 2px solid #e5e5e5;
     @media @screen-tablet {
       color: #ffffff;
       height: 0px;
       padding: 15px 0px 15px 10px;
       line-height: 1rem;
+    }
+    @media @screen-desktop {
+        padding: 19px 0px;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        letter-spacing: 0.6px;
+      }
       &:first-child {
-        display: table-cell;
-        color: @background-color--dark;
-        padding-left: 10px;
-        text-transform: none;
-        height: 13px;
-        &:after {
-          display: none;
+      display: none;
+      @media @screen-tablet {
+          display: table-cell;
+          color: @background-color--dark;
+          padding-left: 10px;
+          text-transform: none;
+          height: 13px;
+          &:after {
+            display: none;
+          }
+        }
+        @media @screen-desktop {
+          padding-left: 16px;
         }
       }
     }
-  }
   &__tarif {
     color: #ffffff;
     background-color: @background-color--dark;
@@ -573,6 +588,11 @@
         font-size: 1.6rem;
         padding-top: 18px;
       }
+      @media @screen-desktop {
+      font-size: 1.8rem;
+      letter-spacing: 0.5px;
+      padding-top: 21px;
+      }
     }
     span {
       .big-headers-text-style ();
@@ -582,6 +602,11 @@
       @media @screen-tablet {
         font-size: 1.8rem;
         padding-bottom: 15px;
+      }
+      @media @screen-desktop {
+        font-size: 2.4rem;
+        width: inherit;
+        padding-bottom: 23px;
       }
     }
   }
@@ -603,6 +628,12 @@
         left: -44px;
         font-size: 1.2rem;
       }
+       @media @screen-desktop {
+        top: 13px;
+        left: -38px;
+        font-size: 1.4rem;
+        line-height: 3rem;
+       }
     }
   }
   /////И ТУТ НАЧИНАЕТСЯ ЖЕСТЬ =) И сердцу тревожно в груди, 
@@ -610,9 +641,7 @@
   &__pink-filter {
     td {
       &:after {
-        content: "";
-        position: absolute;
-        display: block;
+        .pseudo-absolute-elem ();
         width: 50px;
         height: 50px;
         right:10px;
@@ -628,6 +657,10 @@
           right:52px;
           top:1px;
         }
+        @media @screen-desktop {
+          right:97px;
+          top:8px;
+        }
       }
     }
   }
@@ -635,9 +668,7 @@
     td { 
       &:nth-child(1) {
         &:after {
-          content: "";
-          position: absolute;
-          display: block;
+          .pseudo-absolute-elem ();
           width: 50px;
           height: 50px;
           right:10px;
@@ -653,9 +684,7 @@
       }
       &:nth-child(2) {
         &:after {
-          content: "";
-          position: absolute;
-          display: block;
+          .pseudo-absolute-elem ();
           width: 50px;
           height: 50px;
           right:10px;
@@ -671,36 +700,15 @@
           right:52px;
           top:1px;
             }
+          @media @screen-desktop {
+          right:97px;
+          top:10px;
+            }
           }
         }
       &:nth-child(3) {
         &:after {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 50px;
-          height: 50px;
-          right:10px;
-          top:6px;
-          background-image: url("../img/sprt.svg");
-          background-repeat: no-repeat;
-          background-position: -325px -41px;
-          background-size: 485px;
-          @media @screen-tablet {
-          background-position: -277px -39px;
-          background-size: 425px;
-          width:50px;
-          right:52px;
-          top:1px;
-          right:52px;
-          }
-        }
-      }
-      &:nth-child(4) {
-        &:after {
-          content: "";
-          position: absolute;
-          display: block;
+          .pseudo-absolute-elem ();
           width: 50px;
           height: 50px;
           right:10px;
@@ -716,16 +724,66 @@
           right:52px;
           top:1px;
           }
+          @media @screen-desktop {
+            right:97px;
+            top:8px;
+          }
+        }
+      }
+      &:nth-child(4) {
+        &:after {
+          .pseudo-absolute-elem ();
+          width: 50px;
+          height: 50px;
+          right:10px;
+          top:6px;
+          background-image: url("../img/sprt.svg");
+          background-repeat: no-repeat;
+          background-position: -325px -41px;
+          background-size: 485px;
+          @media @screen-tablet {
+          background-position: -360px -30px;
+          background-size: 425px;
+          width: 50px;
+          right:52px;
+          top:1px;
+          }
+          @media @screen-desktop {
+            right:97px;
+            top:8px;
+          }
         }
       }
     }
   }
   &__comments {
     td {
+      &:nth-child(4) {
+        &:after {
+          .pseudo-absolute-elem ();
+          width: 50px;
+          height: 50px;
+          right:10px;
+          top:6px;
+          background-image: url("../img/sprt.svg");
+          background-repeat: no-repeat;
+          background-position: -325px -41px;
+          background-size: 485px;
+          @media @screen-tablet {
+          background-position: -360px -30px;
+          background-size: 425px;
+          width: 50px;
+          right:52px;
+          top:1px;
+          }
+          @media @screen-desktop {
+            right:97px;
+            top:8px;
+          }
+        }
+      }
       &:after {
-        content: "";
-        position: absolute;
-        display: block;
+        .pseudo-absolute-elem ();
         width: 50px;
         height: 50px;
         right:10px;
@@ -741,6 +799,11 @@
           right:52px;
           top:1px;
           right:52px;
+        }
+        @media @screen-desktop {
+          right:97px;
+          top:10px;
+
         }
       }
     }
@@ -776,11 +839,13 @@
     margin-right: 11px;
   }
   &__btn {
+    cursor: pointer;
     border: 3px solid @background-color--light;
     background: #b5b9be;
     border-radius: 50%;
   }
   &__btn--active {
+    cursor: pointer;
     border: 3px solid @background-color--dark;
     background: @background-color--light;
     border-radius: 50%;
