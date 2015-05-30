@@ -202,6 +202,14 @@
       margin-right: 174px;
       background-image: url("../img/logotype-blue-desktop.svg");
     }
+    &:hover {
+      @media @screen-tablet {
+      background-image: url("../img/logotype-white-tablet--hover.svg");
+      }
+    }
+    &:active {
+      opacity: 0.7;
+    }
   }
   &__about-developers {
     font-size: 1.4rem;
@@ -219,13 +227,26 @@
       font-size: 1.8rem;
     }
     a {
-      cursor: pointer;
       padding: 18px 0px 9px 6px;
       background-color: #ffffff;
       display: block;
       @media @screen-desktop {
         padding: 13px 0px 9px 0px;
       }
+      &:hover {
+          &:after {
+            @media @screen-tablet {
+            background-position: -209px -4px;
+            }
+          } 
+        }
+        &:active {
+          &:after {
+            @media @screen-tablet {
+            opacity: 0.7;
+            }
+          }
+        }
       &:after {
         content: "";
         width: 30px;
@@ -273,6 +294,12 @@
     background-image: url("../img/sprt.svg");
     background-repeat: no-repeat;
     background-size: 360px;
+    &:hover {
+      border-color: #283645;
+    }
+    &:active {
+      opacity: 0.7;
+    }
     @media @screen-desktop {
       border: 3px solid #e5e5e5;
     }
@@ -330,6 +357,9 @@
         @media @screen-tablet {
         background-image: url("../img/logotype-white-tablet--hover.svg");
         }
+      }
+      &:active {
+        opacity: 0.7;
       }
     }
     &__about-developers {
