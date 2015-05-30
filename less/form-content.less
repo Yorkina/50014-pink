@@ -58,6 +58,18 @@
       background-color: @background-color--sucsses;
       margin-bottom: 41px;
       outline-style:none;
+      transition-duration: 1s;
+      transition-property: color;
+      &:hover {
+        background-color: #1c9b5e;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      &:active {
+        opacity: 0.7;
+      }
+      &:disabled {
+        background-color: #f2f2f2;
+      }
       @media @screen-tablet {
         width: 300px;
         margin-right: 138px;
@@ -593,6 +605,9 @@
     border-right: none;
     position: relative;
     color: transparent;
+    @media @screen-tablet {
+      border-right: 2px solid @border-color;
+    }
     &:hover {
       box-shadow: inset 0px 0px 0px 2px #283645;
       border-top:none;
@@ -604,6 +619,9 @@
       padding-right: 19px;
       padding-left: 30px;
       margin-right: -2px;
+      @media @screen-tablet {
+      margin-right: 0px;
+      }
     }
     &:after {
         content:"";
@@ -632,6 +650,9 @@
       border-left: none;
       color: #283645;
       border-right: 2px solid @border-color;
+      @media @screen-tablet {
+      border-left: 2px solid @border-color;
+      }
     &:hover {
       box-shadow: inset 0px 0px 0px 2px #283645;
       border-top:none;
@@ -643,6 +664,9 @@
       padding-right: 19px;
       padding-left: 19px;
       margin-left: -2px;
+      @media @screen-tablet {
+      margin-left: 0px;
+      }
     }
     &:active {
       background-color: #283645;
@@ -1108,6 +1132,14 @@
     background-color: @background-color--light;
     color: @border-color;
     font-weight: 100;
+    &:hover {
+      border-color: #283645;
+      color: #283645;
+    }
+    &:active {
+      color: #ffffff;
+      background-color: #283645;
+    }
     @media @screen-tablet {
       top: -27px;
       left: 78%;
