@@ -67,6 +67,7 @@ console.log("test");
 
 					cancel.classList.add("travel-photo__btn-cancel");
 					cancel.innerHTML = ("&times;");
+					cancel.href ="#";
 
 					caption.innerHTML = (file.name.toUpperCase());
 
