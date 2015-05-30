@@ -832,22 +832,33 @@
       display: none;
     }
   }
-  label {
+  a {
     display: inline-block;
     height: 6px;
     width: 6px;
     margin-right: 11px;
   }
   &__btn {
-    cursor: pointer;
     border: 3px solid @background-color--light;
     background: #b5b9be;
     border-radius: 50%;
+    &:hover {
+      background-color: #7e868f;
+    }
+    &:active {
+      opacity: 0.7;
+    }
   }
   &__btn--active {
     cursor: pointer;
     border: 3px solid @background-color--dark;
     background: @background-color--light;
     border-radius: 50%;
+    &:hover {
+      background-color: @background-color--light;
+    }
+    &:active {
+      opacity: 1;
+    }
   }
 }

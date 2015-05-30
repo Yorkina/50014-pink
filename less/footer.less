@@ -154,6 +154,12 @@
     }
     a {
       padding-bottom: 30px;
+       &:hover {
+        color: @text-color--headers;
+      }
+      &:active {
+        opacity: 0.7;
+      }
     }
   }
   &--inner-pages {
@@ -288,9 +294,10 @@
     display: block;
     margin-bottom: 10px;
     .clearfix();
+    padding: 0px 24px 0px 42px;
   }
   @media @screen-desktop {
-    padding: 0px 88px;
+    padding: 0px 110px;
   }
     a {
       @media @screen-tablet {
@@ -304,7 +311,6 @@
       font-weight: @weight-normal;
       letter-spacing: 2.5px;
       position: relative;
-      padding-left: 42px;
       padding-top: 52px;
       padding-bottom: 20px;
       margin-right: 16px;
@@ -318,6 +324,12 @@
       }
       @media @screen-desktop {
       background-image: url("../img/logotype-blue-desktop.svg");
+      margin-right: 35px;
+      }
+      &:hover {
+        @media @screen-tablet {
+        background-image: url("../img/logotype-white-tablet--hover.svg");
+        }
       }
     }
     &__about-developers {
@@ -325,7 +337,6 @@
       font-size: 1.4rem;
       font-weight: 400;
       text-align: center;
-      padding-right: 24px;
       padding-top: 33px;
       padding-bottom: 21px;
       float: right;
@@ -335,7 +346,6 @@
       font-size: 1.8rem;
       }
       a {
-        cursor: pointer;
         @media @screen-tablet {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -345,6 +355,20 @@
         @media @screen-desktop {
           padding-top: 2px;
           padding-right: 28px;
+        }
+        &:hover {
+          &:after {
+            @media @screen-tablet {
+            background-position: -206px -4px;
+            }
+          } 
+        }
+        &:active {
+          &:after {
+            @media @screen-tablet {
+            opacity: 0.7;
+            }
+          }
         }
         &:after {
         @media @screen-tablet {
@@ -376,6 +400,12 @@
         color: @text-color--attention;
         padding: 16px 23px;
         margin-right: 13px;
+        &:hover {
+          border-color: #283645;
+        }
+        &:active {
+          opacity: 0.7;
+        }
         @media @screen-desktop {
           margin-right: 11px;
           .border-style(@b-size:3px);
