@@ -3,11 +3,18 @@
     padding-top: 58px;
     margin-bottom: 56px;
   }
+  @media @screen-desktop {
+    padding: 58px 90px 0px 88px;
+  }
   &__news {
     padding: 0px 20px;
     @media @screen-tablet {
       padding: 0px 30px 0px 102px;
       margin-bottom: 33px;
+    }
+    @media @screen-desktop {
+    padding: 0px 100px 0px 102px;
+    margin-bottom: 42px;
     }
     a {
       font-size: 1.8rem;
@@ -24,7 +31,9 @@
         letter-spacing: 0.5px;
         padding: 11px 0px 5px 0px;
         position: relative;
+      }
       &:before {
+        @media @screen-tablet {
         content:"";
         position: absolute;
         width: 51px;
@@ -35,6 +44,9 @@
         background-position: -68px 0px;
         background-repeat: no-repeat;
         background-size: 423px;
+       }
+       @media @screen-desktop {
+        top: 8px;
        }
       }
     }
@@ -58,6 +70,9 @@
         padding: 0px 80px 41px 0px;
         border-bottom: 2px dotted @border-color;
       }
+      @media @screen-desktop {
+      padding: 0px 0px 41px 0px;
+      }
     }
   }
   &__news {
@@ -67,6 +82,9 @@
     @media @screen-tablet {
       padding: 5px 30px 0px 102px;
       margin-bottom: 45px;
+      }
+    @media @screen-desktop {
+      padding: 2px 101px 0px 102px;
       }
     }
   }
@@ -85,6 +103,10 @@
     font-size: 0px;
     @media @screen-tablet {
       padding: 15px 10px 10px 43px;
+    }
+    @media @screen-desktop {
+      padding-top: 39px;
+      margin-bottom: 77px;
     }
     div,
     a,
