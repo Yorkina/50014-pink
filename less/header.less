@@ -155,7 +155,6 @@
     background-size: 81px;
     @media @screen-tablet {
       position: relative;
-      width: 200px;
       overflow: hidden;
       padding: 30px 0px 28px 70px;
       background-image: url("../img/logotype-white-tablet.svg");
@@ -166,20 +165,39 @@
       position: static;
       background-image: url("../img/logotype-white-desktop.svg");
     }
+    &:hover {
+      background-image: url("../img/logotype-white-mobile--hover.svg");
+      @media @screen-tablet {
+        background-image: url("../img/logotype-white-tablet--hover.svg");
+      }
+    }
+    &:active {
+      opacity: 0.7;
+    }
   }
   &__btn-menu {
     float: right;
-    width: 70px;
+    width: 60px;
     height: 49px;
     background-image: url("../img/sprt.svg");
     background-repeat: no-repeat;
-    background-position: 10px -88px;
+    background-position: -65px -88px;
     background-size: 428px;
     @media @screen-tablet {
-      background-position: 11px -86px;
+      background-position: -65px -86px;
     }
     @media @screen-desktop {
       display: none;
+    }
+    &:hover {
+      background-image: url("../img/sprt.svg");
+      background-position: -1px -88px;
+      @media @screen-tablet {
+        background-position: -1px -86px;
+      }
+    }
+    &:active {
+      opacity: 0.7;
     }
   }
   &__menu {
@@ -210,19 +228,26 @@
       border-bottom: 1px solid black;
       border-top: 1px solid #485361;
        @media @screen-desktop {
-      display: inline-block;
-      padding: 0px;
-      border: none; ////ДА ДА ДА, ДИЗАЙНЕР - МОЛОДЕЦ!!!
-      &:nth-child(2) {
-        margin-left:72px;
+        display: inline-block;
+        padding-bottom: 8px;
+        border: none;
+        &:hover {
+        border-top: none;
+        border-bottom: 2px solid #ffffff;
+        }
+        &:active {
+          opacity: 0.7;
+        }
+        &:nth-child(2) {
+          margin-left:72px;
+        }
+        &:nth-child(3) {
+          margin-left: 62px;
+        }
+        &:nth-child(4) {
+          margin-left: 64px;
+        }
       }
-      &:nth-child(3) {
-        margin-left: 62px;
-      }
-      &:nth-child(4) {
-        margin-left: 64px;
-      }
-     }
     }
     a {
       font-size: @font-size--medium;
@@ -287,6 +312,13 @@
       letter-spacing: 1px;
       font-size: 2rem;
       margin-bottom: 64px;
+    }
+    &:hover {
+      background-color: @background-color--light;
+      color: @text-color--attention;
+    }
+    &:active {
+      opacity: 0.7;
     }
   }
   &__logo-line {
