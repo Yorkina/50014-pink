@@ -24,8 +24,17 @@
   clear:both;
   }
 }
+
 .border-style (@b-size: 2px, @b-type: solid, @b-color: #e5e5e5) {
   border: @b-size @b-type @b-color;
+}
+.input-border-conditions () {
+  &:hover {
+    border-color: #283645;
+  }
+  &:focus {
+    border-color: #d22856;
+  }
 }
 .div-text-style () {
   font-size: 1.2rem;
