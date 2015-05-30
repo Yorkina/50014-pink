@@ -3,6 +3,9 @@
   @media @screen-tablet {
     margin-bottom: 22px;
   }
+  @media @screen-desktop {
+    padding: 21px 170px 0px 170px;
+  }
   &__story {
     text-align: center;
     margin-bottom: 27px;
@@ -12,6 +15,9 @@
       overflow: hidden;
       flex-wrap: wrap;
       margin-bottom: 48px;
+    }
+    @media @screen-desktop {
+    padding: 0px 20px 0px 20px;
     }
     header {
       font-size: 3rem;
@@ -69,6 +75,9 @@
       padding-left: 41px;
       padding-bottom: 4px;
     }
+    @media @screen-desktop {
+      padding-left: 20px;
+    }
   }
   &__prehistory {
     margin-bottom: 30px;
@@ -87,6 +96,9 @@
         line-height: 3rem;
         padding: 0px 33px 0px 40px;
       }
+      @media @screen-desktop {
+      padding: 0px 20px 0px 20px;
+      }
     }
   }
   &__find-hotel {
@@ -99,6 +111,9 @@
         line-height: 3rem;
         padding: 0px 50px 11px 40px;
       }
+      @media @screen-desktop {
+      padding: 0px 20px 11px 20px;
+      }
     }
   }
   &__hotel-list {
@@ -106,6 +121,9 @@
     @media @screen-tablet {
       padding-left: 20px;
       padding-bottom: 30px;
+    }
+    @media @screen-desktop {
+      padding-left: 0px;
     }
     li {
       list-style: none;
@@ -150,6 +168,9 @@
       padding-bottom: 0px;
       margin-bottom: 58px;
     }
+    @media @screen-desktop {
+      padding-left: 20px;
+    }
     p {
       border-left: 2px solid @text-color--attention;
       padding: 0px;
@@ -164,6 +185,11 @@
     display: block;
   }
   &__food {
+    header {
+      @media @screen-desktop {
+      padding-left: 20px;
+      }
+    }
     p {
       .p-text-style ();
       line-height: 2.7rem;
@@ -172,6 +198,9 @@
         font-size: 1.8rem;
         line-height: 3rem;
         padding: 0px 43px 11px 40px;
+      }
+      @media @screen-desktop {
+      padding: 0px 25px 11px 19px;
       }
     }
   }
@@ -185,6 +214,10 @@
       align-items: center;
       overflow: hidden;
       flex-wrap: wrap;
+    }
+    @media @screen-desktop {
+      padding-left: 19px;
+      margin-bottom: 38px;
     }
     a {
       .border-style();
@@ -203,6 +236,10 @@
     @media @screen-tablet {
       margin-right: 27px;
     }
+    @media @screen-desktop {
+      margin-right: 15px;
+      padding: 20px 101px;
+    }
   }
   &__btn--big {
     padding: 20px 60px;
@@ -211,6 +248,10 @@
       order: 2;
       margin-bottom: 21px;
       padding: 20px 67px;
+    }
+    @media @screen-desktop {
+      margin-right: 15px;
+      padding: 20px 57px;
     }
   }
   &__btn--first {
