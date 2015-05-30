@@ -57,6 +57,7 @@
       width: 280px;
       background-color: @background-color--sucsses;
       margin-bottom: 41px;
+      outline-style:none;
       @media @screen-tablet {
         width: 300px;
         margin-right: 138px;
@@ -125,13 +126,14 @@
     padding: 14px;
     margin-bottom: 23px;
     width: 88%;
+    outline-style:none;
+    .input-border-conditions ();
     @media @screen-tablet {
       width: 590px;
     }
      @media @screen-desktop {
       width: 267px;
       margin-right: 21px;
-      flex-shirink: 0;
       order: 2;
       &:nth-child(3) {
         margin-right: 0px;
@@ -226,16 +228,16 @@
       height: 35px;
       border-radius: 50%;
       background: #fff;
-      box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);
+      border: 2px solid @border-color;
       @media @screen-tablet {
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, .2);
+        border: 2px solid @border-color;
       }
     }
     &:not(checked) + label:after {
       content: '';
       position: absolute;
-      top: 10px;
-      left: 4px;
+      top: 12px;
+      left: 6px;
       width: 15px;
       height: 15px;
       border-radius: 50%;
@@ -247,6 +249,18 @@
   }
   &__radio + label {
     cursor: pointer;
+  }
+  label{
+    &:hover {
+      &:before {
+        border-color: #283645;
+        }
+      }
+    //&:checked {
+    // &:before {
+    //border-color: #d22856; ????? На какое состояние этот стиль???
+    // }
+    //}
   }
 }
 
@@ -311,19 +325,19 @@
     line-height: 30px;
     padding: 14px;
     margin-bottom: 17px;
+    outline-style:none;
+    .input-border-conditions ();
   }
   button {
     cursor: pointer;
-    font-size: @html-size-base;
+    font-size: 42px;
     font-family: 'Open Sans', Arial, sans-serif;
     display: inline-block;
     border-top: 2px solid @border-color;
     border-bottom: 2px solid @border-color;
-    padding: 25px 26px 19px 26px;
     background-color: #fff;
-    @media @screen-tablet {
-      padding: 25px 28px 19px 26px;
-    }
+    outline-style:none;
+    vertical-align: top;
   }
   input::-webkit-input-placeholder {
     font-size: 1.8rem;
@@ -385,9 +399,10 @@
   }
   &__trip-date {
     padding: 14px 0px 14px 0px;
-    width: 131px;
+    width: 129px;
     text-align: center;
     margin-bottom: 18px;
+    vertical-align: top;
     @media @screen-tablet {
       width: 95px;
     }
@@ -412,12 +427,64 @@
     }
   }
   &__btn-minus {
-     border-left: 2px solid @border-color;
+    padding: 0px 20px 1px 25px;
+    border-left: 2px solid @border-color;
     border-right: none;
+    position: relative;
+    color: transparent;
+    &:hover {
+      box-shadow: inset 0px 0px 0px 2px #283645;
+      border-top:none;
+      border-bottom: none;
+      padding-bottom: 3px;
+      padding-top: 2px;
+      border-left: none;
+      padding-right: 19px;
+      padding-left: 30px;
+      margin-right: -2px;
+    }
+    &:after {
+        content:"";
+        position: absolute;
+        display: block;
+        font-size: 54px;
+        top: 28px;
+        left: 19px;
+        width:20px;
+        height: 4px;
+        background-color: #283645;
+      }
+    &:hover {
+      &:after {
+        top: 30px;
+        left: 21px;
+      }
+    }
+    &:active {
+      background-color: #283645;
+      color: #283645;
+    }
   }
   &__btn-plus {
-     border-left: none;
-    border-right: 2px solid @border-color;
+      padding: 0px 17px 1px 17px;
+      border-left: none;
+      color: #283645;
+      border-right: 2px solid @border-color;
+    &:hover {
+      box-shadow: inset 0px 0px 0px 2px #283645;
+      border-top:none;
+      border-bottom: none;
+      padding-bottom: 3px;
+      padding-top: 2px;
+      border-right: none;
+      padding-right: 19px;
+      padding-left: 19px;
+      margin-left: -2px;
+    }
+    &:active {
+      background-color: #283645;
+      color: #ffffff;
+    }
   }
 }
 
@@ -476,13 +543,14 @@
       font-size: 1.8rem;
       font-family: 'Open Sans', Arial, sans-serif;
       display: inline-block;
-      border-left: none;
-      border-right: none;
-      border-top: 2px solid @border-color;
-      border-bottom: 2px solid @border-color;
-      line-height: 3rem;
+      .border-style ();
+      line-height: 30px;
+      padding: 14px;
+      margin-bottom: 17px;
+      outline-style:none;
+      .input-border-conditions ();
       @media @screen-tablet {
-        border: none;
+        border: transparent;
       }
     }
     input::-webkit-input-placeholder {
@@ -499,30 +567,88 @@
     }
     button {
       cursor: pointer;
-      font-size: @html-size-base;
+      font-size: 42px;
       font-family: 'Open Sans', Arial, sans-serif;
       display: inline-block;
-      .border-style ();
-      padding: 22px 26px;
+      border-top: 2px solid @border-color;
+      border-bottom: 2px solid @border-color;
       background-color: #fff;
-      @media @screen-tablet {
-        padding: 22px 27px;
-      }
+      outline-style:none;
+      vertical-align: top;
     }
   }
   &__trip-count {
-    padding: 11px 0px 17px 0px;
-    width: 157px;
+    width: 129px;
     text-align: center;
     margin-bottom: 18px;
+    .input-border-conditions ();
     @media @screen-tablet {
-      width: 125px;
+      width: 95px;
       border: none;
     }
   }
-  &__btn-minus {}
-  &__btn-plus {}
-  ///это на случай картинок
+  &__btn-minus {
+    padding: 0px 20px 1px 25px;
+    border-left: 2px solid @border-color;
+    border-right: none;
+    position: relative;
+    color: transparent;
+    &:hover {
+      box-shadow: inset 0px 0px 0px 2px #283645;
+      border-top:none;
+      border-bottom: none;
+      padding-bottom: 3px;
+      padding-top: 2px;
+      border-left: none;
+      border-right: transparent;
+      padding-right: 19px;
+      padding-left: 30px;
+      margin-right: -2px;
+    }
+    &:after {
+        content:"";
+        position: absolute;
+        display: block;
+        font-size: 54px;
+        top: 28px;
+        left: 19px;
+        width:20px;
+        height: 4px;
+        background-color: #283645;
+      }
+    &:hover {
+      &:after {
+        top: 30px;
+        left: 21px;
+      }
+    }
+    &:active {
+      background-color: #283645;
+      color: #283645;
+    }
+  }
+  &__btn-plus {
+      padding: 0px 17px 1px 17px;
+      border-left: none;
+      color: #283645;
+      border-right: 2px solid @border-color;
+    &:hover {
+      box-shadow: inset 0px 0px 0px 2px #283645;
+      border-top:none;
+      border-bottom: none;
+      padding-bottom: 3px;
+      padding-top: 2px;
+      border-right: none;
+      border-left: transparent;
+      padding-right: 19px;
+      padding-left: 19px;
+      margin-left: -2px;
+    }
+    &:active {
+      background-color: #283645;
+      color: #ffffff;
+    }
+  }
   &__info-form {
     @media @screen-tablet {
       padding: 0px 0px 38px 0px;
@@ -581,6 +707,8 @@
       line-height: 3rem;
       padding: 14px;
       width: 187px;
+      outline-style:none;
+      .input-border-conditions ();
       @media @screen-tablet {
         width: 267px;
         display: inline-block;
@@ -607,6 +735,14 @@
     button {
       display: none;
       cursor: pointer;
+      outline-style:none;
+      &:hover {
+        border-bottom: 2px solid #d22856;
+        color: @text-color--attention;
+      }
+      &:active {
+        opacity: 0.7;
+      }
       @media @screen-tablet {
         display: inline-block;
         font-size: 1.3rem;
@@ -657,6 +793,8 @@
       line-height: 3rem;
       padding: 14px;
       width: 187px;
+      outline-style:none;
+      .input-border-conditions ();
       @media @screen-tablet {
         width: 267px;
         display: inline-block;
@@ -683,12 +821,13 @@
   }
   &__form-number {
     .border-style ();
+    border-right: none;
     padding: 22px 26px;
     background-color: #fff;
-    margin-right: -2px;
     @media @screen-tablet {
       margin-right: 21px;
       padding: 20px 25px;
+      border-right: 2px solid @border-color;
       background-color: @background-color--slider;
     }
   }
@@ -790,6 +929,14 @@
   &__checkbox + label {
     cursor: pointer;
   }
+  label {
+    &:hover {
+      &:before {
+        border-color: #283645;
+        box-shadow: -1px -1px 0px #283645; ////???? Тот же вопрос, чтои с радиобаттонами
+      }
+    }
+  }
 }
 
 .travel-photo {
@@ -835,6 +982,7 @@
     height: 5px;
     position: absolute;
     display: inline-block;
+    outline-style:none;
   }
   label {
     cursor: pointer;
@@ -850,6 +998,25 @@
     width: 276px;
     text-align: center;
     text-transform: uppercase;
+    &:hover {
+      border-color:#283645;
+      @media @screen-desktop {
+        border-color:#d22856;
+        background-color: #ffffff;
+        color:#d22856;
+      }
+    }
+    &:active {
+      background-color: #283645;
+      border-color: #ffffff;
+      color: #ffffff;
+      @media @screen-desktop {
+        border-color:#ffffff;
+        background-color: #d22856;
+        color:#ffffff;
+        opacity: 0.7;
+      }
+    }
     @media @screen-tablet {
       padding: 14px 5px 14px 0px;
       width: 490px;
@@ -1000,6 +1167,7 @@
     border-radius: 3px;
     width: 280px;
     background-color: @background-color--sucsses;
+    outline-style:none;
     @media @screen-tablet {
       width: 300px;
       padding-left: 13px;
@@ -1061,6 +1229,7 @@
     margin: 0px 20px;
     width: 280px;
     background-color: @background-color--sucsses;
+    outline-style:none;
     @media @screen-tablet {
       width: 300px;
       padding-left: 13px;
