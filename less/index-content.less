@@ -442,8 +442,15 @@
   }
   &__arrow--next {
     display: none;
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      opacity: 0.3;
+    }
     @media @screen-desktop {
     cursor: pointer;
+    opacity: 0.7;
     z-index: 5;
     display: block;
     position: absolute;
@@ -459,8 +466,15 @@
   }
   &__arrow--prev {
     display: none;
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      opacity: 0.3;
+    }
     @media @screen-desktop {
     cursor: pointer;
+    opacity: 0.7;
     z-index: 5;
     display: block;
     position: absolute;
