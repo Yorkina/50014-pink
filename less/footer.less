@@ -127,7 +127,7 @@
     background-repeat: no-repeat;
     background-position: 50%;
     width: 100%;
-    padding-bottom: 273px;
+    padding-bottom: 236px;
     background-color: #283645;
     @media @screen-tablet {
     background-image: url("../img/map-marker.svg"),
@@ -163,7 +163,6 @@
     padding: 25px 0px 25px 70px;
     margin-bottom: 55px;
     display: block;
-    width: 210px;
     background-image: url("../img/logotype-blue-tablet.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -183,9 +182,7 @@
       background-image: url("../img/logotype-blue-desktop.svg");
     }
     &:hover {
-      @media @screen-tablet {
       background-image: url("../img/logotype-white-tablet--hover.svg");
-      }
     }
     &:active {
       opacity: 0.7;
@@ -215,16 +212,15 @@
       }
       &:hover {
           &:after {
-            @media @screen-tablet {
-            background-position: -209px -4px;
+            background-position: -206px -4px;
+            @media @screen-desktop {
+              background-position: -209px -4px;
             }
           } 
         }
         &:active {
           &:after {
-            @media @screen-tablet {
             opacity: 0.7;
-            }
           }
         }
       &:after {
