@@ -1,51 +1,5 @@
 .footer {
-  background-image: url("../img/footer-map-img.jpg");
-  background-color: @background-color--dark;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  padding-bottom: 69px;
-  margin-bottom: 10px;
-  margin-top: 50px;
-  &:after {
-    content: "";
-    display: block;
-    margin-top: 33.5%;
-    margin-left: 46%;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: @text-color--attention;
-    border: 10px solid #ffffff;
-    }
-  @media @screen-tablet {
-    background-image: url("../img/footer-map-tablet-img.jpg");
-    background-position: 50% -4%;
-    margin-top: 40px;
-    margin-bottom: 18px;
-    padding-bottom: 152px;
-    &:after {
-    content: "";
-    display: block;
-    margin-top: 27%;
-    margin-left: 47%;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: @text-color--attention;
-    border: 10px solid #ffffff;
-    }
-  }
-   @media @screen-desktop {
-    position: relative;
-    padding-bottom: 461px;
-    background-position: 49% -28%;
-    margin-bottom: 55px;
-    &:after {
-      position: absolute;
-      top: 265px;
-      left: 19px;
-    }
-   }
+  width: 100%;
   &__contacts {
     position: relative;
     background-color: @background-color--light;
@@ -123,7 +77,7 @@
       width: 256px;
     }
     a {
-      padding-bottom: 26px;
+      margin-bottom: 30px;
     }
   }
   &__guests {
@@ -137,13 +91,14 @@
       padding-top: 0px;
     }
     a {
-      padding: 0px 20px 28px 20px;
-      line-height: 2.8rem;
+      padding: 0px 20px;
+      line-height: 2.8rem; //надо из-за переноса адреса
+      //без маргина, так как под псевдо элемент и он тогда с отрицательным маргином
       @media @screen-tablet {
-        padding: 0px 170px 28px 170px;
+        padding: 0px 170px;
       }
       @media @screen-desktop {
-        padding: 0px 45px 28px 45px;
+        padding: 0px 45px;
       }
     }
   }
@@ -154,7 +109,7 @@
       width: 256px;
     }
     a {
-      padding-bottom: 3px;
+      padding-bottom: 3px; /// Надо для бордера снизу, чтобы не двигать элемент снизу
       margin-bottom: 27px;
       display: inline-block;
        &:hover {
@@ -164,6 +119,27 @@
       &:active {
         opacity: 0.7;
       }
+    }
+  }
+  &__map {
+    background-image: url("../img/map-marker.svg"),
+                      url("../img/footer-map-img.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 100%;
+    padding-bottom: 273px;
+    background-color: #283645;
+    @media @screen-tablet {
+    background-image: url("../img/map-marker.svg"),
+                      url("../img/footer-map-tablet-img.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 56%;
+    padding-bottom: 376px;
+    margin-bottom: 20px
+    }
+    @media @screen-desktop {
+    padding-bottom: 509px;
+    margin-bottom: 53px;
     }
   }
   &--inner-pages {
@@ -344,10 +320,10 @@
       position: relative;
       padding-top: 52px;
       padding-bottom: 20px;
-      margin-right: 16px;
+      margin-right: 59px;
       display: block;
       float: left;
-      width: 187px;
+      width: 144px;
       background-image: url("../img/logotype-blue-tablet.svg");
       background-repeat: no-repeat;
       background-position: center;
