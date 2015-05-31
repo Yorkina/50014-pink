@@ -1,6 +1,10 @@
 .content {
   position: relative;
   overflow: hidden;
+  margin-bottom: 40px;
+  @media @screen-desktop {
+    margin-bottom: 0px;
+  }
   &:before {
     .pseudo-absolute-elem ();
     width: 650px;
@@ -78,7 +82,7 @@
                           url("../img/iphone-screen-tablet-1@1x.png");
             background-repeat: no-repeat, no-repeat, no-repeat;
             background-position: 3% 0%; 
-            padding-bottom: 42px;
+            padding-bottom: 17px;
             margin: 0px 31px;
             padding-top: 60px;
             background-size: 268px;
@@ -143,9 +147,6 @@
         float: right;
         width: 320px;
         margin-bottom: 23px;
-        &:last-child {
-          margin-bottom: 0px;
-        }
       }
       @media @screen-desktop {
         float: none;
@@ -203,7 +204,7 @@
       position: relative;
       .clearfix();
       padding-top: 94px;
-      padding-bottom: 50px;
+      padding-bottom: 56px;
       padding-left:31px;
       padding-right: 31px;
       background-color: #ffffff;
@@ -228,7 +229,7 @@
         width: 155px;
         height: 152px;
         font-size: 10.4rem;
-        top: 115px;
+        top: 120px;
         left: 64px;
         border: 14px solid @text-color--attention;
         color: @text-color--attention;
@@ -324,7 +325,7 @@
   background-color: @background-color--light;
   @media @screen-tablet {
     height: 240px;
-    margin-bottom: 113px;
+    margin-bottom: 108px;
   }
   @media @screen-desktop {
     height: 340px;
@@ -497,8 +498,8 @@
   overflow: hidden;
   position: relative;
   @media @screen-tablet {
-    margin-bottom: 0px;
     height: 293px;
+    margin-bottom: 0px;
   }
   @media @screen-desktop {
     height: 375px;
