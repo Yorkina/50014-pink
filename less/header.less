@@ -1,4 +1,15 @@
+.center-wrapper {
+  .clearfix();
+  @media @screen-tablet {
+  width: 700px;
+  margin: 0 auto;
+  }
+  @media @screen-desktop {
+  width: 1200px;
+  }
+}
 .header {
+  width:100%;
   background-image: url("../img/background-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
@@ -59,7 +70,7 @@
       background-image: url("../img/iphone-hand-desktop@1x.png"),
                         url("../img/background-fullsize.jpg");
       background-position: bottom right, top center;
-      background-size: 88%, cover;
+      background-size: 1040px, cover;
       @media @retina {
         background-image: url("../img/iphone-hand-desktop@2x.png");
       }
@@ -76,7 +87,7 @@
         font-size: 4rem;
         line-height: 4.8rem;
         width: 247px;
-        padding: 67px 66px 20px 66px;
+        padding: 67px 66px 31px 66px;
       }
       @media @screen-desktop { 
         font-size: 5rem;
@@ -95,7 +106,6 @@
         padding-top: 30px;
         width: 259px;
         height: 285px;
-        border: 2px solid red;
         @media @retina {
           background-image: url("../img/iphone-hand-mobile@2x.png"),
                             url("../img/iphone-hand-mobile@3x.png");
@@ -130,13 +140,13 @@
   &__head-line {
     .clearfix ();
     background-color: rgba(15, 20, 25, 0.5);
-    padding: 6px 20px;
+    padding: 6px 0px;
     position: relative;
     @media @screen-tablet {
-      padding: 25px 40px;
+      padding: 25px 0px;
     }
      @media @screen-desktop {
-      padding: 25px 40px 27px 127px;
+      padding: 25px 0px 27px 0px;
      }
   }
   &__logo-link {
@@ -149,21 +159,22 @@
     color: @text-color--contrast;
     letter-spacing: 3px; // letter spacing ??
     padding: 41px 0px 14px 0px;
+    margin-left: 15px;
     background-image: url("../img/logotype-white-mobile.svg");
     background-repeat: no-repeat;
     background-position: center left;
     background-size: 81px;
     @media @screen-tablet {
-      position: relative;
       overflow: hidden;
       padding: 30px 0px 28px 70px;
+      margin-left: 37px;
       background-image: url("../img/logotype-white-tablet.svg");
       background-position: top left;
       background-size: 151px;
     }
     @media @screen-desktop {
-      position: static;
       background-image: url("../img/logotype-white-desktop.svg");
+      margin-left: 125px;
     }
     &:hover {
       background-image: url("../img/logotype-white-mobile--hover.svg");
@@ -183,14 +194,15 @@
     background-repeat: no-repeat;
     background-position: -65px -88px;
     background-size: 428px;
+    margin-right: 20px;
     @media @screen-tablet {
       background-position: -65px -86px;
+      margin-right: 40px; 
     }
     @media @screen-desktop {
       display: none;
     }
     &:hover {
-      background-image: url("../img/sprt.svg");
       background-position: -1px -88px;
       @media @screen-tablet {
         background-position: -1px -86px;
@@ -203,8 +215,7 @@
   &__menu {
     @media @screen-desktop {
     float:right;
-    .clearfix();
-     width:695px;
+     width:735px;
      margin-top: 20px;
    }
   }
