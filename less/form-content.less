@@ -1114,18 +1114,23 @@
 
 .failure-popup {
   position: absolute;
-  width: 280px;
-  padding: 70px 20px 50px 20px;
+  width: 100%;
+  padding: 70px 0px 50px 00px;
   top: 1120px;
   left: 0px;
-  display: none;
+  display: block;
   background-color: @background-color--light;
   box-shadow: 0px 0px 12px #d8d8d8;
   @media @screen-tablet {
-    width: 420px;
+    width: 66%;
     top: 912px;
-    left: 120px;
-    padding: 20px 20px 50px 20px;
+    left: 17%;
+    padding: 20px 0px 50px 0px;
+  }
+  @media @screen-desktop {
+    top: 1745px;
+    width: 420px;
+    left: 35%;
   }
   header {
     .headers-text-style ();
@@ -1151,6 +1156,7 @@
     }
   }
   button {
+    cursor: pointer;
     color: @text-color--contrast;
     text-transform: uppercase;
     padding: 21px 15px;
@@ -1158,32 +1164,46 @@
     font-weight: 400;
     text-align: center;
     border: none;
+    display: block;
     border-radius: 3px;
-    width: 280px;
+    margin: 0 auto;
+    width: 70%;
     background-color: @background-color--sucsses;
     outline-style:none;
-    @media @screen-tablet {
-      width: 300px;
-      padding-left: 13px;
-      margin-left: 60px;
-    }
+    transition-duration: 1s;
+    transition-property: color;
+      &:hover {
+        background-color: #1c9b5e;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      &:active {
+        opacity: 0.7;
+      }
+      &:disabled {
+        background-color: #f2f2f2;
+      }
   }
 }
 
 .request-popup {
   position: absolute;
-  width: 320px;
+  width: 100%;
   padding: 37px 0px 50px 0px;
   top: 1605px;
   left: 0px;
-  display: none;
+  display: block;
   background-color: @background-color--slider;
   box-shadow: 0px 10px 20px #d9d8d8;
   @media @screen-tablet {
     top: 1379px;
-    left: 120px;
-    width: 462px;
+    left: 17%;
+    width: 66%;
     padding: 0px 0px 50px 0px;
+  }
+  @media @screen-desktop {
+    top: 2186px;
+    left: 23%;
+    width: 54%;
   }
   header {
     .headers-text-style ();
@@ -1210,24 +1230,36 @@
       line-height: 2.4rem;
       padding: 0px 74px 35px 70px;
     }
+    @media @screen-desktop {
+      padding: 0px 170px 35px 170px;
+    }
   }
   button {
+    cursor: pointer;
     color: @text-color--contrast;
     text-transform: uppercase;
     padding: 21px 15px;
     font-size: 1.8rem;
     font-weight: 400;
     text-align: center;
+    display: block;
     border: none;
     border-radius: 3px;
-    margin: 0px 20px;
-    width: 280px;
+    margin: 0 auto;
+    width: 70%;
     background-color: @background-color--sucsses;
     outline-style:none;
-    @media @screen-tablet {
-      width: 300px;
-      padding-left: 13px;
-      margin: 0px 20px 0px 80px;
+    transition-duration: 1s;
+    transition-property: color;
+    &:hover {
+        background-color: #1c9b5e;
+        color: rgba(255, 255, 255, 0.3);
+      }
+    &:active {
+        opacity: 0.7;
+      }
+    &:disabled {
+        background-color: #f2f2f2;
     }
   }
 }
