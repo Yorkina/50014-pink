@@ -7,29 +7,42 @@
   }
   &:before {
     .pseudo-absolute-elem ();
-    width: 650px;
-    height: 940px;
+    width: 900px;
+    height: 900px;
     top: 11%;
     left: -71px;
     z-index: -1;
-    background-color: @background-color--slider;
     transform: rotate(175deg);
+    background-color: @background-color--slider;
     @media @screen-tablet {
-      width: 1000px;
-      top: 14%;
-      transform: rotate(175deg);
+      transform: rotate(0deg);
+      width: 1400px;
+      top: 13%;
       left: -4%;
-      height: 1000px;
+      height: 478px;
     }
     @media @screen-desktop {
-      width: 1680px;
-      top: 15%;
-      left: -7%;
-      height: 850px;
+      width: 1900px;
+      top: 12%;
+      height: 1150px;
     }
   }
   &__promo-slogan {
     margin: 0px 19px 118px 19px;
+    position: relative;
+    &:after {
+      display: none;
+      @media @screen-tablet {
+      .pseudo-absolute-elem ();
+      width: 150%;
+      height: 200px;
+      z-index: -1;
+      left: -20%;
+      background-image: url("../img/triangle-white.svg");
+      background-position:  100% 53px;
+      background-repeat:  no-repeat;
+      } 
+    }
     @media @screen-tablet {
       margin: 0px 19px 53px 19px;
     }
@@ -237,6 +250,7 @@
         font-weight: 700;
         padding-top: 37px;
         padding-left: 34px;
+        background-color: #ffffff;
       }
        @media @screen-desktop {
         width: 220px;
@@ -339,22 +353,34 @@
   }
   &:before {
     .pseudo-absolute-elem ();
-    width: 700px;
+    width: 900px;
     height: 470px;
     top: 74%;
     left: -20px;
     z-index: -1;
     background-color: @background-color--slider;
-    transform: rotate(176deg);
+    transform: rotate(175deg);
     @media @screen-tablet {
-      width: 1000px;
-      top: 80%;
-    }
-    @media @screen-desktop {
-      width: 1620px;
-      height: 533px;
+      transform: rotate(0deg);
+      width: 1400px;
       top: 78%;
     }
+    @media @screen-desktop {
+      width: 1900px;
+    }
+  }
+  &:after {
+    display: none;
+      @media @screen-tablet {
+      .pseudo-absolute-elem ();
+      width: 150%;
+      height: 200px;
+      z-index: -1;
+      left: -20%;
+      background-image: url("../img/triangle-white.svg");
+      background-position:  100% 53px;
+      background-repeat:  no-repeat;
+    } 
   }
   &__slides {
     position: relative;
