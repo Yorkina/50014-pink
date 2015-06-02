@@ -1,4 +1,3 @@
-console.log("start");
 (function() {
     if (!("FormData" in window)) {
         return;
@@ -16,7 +15,7 @@ console.log("start");
         });
     });
 
-    console.log("middle");
+
 
     function request(data, fn) {
         var test = new XMLHttpRequest();
@@ -33,7 +32,7 @@ console.log("start");
         test.send(data);
     }
 
-    console.log("center");
+
 
     if ("FileReader" in window) {
         var area = document.querySelector(".travel-photo");
@@ -47,7 +46,7 @@ console.log("start");
             }
         });
 
-        console.log("test");
+
 
         function preview(file) {
             if (file.type.match(/image.*/)) {
@@ -86,9 +85,96 @@ console.log("start");
         }
     }
 
+    function travelersBox(options) {
+        var curCount = 0,
+            wrap = document.querySelector(options.wrap),
+            self = this;
+
+        this.init = function(count) {
+            curCount = +count;
+            wrap.innerHTML = "";
+            for (var i = 1; i <= curCount; i++) {
+                var row = getHtmlTemplate(i);
+                wrap.innerHTML += row;
+            };
+            setEvents();
+        }
+
+        this.change = function(count) {
+            var count = +count;
+            return count != curCount ? (count > curCount ? addRows(count) : removeRows(count)) : false;
+        }
+
+        var addRows = function(count) {
+            curCount = +count;
+            if (wrap.children.length < curCount) {
+                var row = getHtmlTemplate(curCount);
+                wrap.innerHTML += row;
+                setEvents();
+            }
+        }
+
+        var removeRows = function(count) {
+            curCount = +count;
+            wrap.lastChild.remove();
+        }
+
+        var getHtmlTemplate = function(num) {
+            var num = +num,
+                curCount = curCount < num ? num : curCount,
+                tpl = '<div class="travelers__row">\
+                            <div class="travelers__names">\
+                                <header>\
+                                    <span>№</span>\
+                                    <label for="traveler-name">Имя:\
+                                        <sup>*</sup>\
+                                    </label>\
+                                </header>\
+                                <span class="travelers__form-number">' + num + '</span>\
+                                <input type="text" name="traveler-name[' + num + ']" value="" placeholder="Введите ваше имя" required>\
+                                <button class="travelers__name--delete">Удалить</button>\
+                            </div>\
+                            <div class="travelers__nick">\
+                                <label for="traveler-nick">Прозвище:</label>\
+                                <input type="text" name="traveler-nick[' + num + ']" value="" placeholder="Ну как же без этого!" required>\
+                            </div>\
+                        </div>';
+            return tpl;
+        }
+
+        var setEvents = function() {
+            var rows = wrap.querySelectorAll("button.travelers__name--delete");
+            for (var i = rows.length - 1; i >= 0; i--) {
+                rows[i].onclick = function(event) {
+                    event.preventDefault();
+                    this.parentNode.parentNode.remove();
+                    curCount = +wrap.children.length;
+                    options.counter.value = curCount;
+                    if (curCount > 0)
+                        updateNums(curCount);
+                }
+            };
+        }
+        var updateNums = function(count) {
+            var rows = wrap.children;
+            for (var i = 0, c = 1; i <= rows.length - 1, c <= count; i++, c++) {
+                rows[i].querySelector(".travelers__form-number").innerText = c;
+                rows[i].querySelector(".travelers__names input[type=text]").name = "traveler-name[" + c + "]";
+                rows[i].querySelector(".travelers__nick input[type=text]").name = "traveler-nick[" + c + "]";
+            };
+        }
+    }
+
     function Counter(options) {
-        var wrap = document.querySelector(options.wrap);;
+        var wrap = document.querySelector(options.wrap);
         var countElem = document.querySelector(options.box);
+        var maxIncrease = +options.max > 0 ? +options.max : 365;
+
+        var travelers = options.travelersBox ? new travelersBox({
+            wrap: options.travelersBox,
+            counter: countElem
+        }) : false;
+        var self = this;
 
         wrap.onclick = function(event) {
             event.preventDefault();
@@ -97,10 +183,16 @@ console.log("start");
             } else if (event.target.className == options.plus) {
                 countIncrease();
             }
+
+            if (travelers instanceof travelersBox) {
+                travelers.change(countElem.value)
+            }
         }
+
         countElem.oninput = function(e) {
             var pattern = /^[^A-Za-zА-Яа-я/]+$/g;
             if (this.value.match(pattern)) {
+                self.setCount(+this.value);
                 return;
             } else {
                 this.value = this.value.replace(/[A-Za-zА-Яа-я]+/, '');
@@ -114,13 +206,17 @@ console.log("start");
         }
 
         function countIncrease() {
-            if (countElem.value != 365) {
+            if (countElem.value != maxIncrease) {
                 countElem.value = +countElem.value + 1;
             }
         }
 
         this.setCount = function(add) {
-            countElem.value = +add;
+            countElem.value = +add < 0 ? 0 : (+add <= maxIncrease ? +add : maxIncrease);
+
+            if (travelers instanceof travelersBox) {
+                travelers.init(countElem.value)
+            }
         };
     }
 
@@ -129,7 +225,6 @@ console.log("start");
         box: ".travel-duration__trip-date",
         minus: "travel-duration__btn-minus",
         plus: "travel-duration__btn-plus"
-
     });
 
     calc.setCount(0);
@@ -138,30 +233,28 @@ console.log("start");
         wrap: ".travelers__count",
         box: ".travelers__trip-count",
         minus: "travelers__btn-minus",
-        plus: "travelers__btn-plus"
+        plus: "travelers__btn-plus",
+        max: 9,
+        travelersBox: ".travelers__info-form"
     });
 
-    calc.setCount(0);
+    calcTravalers.setCount(2);
 
-    console.log("popups");
-////////// ПОПАПЧИКИ
+
+
     var failure = document.querySelector(".failure-popup");
     var button = failure.querySelector(".failure-popup__button");
 
-    button.addEventListener("click", function(event){
-    	event.preventDefault();
-    	failure.classList.add("failure-popup--hidden");
+    button.addEventListener("click", function(event) {
+        event.preventDefault();
+        failure.classList.add("failure-popup--hidden");
     });
 
     var request = document.querySelector(".request-popup");
     var btn = request.querySelector(".request-popup__button");
 
-    btn.addEventListener("click", function(event){
-    	event.preventDefault();
-    	request.classList.add("request-popup--hidden");
+    btn.addEventListener("click", function(event) {
+        event.preventDefault();
+        request.classList.add("request-popup--hidden");
     });
-
-    console.log("menu");
-
-////// МЕНЮШЕЧКА
 })();
