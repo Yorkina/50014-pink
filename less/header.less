@@ -36,7 +36,7 @@
   h1 {
     display: block;
     word-wrap: break-word;
-    .big-headers-text-style (); // +line-height
+    .big-headers-text-style ();
     color: @text-color--contrast;
     line-height: 2.8rem;
     padding: 21px 20px 41px 20px;
@@ -78,7 +78,7 @@
     h1 {
       display: block;
       word-wrap: break-word;
-      .big-headers-text-style (); // +line-height
+      .big-headers-text-style (); 
       color: @text-color--contrast;
       line-height: 2.8rem;
       padding: 7px 20px;
@@ -101,10 +101,11 @@
         content: "";
         background-image: url("../img/iphone-hand-mobile.png");
         background-repeat: no-repeat;
+        background-position: center;
         display: block;
         margin: 30px 0px 0px -21px;
         padding-top: 30px;
-        width: 259px;
+        width: 100%;
         height: 285px;
         @media @retina {
           background-image: url("../img/iphone-hand-mobile@2x.png"),
@@ -158,10 +159,10 @@
     display: block;
     width: 80px;
     .a-decoration ();
-    font-size: 3rem; //big + light
+    font-size: 3rem; 
     font-weight: @weight-light;
     color: @text-color--contrast;
-    letter-spacing: 3px; // letter spacing ??
+    letter-spacing: 3px; 
     padding: 41px 0px 14px 0px;
     margin-left: 15px;
     background-image: url("../img/logotype-white-mobile.svg");
@@ -199,10 +200,8 @@
     height: 49px;
     background-image: url("../img/sprt.svg");
     background-repeat: no-repeat;
-  }
-  &__btn-menu--opened {
-    background-position: -65px -88px;
     background-size: 428px;
+    background-position: -65px -88px;
     margin-right: 20px;
     @media @screen-tablet {
       background-position: -65px -86px;
@@ -221,10 +220,14 @@
       opacity: 0.7;
     }
   }
+
   &__btn-menu--closed {
     background-position: -274px 13px;
     background-size: 428px;
     margin-right: 20px;
+    & + div > ul {
+      display: block;
+    }
     @media @screen-tablet {
       background-position: -274px 13px;
       margin-right: 40px; 
@@ -311,7 +314,7 @@
   &__slogan {
     display: block;
     word-wrap: break-word;
-    .big-headers-text-style (); // +line-height
+    .big-headers-text-style (); 
     color: @text-color--contrast;
     line-height: 2.8rem;
     padding: 16px 20px 42px 20px;
@@ -375,17 +378,17 @@
   &__apple-img {
     background-image: url("../img/apple-logo.svg");
     background-repeat: no-repeat;
-    background-position: 50% 13%; //////Background size??????
+    background-position: 50% 13%; 
   }
   &__android-img {
     background-image: url("../img/android-logo.svg");
     background-repeat: no-repeat;
-    background-position: 50% 50%; //////Background size??????
+    background-position: 50% 50%; 
   }
   &__windows-img {
     background-image: url("../img/microsoft-logo.svg");
     background-repeat: no-repeat;
-    background-position: 50% 50%; //////Background size??????
+    background-position: 50% 50%; 
   }
   &__phone-types {
     font-size: @font-size--small;

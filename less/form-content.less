@@ -23,7 +23,7 @@
       margin-bottom: 70px;
     }
     span {
-      display: none; 
+      display: none;
       @media @screen-tablet {
         display: block;
         font-size: 1.8rem;
@@ -57,7 +57,7 @@
       width: 92%;
       background-color: @background-color--sucsses;
       margin-bottom: 41px;
-      outline-style:none;
+      outline-style: none;
       transition-duration: 1s;
       transition-property: color;
       &:hover {
@@ -138,12 +138,12 @@
     padding: 14px 12px 14px 16px;
     margin-bottom: 23px;
     width: 88%;
-    outline-style:none;
+    outline-style: none;
     .input-border-conditions ();
     @media @screen-tablet {
       width: 590px;
     }
-     @media @screen-desktop {
+    @media @screen-desktop {
       width: 267px;
       margin-right: 21px;
       order: 2;
@@ -152,17 +152,10 @@
       }
     }
   }
-  input::-webkit-input-placeholder {
+  input::placeholder {
     font-size: 1.8rem;
     font-weight: 400;
     color: @text-color--headers;
-    
-  }
-  input:-moz-placeholder {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: @text-color--headers;
-    
   }
 }
 
@@ -208,16 +201,15 @@
     display: block;
     line-height: 3rem;
     margin-bottom: 45px;
-     @media @screen-desktop {
+    @media @screen-desktop {
       width: 170px;
       margin-right: 88px;
       display: inline-block;
-      &:last-child{
+      &:last-child {
         margin-right: 0px;
       }
     }
   }
-
   &__radio {
     vertical-align: top;
     margin: 0 3px 0 0;
@@ -262,7 +254,7 @@
   &__radio + label {
     cursor: pointer;
   }
-  label{
+  label {
     &:hover {
       &:before {
         border-color: #283645;
@@ -282,7 +274,7 @@
     width: 623px;
   }
   @media @screen-desktop {
-    width:880px;
+    width: 880px;
   }
   fieldset {
     border: none;
@@ -292,7 +284,7 @@
       .clearfix();
     }
     @media @screen-desktop {
-      width:875px;
+      width: 875px;
       font-size: 0px;
     }
   }
@@ -332,7 +324,7 @@
     .border-style ();
     line-height: 30px;
     padding: 14px 12px 14px 16px;
-    outline-style:none;
+    outline-style: none;
     .input-border-conditions ();
   }
   button {
@@ -342,32 +334,25 @@
     display: inline-block;
     border-top: 2px solid @border-color;
     border-bottom: 2px solid @border-color;
-    background-color: #fff;
-    outline-style:none;
+    background-color: #ffffff;
+    outline-style: none;
     vertical-align: top;
   }
-  input::-webkit-input-placeholder {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: @text-color--headers;
-  }
-  input:-moz-placeholder {
+  input::placeholder {
     font-size: 1.8rem;
     font-weight: 400;
     color: @text-color--headers;
   }
   &__trip-info {
-    padding: 14px;
     width: 250px;
     @media @screen-tablet {
       width: 210px;
-      margin-bottom: 18px;
     }
     @media @screen-desktop {
       width: 207px;
       margin-bottom: 20px;
       padding: 14px 19px 14px 8px;
-     }
+    }
   }
   .trip-info-wrapper {
     @media @screen-tablet {
@@ -381,8 +366,8 @@
     }
     label {
       @media @screen-tablet {
-      text-align: left;
-      padding-left: 22px;
+        text-align: left;
+        padding-left: 22px;
       }
       @media @screen-desktop {
         padding-left: 19px;
@@ -397,18 +382,18 @@
     @media @screen-tablet {
       width: 95px;
     }
-     @media @screen-desktop {
+    @media @screen-desktop {
       width: 100px;
       margin-bottom: 20px;
       padding: 14px 8px 14px 0px;
-     }
+    }
   }
   .trip-date-wrapper {
-     font-size: 0px;
+    font-size: 0px;
     @media @screen-tablet {
       display: block;
       float: right;
-      padding-right: 57px;
+      padding-right: 40px;
     }
     @media @screen-desktop {
       width: 294px;
@@ -425,7 +410,7 @@
     color: transparent;
     &:hover {
       box-shadow: inset 0px 0px 0px 2px #283645;
-      border-top:none;
+      border-top: none;
       border-bottom: none;
       padding-bottom: 3px;
       padding-top: 2px;
@@ -435,16 +420,16 @@
       margin-right: -2px;
     }
     &:after {
-        content:"";
-        position: absolute;
-        display: block;
-        font-size: 54px;
-        top: 28px;
-        left: 19px;
-        width:20px;
-        height: 4px;
-        background-color: #283645;
-      }
+      content: "";
+      position: absolute;
+      display: block;
+      font-size: 54px;
+      top: 28px;
+      left: 19px;
+      width: 20px;
+      height: 4px;
+      background-color: #283645;
+    }
     &:hover {
       &:after {
         top: 30px;
@@ -452,18 +437,21 @@
       }
     }
     &:active {
-      background-color: #283645;
       color: #283645;
+      background-color: #283645;
+      &:after {
+        background-color: #ffffff;
+      }
     }
   }
   &__btn-plus {
-      padding: 0px 17px 1px 17px;
-      border-left: none;
-      color: #283645;
-      border-right: 2px solid @border-color;
+    padding: 0px 17px 1px 17px;
+    border-left: none;
+    color: #283645;
+    border-right: 2px solid @border-color;
     &:hover {
       box-shadow: inset 0px 0px 0px 2px #283645;
-      border-top:none;
+      border-top: none;
       border-bottom: none;
       padding-bottom: 3px;
       padding-top: 2px;
@@ -492,7 +480,7 @@
     margin-bottom: 56px;
   }
   @media @screen-desktop {
-    width:942px;
+    width: 942px;
   }
   fieldset {
     border: none;
@@ -500,7 +488,7 @@
       border: 2px solid @border-color;
     }
     @media @screen-desktop {
-      width:925px;
+      width: 925px;
       padding-right: 0px;
       padding-bottom: 0px;
     }
@@ -538,18 +526,13 @@
       line-height: 30px;
       padding: 14px 12px 14px 16px;
       margin-bottom: 17px;
-      outline-style:none;
+      outline-style: none;
       .input-border-conditions ();
       @media @screen-tablet {
         border: transparent;
       }
     }
-    input::-webkit-input-placeholder {
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: @text-color--headers;
-    }
-    input:-moz-placeholder {
+    input::placeholder {
       font-size: 1.8rem;
       font-weight: 400;
       color: @text-color--headers;
@@ -562,7 +545,7 @@
       border-top: 2px solid @border-color;
       border-bottom: 2px solid @border-color;
       background-color: #fff;
-      outline-style:none;
+      outline-style: none;
       vertical-align: top;
     }
   }
@@ -587,7 +570,7 @@
     }
     &:hover {
       box-shadow: inset 0px 0px 0px 2px #283645;
-      border-top:none;
+      border-top: none;
       border-bottom: none;
       padding-bottom: 3px;
       padding-top: 2px;
@@ -597,20 +580,20 @@
       padding-left: 30px;
       margin-right: -2px;
       @media @screen-tablet {
-      margin-right: 0px;
+        margin-right: 0px;
       }
     }
     &:after {
-        content:"";
-        position: absolute;
-        display: block;
-        font-size: 54px;
-        top: 28px;
-        left: 19px;
-        width:20px;
-        height: 4px;
-        background-color: #283645;
-      }
+      content: "";
+      position: absolute;
+      display: block;
+      font-size: 54px;
+      top: 28px;
+      left: 19px;
+      width: 20px;
+      height: 4px;
+      background-color: #283645;
+    }
     &:hover {
       &:after {
         top: 30px;
@@ -618,21 +601,24 @@
       }
     }
     &:active {
-      background-color: #283645;
       color: #283645;
+      background-color: #283645;
+      &:after {
+        background-color: #ffffff;
+      }
     }
   }
   &__btn-plus {
-      padding: 0px 17px 1px 17px;
-      border-left: none;
-      color: #283645;
-      border-right: 2px solid @border-color;
-      @media @screen-tablet {
+    padding: 0px 17px 1px 17px;
+    border-left: none;
+    color: #283645;
+    border-right: 2px solid @border-color;
+    @media @screen-tablet {
       border-left: 2px solid @border-color;
-      }
+    }
     &:hover {
       box-shadow: inset 0px 0px 0px 2px #283645;
-      border-top:none;
+      border-top: none;
       border-bottom: none;
       padding-bottom: 3px;
       padding-top: 2px;
@@ -642,7 +628,7 @@
       padding-left: 19px;
       margin-left: -2px;
       @media @screen-tablet {
-      margin-left: 0px;
+        margin-left: 0px;
       }
     }
     &:active {
@@ -656,8 +642,8 @@
       margin-left: 49px;
     }
     @media @screen-desktop {
-       margin-left: 46px;
-       padding: 0px 0px 31px 0px;
+      margin-left: 46px;
+      padding: 0px 0px 31px 0px;
     }
   }
   &__names {
@@ -708,19 +694,14 @@
       line-height: 3rem;
       padding: 14px 12px 14px 16px;
       width: 187px;
-      outline-style:none;
+      outline-style: none;
       .input-border-conditions ();
       @media @screen-tablet {
         width: 267px;
         display: inline-block;
       }
     }
-    input::-webkit-input-placeholder {
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: @text-color--headers;
-    }
-    input:-moz-placeholder {
+    input::placeholder {
       font-size: 1.8rem;
       font-weight: 400;
       color: @text-color--headers;
@@ -728,7 +709,7 @@
     button {
       display: none;
       cursor: pointer;
-      outline-style:none;
+      outline-style: none;
       &:hover {
         border-bottom: 2px solid #d22856;
         color: @text-color--attention;
@@ -765,7 +746,7 @@
     @media @screen-desktop {
       width: 300px;
       display: inline-block;
-      padding:0px;
+      padding: 0px;
     }
     label {
       float: left;
@@ -786,19 +767,14 @@
       line-height: 3rem;
       padding: 14px 12px 14px 16px;
       width: 187px;
-      outline-style:none;
+      outline-style: none;
       .input-border-conditions ();
       @media @screen-tablet {
         width: 267px;
         display: inline-block;
       }
     }
-    input::-webkit-input-placeholder {
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: @text-color--headers;
-    }
-    input:-moz-placeholder {
+    input::placeholder {
       font-size: 1.8rem;
       font-weight: 400;
       color: @text-color--headers;
@@ -918,7 +894,7 @@
     &:hover {
       &:before {
         border-color: #283645;
-        box-shadow: -1px -1px 0px #283645; ////???? Тот же вопрос, чтои с радиобаттонами
+        box-shadow: -1px -1px 0px #283645; 
       }
     }
   }
@@ -937,7 +913,7 @@
     margin-bottom: 66px;
   }
   @media @screen-desktop {
-    width:100%;
+    width: 100%;
   }
   fieldset {
     border: none;
@@ -947,7 +923,7 @@
       margin-bottom: 14px;
     }
     @media @screen-desktop {
-    padding-bottom: 43px;
+      padding-bottom: 43px;
     }
   }
   legend {
@@ -968,7 +944,7 @@
     z-index: -1;
     position: absolute;
     display: inline-block;
-    outline-style:none;
+    outline-style: none;
   }
   label {
     cursor: pointer;
@@ -985,11 +961,11 @@
     text-align: center;
     text-transform: uppercase;
     &:hover {
-      border-color:#283645;
+      border-color: #283645;
       @media @screen-desktop {
-        border-color:#d22856;
+        border-color: #d22856;
         background-color: #ffffff;
-        color:#d22856;
+        color: #d22856;
       }
     }
     &:active {
@@ -997,9 +973,9 @@
       border-color: #ffffff;
       color: #ffffff;
       @media @screen-desktop {
-        border-color:#ffffff;
+        border-color: #ffffff;
         background-color: #d22856;
-        color:#ffffff;
+        color: #ffffff;
         opacity: 0.7;
       }
     }
@@ -1017,19 +993,19 @@
   }
   &__btn-file--wrap {
     position: relative;
-    width:97%;
+    width: 97%;
     margin: 0 auto;
     padding-bottom: 96px;
     border-bottom: 2px solid @border-color;
     @media @screen-tablet {
-      width:500px;
+      width: 500px;
       padding-left: 0px;
       padding-bottom: 104px;
       margin-bottom: 50px;
       margin-left: 0px;
     }
     @media @screen-desktop {
-      width:100%;
+      width: 100%;
     }
   }
   &__images {
@@ -1046,8 +1022,8 @@
     margin: 15px 27px 12px 10px;
     position: relative;
     &:nth-child(3n) {
-        margin-right: 0px;
-      }
+      margin-right: 0px;
+    }
     @media @screen-tablet {
       margin: 17px 69px 34px 0px;
     }
@@ -1169,25 +1145,25 @@
     margin: 0 auto;
     width: 70%;
     background-color: @background-color--sucsses;
-    outline-style:none;
+    outline-style: none;
     transition-duration: 1s;
     transition-property: color;
-      &:hover {
-        background-color: #1c9b5e;
-        color: rgba(255, 255, 255, 0.3);
-      }
-      &:active {
-        opacity: 0.7;
-      }
-      &:disabled {
-        background-color: #f2f2f2;
-      }
+    &:hover {
+      background-color: #1c9b5e;
+      color: rgba(255, 255, 255, 0.3);
+    }
+    &:active {
+      opacity: 0.7;
+    }
+    &:disabled {
+      background-color: #f2f2f2;
+    }
   }
 }
+
 .failure-popup--hidden {
   display: none;
 }
-
 
 .request-popup {
   position: absolute;
@@ -1252,21 +1228,22 @@
     margin: 0 auto;
     width: 70%;
     background-color: @background-color--sucsses;
-    outline-style:none;
+    outline-style: none;
     transition-duration: 1s;
     transition-property: color;
     &:hover {
-        background-color: #1c9b5e;
-        color: rgba(255, 255, 255, 0.3);
-      }
+      background-color: #1c9b5e;
+      color: rgba(255, 255, 255, 0.3);
+    }
     &:active {
-        opacity: 0.7;
-      }
+      opacity: 0.7;
+    }
     &:disabled {
-        background-color: #f2f2f2;
+      background-color: #f2f2f2;
     }
   }
 }
+
 .request-popup--hidden {
   display: none;
 }
