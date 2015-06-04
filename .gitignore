@@ -3,6 +3,7 @@ npm-debug.log
 Thumbs.db
 .DS_Store
 prepros.cfg
+dest
 *.sublime*
 *.map
 css/*
