@@ -42,7 +42,7 @@
             var files = this.files;
 
             for (var i = 0; i < files.length; i++) {
-                prewiew(files[i]);
+                preview(files[i]);
             }
         });
 
