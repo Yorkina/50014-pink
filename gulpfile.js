@@ -8,6 +8,7 @@ var minifyHTML = require('gulp-minify-html');
 var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
 var csscomb = require('gulp-csscomb');
+var uglify = require('gulp-uglify');
 
 gulp.task('css-comb', function() {
     gulp.src('./src/less/**/*.less')
@@ -24,8 +25,13 @@ gulp.task('minify-html', function() {
 gulp.task('img-min', function() {
     gulp.src('./src/img/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./dest/img'))
+        .pipe(gulp.dest('./dest/img'));
+});
 
+gulp.task('js-min', function() {
+    gulp.src('./src/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./dest/js'));
 });
 
 gulp.task('less', function() {
@@ -57,5 +63,5 @@ gulp.task('serve', ['less'], function() {
     gulp.watch("./src/*.html").on('change', reload);
 });
 
-gulp.task('build', ['minify-html', 'less', 'img-min']);
+gulp.task('build', ['minify-html', 'less', 'img-min', 'js-min']);
 gulp.task('default', ['less', 'serve']);
