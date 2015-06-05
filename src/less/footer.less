@@ -1,27 +1,13 @@
 .footer {
   width: 100%;
   &__contacts {
-    position: relative;
     background-color: @background-color--light;
     @media @screen-tablet {
-      padding: 0px 61px 215px 61px;
+      padding: 0px 61px 75px 61px;
       .clearfix();
     }
     @media @screen-desktop {
-      padding: 25px 152px 164px 152px;
-    }
-    &:after {
-      .pseudo-absolute-elem ();
-      background-image: url("../img/triangle-white-footer.svg");
-      background-position: 50% 0%;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 62px;
-      @media @screen-tablet {
-        background-position: center bottom;
-        bottom: -61px;
-        left: 0px;
-      }
+      padding: 25px 152px 75px 152px;
     }
   }
   &__header {
@@ -127,6 +113,7 @@
     }
   }
   &__map {
+    position: relative;
     background-image: url("../img/map-marker.svg"), url("../img/footer-map-img.jpg");
     background-repeat: no-repeat;
     background-position: 50%;
@@ -144,6 +131,14 @@
       padding-bottom: 509px;
       margin-bottom: 53px;
     }
+  }
+  &__triangle {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 62px;
+    top: 0px;
+    left: 0px;
   }
   &--inner-pages {
     padding: 49px 20px 40px 20px;
@@ -220,9 +215,9 @@
       }
       &:hover {
         &:after {
-          background-position: -206px -4px;
+          background-position: -206px -1px;
           @media @screen-desktop {
-            background-position: -209px -4px;
+            background-position: -209px -1px;
           }
         }
       }
@@ -235,13 +230,13 @@
         content: "";
         position: absolute;
         width: 30px;
-        height: 36px;
+        height: 40px;
         display: block;
         background-image: url("../img/sprt.svg");
-        background-position: -138px -4px;
+        background-position: -138px -1px;
         background-repeat: no-repeat;
         background-size: 400px;
-        margin-top: -25px;
+        margin-top: -27px;
         left: 95px;
         @media @screen-desktop {
           width: 40px;
@@ -376,7 +371,7 @@
       &:hover {
         &:after {
           @media @screen-tablet {
-            background-position: -206px -4px;
+            background-position: -206px -1px;
           }
         }
       }
@@ -391,14 +386,14 @@
         @media @screen-tablet {
           content: "";
           width: 30px;
-          height: 36px;
+          height: 40px;
           display: block;
           background-image: url("../img/sprt.svg");
-          background-position: -138px -4px;
+          background-position: -138px -1px;
           background-repeat: no-repeat;
           background-size: 400px;
           margin-left: 155px;
-          margin-top: -24px;
+          margin-top: -27px;
         }
       }
     }

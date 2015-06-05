@@ -27,22 +27,24 @@
       height: 1150px;
     }
   }
-  &__promo-slogan {
-    margin: 0px 19px 118px 19px;
-    position: relative;
-    &:after {
+  &__triangle {
       display: none;
       @media @screen-tablet {
-        .pseudo-absolute-elem ();
-        width: 150%;
+        position: absolute;
+        display: block;
+        width: 290%;
         height: 200px;
         z-index: -1;
         left: -20%;
-        background-image: url("../img/triangle-white.svg");
-        background-position: 100% 53px;
-        background-repeat: no-repeat;
+        top: 86px;
+      }
+      @media @screen-desktop {
+        top: 140px;
       }
     }
+  &__promo-slogan {
+    margin: 0px 19px 118px 19px;
+    position: relative;
     @media @screen-tablet {
       margin: 0px 19px 53px 19px;
     }
@@ -347,17 +349,16 @@
       width: 1900px;
     }
   }
-  &:after {
+  &__triangle {
     display: none;
     @media @screen-tablet {
-      .pseudo-absolute-elem ();
-      width: 150%;
+      display: block;
+      position: absolute;
+      width: 290%;
       height: 200px;
       z-index: -1;
       left: -20%;
-      background-image: url("../img/triangle-white.svg");
-      background-position: 100% 53px;
-      background-repeat: no-repeat;
+      top: 73%;
     }
   }
   &__slides {
