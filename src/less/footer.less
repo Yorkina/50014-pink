@@ -60,9 +60,8 @@
     }
   }
   &__call-us,
-  &__guests,
-  &__write-us {
-    a {
+  &__guests {
+    div {
       .big-headers-text-style ();
       word-wrap: break-word;
       color: @text-color--attention;
@@ -76,7 +75,7 @@
       float: left;
       width: 256px;
     }
-    a {
+    div {
       margin-bottom: 30px;
     }
   }
@@ -90,7 +89,7 @@
       width: 384px;
       padding-top: 0px;
     }
-    a {
+    div {
       padding: 0px 20px;
       line-height: 2.8rem; //надо из-за переноса адреса
       //без маргина, так как под псевдо элемент и он тогда с отрицательным маргином
@@ -109,6 +108,12 @@
       width: 256px;
     }
     a {
+      .big-headers-text-style ();
+      word-wrap: break-word;
+      color: @text-color--attention;
+      display: block;
+      text-align: center;
+      text-decoration: none;
       padding-bottom: 3px; /// Надо для бордера снизу, чтобы не двигать элемент снизу
       margin-bottom: 27px;
       display: inline-block;
