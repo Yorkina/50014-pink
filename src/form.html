@@ -36,20 +36,20 @@
       <form class="form-content__form" action="/echo" method="post">
         <div class="user-info">
           <label for="name">Имя:<sup>*</sup></label>
-          <input id="name" type="text" name="name" value="" placeholder="Введите ваше имя" required>
+          <input id="name" type="text" name="name" value="" placeholder="Введите ваше имя" tabindex="1" required>
           <label for="last-name">Фамилия:<sup>*</sup></label>
-          <input id="last-name" type="text" name="last-name" value="" placeholder="Укажите фамилию" required>
+          <input id="last-name" type="text" name="last-name" value="" placeholder="Укажите фамилию" tabindex="2" required>
           <label for="patronymic">Отчество:<sup>*</sup></label>
-          <input id="patronymic" type="text" name="patronymic" value="" placeholder="Ну и отчество тоже" required>
+          <input id="patronymic" type="text" name="patronymic" value="" placeholder="Ну и отчество тоже" tabindex="3" required>
         </div>
         <div class="type-application">
           <fieldset>
             <legend>С каким приложением путешествовали?<sup>*</sup></legend>
-            <input id="ios" class="type-application__radio" type="radio" name="radio" placeholder="IOS" checked>
+            <input id="ios" class="type-application__radio" type="radio" name="radio" placeholder="IOS" tabindex="4" checked>
             <label for="ios">Pink для IOS</label>
-            <input id="android" class="type-application__radio" type="radio" name="radio" placeholder="Android">
+            <input id="android" class="type-application__radio" type="radio" name="radio" placeholder="Android" tabindex="5">
             <label for="android">Pink на Android</label>
-            <input id="w-phone" class="type-application__radio" type="radio" name="radio" placeholder="Windows">
+            <input id="w-phone" class="type-application__radio" type="radio" name="radio" placeholder="Windows" tabindex="6">
             <label for="w-phone">Windows Phone</label>
           </fieldset>
         </div>
@@ -57,17 +57,17 @@
           <fieldset>
             <legend>Когда вы путешествовали?<sup>*</sup></legend>
             <div class="trip-info-wrapper">
-              <input id="check-out" class="travel-duration__trip-info" type="data" name="chek-out" value="" placeholder="1 апреля 2015" required>
+              <input id="check-out" class="travel-duration__trip-info" type="data" name="chek-out" value="" placeholder="1 апреля 2015" tabindex="7" required>
               <label for="check-out">Дата выезда</label>
             </div>
             <div class="trip-date-wrapper">
-              <button class="travel-duration__btn-minus">-</button>
-              <input id="trip-lasting" class="travel-duration__trip-date" type="text" name="trip-lasting" value="" placeholder="10 дней" required>
-              <button class="travel-duration__btn-plus">+</button>
+              <button class="travel-duration__btn-minus" tabindex="8">-</button>
+              <input id="trip-lasting" class="travel-duration__trip-date" type="text" name="trip-lasting" value="" placeholder="10 дней" tabindex="8" required>
+              <button class="travel-duration__btn-plus" tabindex="9">+</button>
               <label for="trip-lasting">Продолжительность</label>
             </div>
             <div class="trip-info-wrapper">
-              <input id="return-date" class="travel-duration__trip-info" type="data" name="return-date" value="" placeholder="1 апреля 2015" required>
+              <input id="return-date" class="travel-duration__trip-info" type="data" name="return-date" value="" placeholder="1 апреля 2015" tabindex="10"required>
               <label for="return-date">Дата возвращения</label>
             </div>
           </fieldset>
@@ -76,9 +76,9 @@
           <fieldset>
             <legend>Количество попутчиков<sup>*</sup></legend>
             <div class="travelers__count">
-              <button class="travelers__btn-minus">-</button>
-              <input id="count" class="travelers__trip-count" type="text" name="count" value="" placeholder="2 чел" required>
-              <button class="travelers__btn-plus">+</button>
+              <button class="travelers__btn-minus" tabindex="11">-</button>
+              <input id="count" class="travelers__trip-count" type="text" name="count" value="" placeholder="2 чел" tabindex="12" required>
+              <button class="travelers__btn-plus" tabindex="13">+</button>
             </div>
             <div class="travelers__info-form">
             </div>
@@ -88,17 +88,17 @@
           <fieldset>
             <legend>Ваши безбашенные достижения в путешествии</legend>
             <input class="travel-achievements__checkbox" id="selfie" type="checkbox" name="check" checked>
-            <label for="selfie">Сделал селфи с акулой</label>
+            <label for="selfie" tabindex="14">Сделал селфи с акулой</label>
             <input class="travel-achievements__checkbox" id="burn" type="checkbox" name="check" checked>
-            <label for="burn">Обгорел на пляже</label>
+            <label for="burn" tabindex="15">Обгорел на пляже</label>
             <input class="travel-achievements__checkbox" id="norris" type="checkbox" name="check">
-            <label for="norris">Видел Чака Норриса</label>
+            <label for="norris" tabindex="16">Видел Чака Норриса</label>
             <input class="travel-achievements__checkbox" id="shopping" type="checkbox" name="check">
-            <label for="shopping">Накупил сувениров</label>
+            <label for="shopping" tabindex="17">Накупил сувениров</label>
             <input class="travel-achievements__checkbox" id="touch" type="checkbox" name="check" checked>
-            <label for="touch">Удержал башню</label>
+            <label for="touch" tabindex="18">Удержал башню</label>
             <input class="travel-achievements__checkbox" id="hotel" type="checkbox" name="check">
-            <label for="hotel">Разгромил отель</label>
+            <label for="hotel" tabindex="19">Разгромил отель</label>
           </fieldset>
         </div>
         <div class="travel-photo">
@@ -106,7 +106,7 @@
             <legend>Ваши фотографии из поездки<sup>*</sup></legend>
             <div class="travel-photo__btn-file--wrap">
               <label for="upload__photo">
-                <input id="upload__photo" type="file" name="images" accept="image/jpeg,image/png,image/gif" placeholder="Загрузить фото" multiple> Загрузить фото</label>
+                <input id="upload__photo" type="file" name="images" accept="image/jpeg,image/png,image/gif" placeholder="Загрузить фото" tabindex="20" multiple> Загрузить фото</label>
             </div>
             <article class="travel-photo__images">
               <figure>
@@ -153,7 +153,7 @@
           </fieldset>
         </div>
         <div class="form-content__sending-form">
-          <button class="button form-content__button" type="submit">Отправить форму</button>
+          <button class="button form-content__button" type="submit" tabindex="21">Отправить форму</button>
           <div><sup>*</sup> — Обязательные <span>для заполнения </span>поля</div>
         </div>
       </form>
