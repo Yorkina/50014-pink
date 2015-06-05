@@ -1,4 +1,4 @@
-(function() {
+;(function() {
     if (!("FormData" in window)) {
         return;
     }
@@ -10,18 +10,15 @@
 
         var data = new FormData(form);
 
-        request(data, function(response) {
+        requestAjax(data, function(response) {
             console.log(response);
         });
     });
-
-
-
-    function request(data, fn) {
+    function requestAjax(data, fn) {
         var test = new XMLHttpRequest();
         var time = (new Date()).getTime();
 
-        test.open("post", "http://simonenko.ru/academy/echo" + time);
+        test.open("post", "http://simonenko.ru/academy/echo" + time, true);
 
         test.addEventListener("readystatechange", function() {
             if (test.readyState == 4) {
@@ -31,9 +28,6 @@
 
         test.send(data);
     }
-
-
-
     if ("FileReader" in window) {
         var area = document.querySelector(".travel-photo");
         var adder = document.querySelector(".travel-photo__images");
@@ -75,10 +69,10 @@
                     figure.appendChild(cancel);
                     figure.appendChild(caption);
 
-                    cancel.onclick = function(event) {
+                    cancel.addEventListener('click', function(event) {
                         event.preventDefault();
                         this.parentNode.remove();
-                    }
+                    });
                 });
                 reader.readAsDataURL(file);
             }
@@ -131,12 +125,12 @@
                                     </label>\
                                 </header>\
                                 <span class="travelers__form-number">' + num + '</span>\
-                                <input type="text" name="traveler-name[' + num + ']" value="" placeholder="Введите ваше имя" required>\
+                                <input type="text" name="traveler-name[' + num + ']" tabindex="13" value="" placeholder="Введите ваше имя" required>\
                                 <button class="travelers__name--delete">Удалить</button>\
                             </div>\
                             <div class="travelers__nick">\
                                 <label for="traveler-nick">Прозвище:</label>\
-                                <input type="text" name="traveler-nick[' + num + ']" value="" placeholder="Ну как же без этого!" required>\
+                                <input type="text" name="traveler-nick[' + num + ']" tabindex="13" value="" placeholder="Ну как же без этого!" required>\
                             </div>\
                         </div>';
             return tpl;
@@ -145,14 +139,14 @@
         var setEvents = function() {
             var rows = wrap.querySelectorAll("button.travelers__name--delete");
             for (var i = rows.length - 1; i >= 0; i--) {
-                rows[i].onclick = function(event) {
+                rows[i].addEventListener('click', function(event) {
                     event.preventDefault();
                     this.parentNode.parentNode.remove();
                     curCount = +wrap.children.length;
                     options.counter.value = curCount;
                     if (curCount > 0)
                         updateNums(curCount);
-                }
+                });
             };
         }
         var updateNums = function(count) {
@@ -176,7 +170,7 @@
         }) : false;
         var self = this;
 
-        wrap.onclick = function(event) {
+        wrap.addEventListener('click', function(event) {
             event.preventDefault();
             if (event.target.className == options.minus) {
                 countDecrease();
@@ -187,7 +181,7 @@
             if (travelers instanceof travelersBox) {
                 travelers.change(countElem.value)
             }
-        }
+        });
 
         countElem.oninput = function(e) {
             var pattern = /^[^A-Za-zА-Яа-я/]+$/g;
@@ -258,3 +252,4 @@
         request.classList.add("request-popup--hidden");
     });
 })();
+
