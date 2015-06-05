@@ -60,7 +60,8 @@
       outline-style: none;
       transition-duration: 1s;
       transition-property: color;
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: #1c9b5e;
         color: rgba(255, 255, 255, 0.3);
       }
@@ -408,7 +409,8 @@
     border-right: none;
     position: relative;
     color: transparent;
-    &:hover {
+    &:hover, 
+    &:focus {
       box-shadow: inset 0px 0px 0px 2px #283645;
       border-top: none;
       border-bottom: none;
@@ -430,7 +432,8 @@
       height: 4px;
       background-color: #283645;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       &:after {
         top: 30px;
         left: 21px;
@@ -449,7 +452,8 @@
     border-left: none;
     color: #283645;
     border-right: 2px solid @border-color;
-    &:hover {
+    &:hover,
+    &:focus {
       box-shadow: inset 0px 0px 0px 2px #283645;
       border-top: none;
       border-bottom: none;
@@ -568,7 +572,8 @@
     @media @screen-tablet {
       border-right: 2px solid @border-color;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       box-shadow: inset 0px 0px 0px 2px #283645;
       border-top: none;
       border-bottom: none;
@@ -594,7 +599,8 @@
       height: 4px;
       background-color: #283645;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       &:after {
         top: 30px;
         left: 21px;
@@ -616,7 +622,8 @@
     @media @screen-tablet {
       border-left: 2px solid @border-color;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       box-shadow: inset 0px 0px 0px 2px #283645;
       border-top: none;
       border-bottom: none;
