@@ -76,7 +76,7 @@
       padding-top: 0px;
     }
     div {
-      padding: 0px 20px;
+      padding: 0px 30px;
       line-height: 2.8rem; //надо из-за переноса адреса
       //без маргина, так как под псевдо элемент и он тогда с отрицательным маргином
       @media @screen-tablet {
@@ -114,22 +114,16 @@
   }
   &__map {
     position: relative;
-    background-image: url("../img/map-marker.svg"), url("../img/footer-map-img.jpg");
-    background-repeat: no-repeat;
-    background-position: 50%;
+    height: 250px;
     width: 100%;
-    padding-bottom: 236px;
-    background-color: #283645;
+    z-index: 1;
     @media @screen-tablet {
-      background-image: url("../img/map-marker.svg"), url("../img/footer-map-tablet-img.jpg");
-      background-repeat: no-repeat;
-      background-position: 50% 56%;
-      padding-bottom: 376px;
-      margin-bottom: 20px
+      height: 380px;
+      margin-bottom: 40px;
     }
     @media @screen-desktop {
-      padding-bottom: 509px;
-      margin-bottom: 53px;
+      height: 535px;
+      margin-bottom: 60px;
     }
   }
   &__triangle {
@@ -139,6 +133,7 @@
     height: 62px;
     top: 0px;
     left: 0px;
+    z-index: 1;
   }
   &--inner-pages {
     padding: 49px 20px 40px 20px;
