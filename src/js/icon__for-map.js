@@ -13,7 +13,7 @@ ymaps.ready(function() {
         balloonContent: ''// различная инфа при нажатии на метку
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../src/img/map-marker.svg',
+        iconImageHref: '../src/img/svg/map-marker.svg',
         iconImageSize: [40, 40],
         iconImageOffset: [0, 0]
     });
