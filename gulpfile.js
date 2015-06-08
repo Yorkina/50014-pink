@@ -9,11 +9,23 @@ var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
+var csscomb = require('gulp-csscomb');
 
 gulp.task('css-comb', function() {
-    gulp.src('./src/less/**/*.less')
+    gulp.src(['./src/less/style.less',
+              './src/less/blog-content.less',
+              './src/less/body.less',
+              //'./src/less/debug.less',
+              './src/less/footer.less',
+              './src/less/form-content.less',
+              './src/less/header.less',
+              './src/less/index-content.less',
+              './src/less/mixins.less',
+              './src/less/post-content.less',
+              //'./src/less/variables.less'
+             ])
         .pipe(csscomb())
-        .pipe(gulp.dest('./dest/less'));
+        .pipe(gulp.dest('./src/less'));
 });
 
 gulp.task('minify-html', function() {
