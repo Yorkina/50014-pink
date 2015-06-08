@@ -338,6 +338,7 @@
     outline-style: none;
     vertical-align: top;
     height: 62px;
+    width:61px;
   }
   input::placeholder {
     font-size: 1.8rem;
@@ -415,6 +416,7 @@
       border-top: none;
       border-bottom: none;
       padding-bottom: 3px;
+      width: 63px;
       padding-top: 2px;
       border-left: none;
       padding-right: 19px;
@@ -456,6 +458,7 @@
     &:focus {
       box-shadow: inset 0px 0px 0px 2px #283645;
       border-top: none;
+      width:63px;
       border-bottom: none;
       padding-bottom: 3px;
       padding-top: 2px;
@@ -550,6 +553,9 @@
       background-color: #fff;
       outline-style: none;
       vertical-align: top;
+      width:61px;
+      height: 62px;
+      overflow: hidden;
     }
   }
   &__trip-count {
@@ -583,8 +589,10 @@
       padding-right: 19px;
       padding-left: 30px;
       margin-right: -2px;
+      width: 63px;
       @media @screen-tablet {
         margin-right: 0px;
+        width: 61px;
       }
     }
     &:after {
@@ -633,8 +641,10 @@
       padding-right: 19px;
       padding-left: 19px;
       margin-left: -2px;
+      width: 63px;
       @media @screen-tablet {
         margin-left: 0px;
+        width: 61px;
       }
     }
     &:active {
@@ -716,6 +726,7 @@
       display: none;
       cursor: pointer;
       outline-style: none;
+      overflow: hidden;
       &:hover,
       &:focus {
         border-bottom: 2px solid #d22856;
@@ -737,6 +748,8 @@
       }
       @media @screen-desktop {
         position: absolute;
+        width:65px;
+        height:20px;
         right: -437px;
         top: 52px;
       }
@@ -792,9 +805,13 @@
     border-right: none;
     padding: 22px 26px;
     background-color: #fff;
+    overflow: hidden;
+    width: 10px;
+    height: 14px;
     @media @screen-tablet {
       margin-right: 21px;
       padding: 20px 25px;
+      height: 18px;
       border-right: 2px solid @border-color;
       background-color: @background-color--slider;
     }
