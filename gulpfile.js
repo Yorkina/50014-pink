@@ -7,36 +7,8 @@ var minifyCss = require('gulp-minify-css');
 var minifyHTML = require('gulp-minify-html');
 var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
-var csscomb = require('gulp-csscomb');
 var uglify = require('gulp-uglify');
-var svgSprite = require('gulp-svg-sprite');
 var plumber = require('gulp-plumber');
-
-var config = {
-  shape: {
-    dimension: { // Set maximum dimensions
-      maxWidth: 32,
-      maxHeight: 32
-    },
-    spacing: { // Add padding
-      padding: 10
-    }
-  },
-  mode: {
-    css: { // Activate the «css» mode
-      render: {
-        css: true // Activate CSS output (with default options)
-      }
-    }
-  }
-};
-
-gulp.task('svg', function () {
-  gulp.src('src/img/svg/**/*.svg')
-    .pipe(plumber())
-    .pipe(svgSprite(config))
-    .pipe(gulp.dest('dest/img/svg'));
-});
 
 gulp.task('css-comb', function() {
     gulp.src('./src/less/**/*.less')
@@ -51,7 +23,7 @@ gulp.task('minify-html', function() {
 });
 
 gulp.task('img-min', function() {
-    gulp.src('./src/img/*')
+    gulp.src('./src/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./dest/img'));
 });
