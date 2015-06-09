@@ -35,7 +35,7 @@ gulp.task('svg', function () {
   gulp.src('./src/img/svg/*.svg')
     .pipe(plumber())
     .pipe(svgSprite(config))
-    .pipe(gulp.dest('./debug/img/'));
+    .pipe(gulp.dest('./dest/img/'));
 });
 
 gulp.task('css-comb', function() {
