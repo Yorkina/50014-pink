@@ -58,7 +58,7 @@ gulp.task('css-comb', function() {
 });
 
 gulp.task('deploy', function() {
-    gulp.src('./src/**/*')
+    gulp.src('./dest/**/*')
         .pipe(ghPages());
 });
 
