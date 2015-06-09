@@ -11,48 +11,55 @@ var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 var csscomb = require('gulp-csscomb');
 var svgSprite = require('gulp-svg-sprite');
+var ghPages = require('gulp-gh-pages');
 
 
 
 var config = {
-  shape: {
-    dimension: { // Set maximum dimensions
-      maxWidth: 32,
-      maxHeight: 32
+    shape: {
+        dimension: { // Set maximum dimensions
+            maxWidth: 32,
+            maxHeight: 32
+        },
+        spacing: { // Add padding
+            padding: 10
+        }
     },
-    spacing: { // Add padding
-      padding: 10
+    mode: {
+        css: { // Activate the «css» mode
+            render: {
+                css: true // Activate CSS output (with default options)
+            }
+        }
     }
-  },
-  mode: {
-    css: { // Activate the «css» mode
-      render: {
-        css: true // Activate CSS output (with default options)
-      }
-    }
-  }
 };
 
-gulp.task('svg', function () {
-  gulp.src('./src/img/svg/*.svg')
-    .pipe(plumber())
-    .pipe(svgSprite(config))
-    .pipe(gulp.dest('./dest/img/'));
+gulp.task('svg', function() {
+    gulp.src('./src/img/svg/*.svg')
+        .pipe(plumber())
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('./dest/img/'));
 });
+
+gulp.task('deploy', function() {
+    gulp.src('./dest/**/*')
+        .pipe(ghPages());
+});
+
 
 gulp.task('css-comb', function() {
     gulp.src(['./src/less/style.less',
-              './src/less/blog-content.less',
-              './src/less/body.less',
-              //'./src/less/debug.less',
-              './src/less/footer.less',
-              './src/less/form-content.less',
-              './src/less/header.less',
-              './src/less/index-content.less',
-              './src/less/mixins.less',
-              './src/less/post-content.less',
-              //'./src/less/variables.less'
-             ])
+            './src/less/blog-content.less',
+            './src/less/body.less',
+            //'./src/less/debug.less',
+            './src/less/footer.less',
+            './src/less/form-content.less',
+            './src/less/header.less',
+            './src/less/index-content.less',
+            './src/less/mixins.less',
+            './src/less/post-content.less',
+            //'./src/less/variables.less'
+        ])
         .pipe(csscomb())
         .pipe(gulp.dest('./src/less'));
 });
