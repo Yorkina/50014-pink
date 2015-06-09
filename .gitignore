@@ -4,6 +4,7 @@ Thumbs.db
 .DS_Store
 prepros.cfg
 dest
+exp
 *.sublime*
 *.map
 css/*

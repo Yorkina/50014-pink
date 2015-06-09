@@ -343,10 +343,17 @@
     font-weight: 400;
     color: @text-color--headers;
   }
+  input[type="date"] {
+    -webkit-padding-after: 12px;
+    -webkit-appearance: none;
+  }
+  input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
   &__trip-info {
     width: 250px;
     @media @screen-tablet {
-      width: 210px;
+      width: 215px;
     }
     @media @screen-desktop {
       width: 207px;
@@ -363,6 +370,28 @@
       width: 279px;
       display: inline-block;
       float: none;
+    }
+    label {
+      @media @screen-tablet {
+        text-align: left;
+        padding-left: 22px;
+      }
+      @media @screen-desktop {
+        padding-left: 19px;
+      }
+    }
+  }
+  .trip-return-wrapper {
+    @media @screen-tablet {
+      display: block;
+      float: right;
+      margin-right: 40px;
+    }
+    @media @screen-desktop {
+      width: 279px;
+      display: inline-block;
+      float: none;
+      margin-right: 0;
     }
     label {
       @media @screen-tablet {
@@ -754,7 +783,7 @@
     }
   }
   &__nick {
-    padding-left: 62px;
+    padding-left: 64px;
     padding-top: 26px;
     padding-bottom: 8px;
     @media @screen-tablet {
