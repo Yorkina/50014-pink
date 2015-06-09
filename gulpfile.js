@@ -11,6 +11,8 @@ var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 var csscomb = require('gulp-csscomb');
 var svgSprite = require('gulp-svg-sprite');
+var ghPages = require('gulp-gh-pages');
+
 
 var config = {
   shape: {
@@ -54,6 +56,12 @@ gulp.task('css-comb', function() {
         .pipe(csscomb())
         .pipe(gulp.dest('./src/less'));
 });
+
+gulp.task('deploy', function() {
+    gulp.src('./src/**/*')
+        .pipe(ghPages());
+});
+
 
 gulp.task('minify-html', function() {
     gulp.src('./src/*.html')
