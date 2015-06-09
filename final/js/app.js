@@ -1,0 +1,1 @@
+var express=require("express"),app=express();app.use(express["static"](__dirname+""));var server=app.listen(3e3,function(){var e=server.address().address,s=server.address().port;console.log("Example app listening at http://%s:%s",e,s)});
