@@ -18,7 +18,7 @@
         var test = new XMLHttpRequest();
         var time = (new Date()).getTime();
 
-        test.open("post", "http://simonenko.ru/academy/echo" + time, true);
+        test.open("post", "http://simonenko.su/academy/echo?" + time, true);
 
         test.addEventListener("readystatechange", function() {
             if (test.readyState == 4) {
