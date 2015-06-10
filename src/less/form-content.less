@@ -344,8 +344,9 @@
     color: @text-color--headers;
   }
   input[type="date"] {
-    -webkit-padding-after: 12px;
-    -webkit-appearance: none;
+    font-size: 18px;
+    padding: 14px 12px 14px 16px;
+    height: 1.69em;
   }
   input[type="date"]::-webkit-inner-spin-button {
     display: none;
@@ -1158,9 +1159,9 @@
     left: 0px;
     right: 0px;
     bottom: 180px;
-    width: 59%;
+    width: 400px;
     height: 295px;
-    padding: 20px 10px 50px 10px;
+    padding: 20px 40px 50px 40px;
   }
   @media @screen-desktop {
     width: 35%;
@@ -1237,12 +1238,13 @@
   background-color: @background-color--slider;
   box-shadow: 0px 10px 20px #d9d8d8;
   @media @screen-tablet {
-    width: 66%;
-    height: 325px;
+    width: 480px;
+    height: 380px;
     padding: 0px 0px 50px 0px;
   }
   @media @screen-desktop {
     width: 54%;
+    padding: 0px;
   }
   header {
     .headers-text-style ();
