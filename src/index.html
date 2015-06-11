@@ -17,10 +17,10 @@
         <a class="header__btn-menu" href="#2" title="Открыть меню"></a>
         <div class="header__menu">
           <ul class="header__list">
-            <li><a href="#10" title="Информация о нас">Информация</a></li>
-            <li><a href="#11" title="Наши возможности">Возможности</a></li>
-            <li><a href="#12" title="Отзывы о нас">Отзывы</a></li>
-            <li><a href="#13" title="Стоимость услуг">Стоимость</a></li>
+            <li><a href="#nav-info" class="info-link" title="Информация о нас">Информация</a></li>
+            <li><a href="#nav-ability" class="info-link" title="Наши возможности">Возможности</a></li>
+            <li><a href="#nav-comment" class="info-link" title="Отзывы о нас">Отзывы</a></li>
+            <li><a href="#nav-price" class="info-link" title="Стоимость услуг">Стоимость</a></li>
           </ul>
         </div>
       </div>
@@ -47,7 +47,7 @@
       </div>
     </div>
     <div class="center-wrapper">
-      <div class="content__promo-info">
+      <div class="content__promo-info" id="nav-info">
         <div class="content__promo-info-block">
           <header>Поднимает настроение</header>
           <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
@@ -61,14 +61,14 @@
           <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
         </div>
       </div>
-      <div class="content__promo-effect">
+      <div class="content__promo-effect" id="nav-ability">
         <div class="content__promo-effect-block">
           <header>Эффект на 24 часа!</header>
           <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
           <a href="#200">Узнать больше об исследовании</a>
         </div>
       </div>
-      <div class="review-slider">
+      <div class="review-slider" id="nav-comment">
         <div class="review-slider__slides">
           <div class="review-slider__slide">
             <div>25 лет, водитель трамвая</div>
@@ -96,7 +96,7 @@
         <a href="#" class="toggle__btn"></a>
         <a href="#" class="toggle__btn"></a>
       </div>
-      <div class="price-slider">
+      <div class="price-slider" id="nav-price">
         <table class="price-slide">
           <tr class="price-slide__tarif">
             <th>&nbsp;</th>
@@ -178,6 +178,7 @@
   <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="./js/icon__for-map.js"></script>
   <script src="./js/header.js"></script>
+  <script src="./js/desktop-menu.js"></script>
 </body>
 
 </html>
