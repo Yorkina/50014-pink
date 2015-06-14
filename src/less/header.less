@@ -57,7 +57,6 @@
                         url("../img/background-tablet@1x.jpg");
       background-position: bottom center, top center;
       background-repeat: no-repeat;
-      background-color: transparent;
             @retina {
         background-image: url("../img/iphone-hand-tablet@2x.png"), 
                           url("../img/background-tablet@2x.jpg");
@@ -151,6 +150,7 @@
   &__head-line--menu-style {
     background-color: #283645;
     border-bottom: 1px solid #000000;
+    margin-bottom: -1px;
   }
   &__logo-link {
     float: left;
@@ -294,7 +294,6 @@
       color: @text-color--contrast;
       background-color: #283645;
       padding: 18px 86px;
-      taransition: all 3s;
       @media @screen-desktop {
       display: inline-block;
       padding: 0px;
