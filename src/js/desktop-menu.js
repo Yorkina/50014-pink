@@ -1,10 +1,14 @@
 ;
 (function() {
 var linkNav = document.querySelectorAll('[href^="#nav"]'),
-    V = 0.5;
+    V = 0.4;
 for (var i = 0; i < linkNav.length; i++) {
   linkNav[i].addEventListener('click', function(e) {
     e.preventDefault();
+    var btnMenu = document.querySelector(".header__btn-menu");
+    var headerHeadline = document.querySelector(".header__head-line");
+    btnMenu.classList.remove("header__btn-menu--closed");
+    headerHeadline.classList.remove("header__head-line--menu-style");
     var scroll = window.pageYOffset,
         hash = this.href.replace(/[^#]*(.*)/, '$1');
         position = document.querySelector(hash).getBoundingClientRect().top,
