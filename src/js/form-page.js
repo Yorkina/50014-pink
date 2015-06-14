@@ -1,4 +1,5 @@
-;(function() {
+;
+(function() {
     if (!("FormData" in window)) {
         return;
     }
@@ -14,6 +15,7 @@
             console.log(response);
         });
     });
+
     function requestAjax(data, fn) {
         var test = new XMLHttpRequest();
         var time = (new Date()).getTime();
@@ -162,7 +164,7 @@
     function Counter(options) {
         var wrap = document.querySelector(options.wrap);
         var countElem = document.querySelector(options.box);
-        var maxIncrease = +options.max > 0 ? +options.max : 365;
+        var maxIncrease = +options.max > 0 ? +options.max : 30;
 
         var travelers = options.travelersBox ? new travelersBox({
             wrap: options.travelersBox,
@@ -182,7 +184,7 @@
                 travelers.change(countElem.value)
             }
         });
-
+//// ПРОВЕРКА НА ВВОД
         countElem.oninput = function(e) {
             var pattern = /^[^A-Za-zА-Яа-я/]+$/g;
             if (this.value.match(pattern)) {
@@ -216,9 +218,7 @@
 
     var calc = new Counter({
         wrap: ".trip-date-wrapper",
-        box: ".travel-duration__trip-date",
-        minus: "travel-duration__btn-minus",
-        plus: "travel-duration__btn-plus"
+        box: ".travel-duration__trip-date"
     });
 
     calc.setCount(0);
@@ -234,6 +234,96 @@
 
     calcTravalers.setCount(2);
 
+    /////////Изменение даты инпутов 
+    if (document.querySelector(".form-content__form")) {
+        var tripLasting = document.getElementById('trip-lasting');
+        var btnMinus = document.querySelector('.travel-duration__btn-minus');
+        var btnPlus = document.querySelector('.travel-duration__btn-plus');
+
+        btnMinus.addEventListener('click', function(e) {
+
+            e.preventDefault();
+            changeNumbers(-1, tripLasting);
+            plusDate(tripLasting.value);
+        });
+
+        btnPlus.addEventListener('click', function(e) {
+
+            e.preventDefault();
+            changeNumbers(1, tripLasting);
+            plusDate(tripLasting.value);
+        });
+
+
+        function diffDate() {
+            var dateCheck = new Date(checkout.value).getTime();
+            var dateDepart = new Date(departure.value).getTime();
+
+            var dateDiff = Math.floor((dateDepart - dateCheckout) / 1000 / 60 / 60 / 24);
+            if (dateDiff < 0) {
+                tripDuration.value = 0;
+            } else {
+                tripDuration.value = dateDiff;
+            }
+        }
+
+        function plusDate(num) {
+
+            if (!checkout.value) {
+                date = new Date();
+                var month = (date.getMonth() + 1).toString();
+                var month = month[1] ? month : '0' + month[0]
+
+                var day = date.getDate().toString();
+                var day = day[1] ? day : '0' + day[0]
+                checkout.value = date.getFullYear() + '-' + month + '-' + day; /* TODO: refactor */
+
+                checkout.addEventListener('change', function() {
+                    plusDate(tripLasting.value);
+                    departure.addEventListener('change', function() {
+                        diffDate();
+                    });
+                });
+            }
+            tripLasting.addEventListener('change', function() {
+                if(tripLasting.value) {
+                    plusDate(tripLasting.value);
+                }
+            });
+            checkout.addEventListener('change', function() {
+                if(checkout.value) {
+                    plusDate(tripLasting.value);
+                }
+            });
+            var dateCheck = new Date(checkout.value).getTime();
+            var d = Math.floor(num * 1000 * 60 * 60 * 24 + dateCheck);
+            var a = new Date(d);
+
+
+            var month = (a.getMonth() + 1).toString();
+            var month = month[1] ? month : '0' + month[0]
+
+            var day = a.getDate().toString();
+            var day = day[1] ? day : '0' + day[0];
+
+            departure.value = a.getFullYear() + '-' + month + '-' + day;
+        }
+
+        function changeNumbers(number, el) {
+
+            if ((parseInt(el.value) + number) < 1) {
+                el.value = 0;
+            } else if ((parseInt(el.value) + number) >= 1 && (parseInt(el.value) + number) <= 30) {
+                if (!el.value) {
+                    el.value = 0;
+                }
+                el.value = parseInt(el.value) + number;
+            } else {
+                el.value = 0;
+            }
+        }
+    }
+    ////////конец изменения даты в инпутах
 
 
     var failure = document.querySelector(".failure-popup");
@@ -252,4 +342,3 @@
         request.classList.add("request-popup--hidden");
     });
 })();
-

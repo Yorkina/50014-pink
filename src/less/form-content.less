@@ -347,6 +347,9 @@
     font-size: 18px;
     padding: 14px 12px 14px 16px;
     height: 1.69em;
+    &:disabled {
+      background-color: #f2f2f2;
+    }
   }
   input[type="date"]::-webkit-inner-spin-button {
     display: none;
@@ -757,7 +760,7 @@
       overflow: hidden;
       &:hover,
       &:focus {
-        border-bottom: 2px solid #d22856;
+        box-shadow:inset 0px -2px 0 0 #d22856;
         color: @text-color--attention;
       }
       &:active {
@@ -773,6 +776,7 @@
         text-transform: uppercase;
         margin-left: 51px;
         padding: 0px;
+
       }
       @media @screen-desktop {
         position: absolute;

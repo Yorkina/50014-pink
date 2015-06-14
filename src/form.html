@@ -57,17 +57,17 @@
           <fieldset>
             <legend align="center">Когда вы путешествовали?<sup>*</sup></legend>
             <div class="trip-info-wrapper">
-              <input id="check-out" class="travel-duration__trip-info" type="date" name="chek-out" value="2015-04-01" tabindex="7" step="1" required>
+              <input id="checkout" class="travel-duration__trip-info" type="date" name="chekout" value="2015-04-01" tabindex="7" step="1" required>
               <label for="check-out">Дата выезда</label>
             </div>
             <div class="trip-date-wrapper">
-              <button class="travel-duration__btn-minus" tabindex="8">-</button>
-              <input id="trip-lasting" class="travel-duration__trip-date" type="text" name="trip-lasting" value="10 дней" tabindex="8" required>
-              <button class="travel-duration__btn-plus" tabindex="9">+</button>
+              <button class="travel-duration__btn-minus" step="1" tabindex="8">-</button>
+              <input id="trip-lasting" class="travel-duration__trip-date" type="text" name="trip-lasting" value="0" placeholder="0"tabindex="8" step="1" required>
+              <button class="travel-duration__btn-plus" step="1" tabindex="9">+</button>
               <label for="trip-lasting">Продолжительность</label>
             </div>
             <div class="trip-return-wrapper">
-              <input id="return-date" class="travel-duration__trip-info" type="date" name="return-date" value="2015-04-11" tabindex="10" step="1" required>
+              <input id="departure" class="travel-duration__trip-info" type="date" name="return-date" value="2015-04-11" tabindex="10" step="1" disabled>
               <label for="return-date">Дата возвращения</label>
             </div>
           </fieldset>
@@ -77,7 +77,7 @@
             <legend align="center">Количество попутчиков<sup>*</sup></legend>
             <div class="travelers__count">
               <button class="travelers__btn-minus" tabindex="11">-</button>
-              <input id="count" class="travelers__trip-count" type="text" name="count" value="" placeholder="2 чел" tabindex="12" required>
+              <input id="count" class="travelers__trip-count" type="text" name="count" value="2" placeholder="2" tabindex="12" required>
               <button class="travelers__btn-plus" tabindex="13">+</button>
             </div>
             <div class="travelers__info-form">
