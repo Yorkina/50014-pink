@@ -285,16 +285,6 @@
                     });
                 });
             }
-            tripLasting.addEventListener('change', function() {
-                if(tripLasting.value) {
-                    plusDate(tripLasting.value);
-                }
-            });
-            checkout.addEventListener('change', function() {
-                if(checkout.value) {
-                    plusDate(tripLasting.value);
-                }
-            });
             var dateCheck = new Date(checkout.value).getTime();
             var d = Math.floor(num * 1000 * 60 * 60 * 24 + dateCheck);
             var a = new Date(d);
@@ -308,23 +298,43 @@
 
             departure.value = a.getFullYear() + '-' + month + '-' + day;
         }
-
+        tripLasting.addEventListener('change', function() {
+                if(tripLasting.value) {
+                    plusDate(tripLasting.value);
+                }
+            });
+        checkout.addEventListener('change', function() {
+                if(checkout.value) {
+                    plusDate(tripLasting.value);
+                }
+            });
         function changeNumbers(number, el) {
-
             if ((parseInt(el.value) + number) < 1) {
-                el.value = 0;
+                el.value = 1;
             } else if ((parseInt(el.value) + number) >= 1 && (parseInt(el.value) + number) <= 30) {
                 if (!el.value) {
-                    el.value = 0;
+                    el.value = 1;
                 }
                 el.value = parseInt(el.value) + number;
             } else {
-                el.value = 0;
+                el.value = 1;
             }
         }
     }
+     //////JQ календарик для инпутов с типом дата
+    $(function() {
+        $('input[type=date]').datepicker({
+         dateFormat: 'yy-mm-dd',
+         minDate: "-30",
+         onSelect: function() {
+            if(checkout.value) {
+                plusDate(tripLasting.value);
+              }
+            }
+        });
+    });
+    ///////////конец календарика
     ////////конец изменения даты в инпутах
-
 
     var failure = document.querySelector(".failure-popup");
     var button = failure.querySelector(".failure-popup__button");

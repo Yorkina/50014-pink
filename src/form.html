@@ -7,6 +7,9 @@
   <title>HTML Academy: Pink</title>
   <link href="../dest/css/style.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -36,11 +39,11 @@
       <form class="form-content__form" action="/echo" method="post">
         <div class="user-info">
           <label for="name">Имя:<sup>*</sup></label>
-          <input id="name" type="text" name="name" value="" placeholder="Введите ваше имя" tabindex="1" required>
+          <input id="name" type="text" name="name" placeholder="Введите ваше имя" tabindex="1" required>
           <label for="last-name">Фамилия:<sup>*</sup></label>
-          <input id="last-name" type="text" name="last-name" value="" placeholder="Укажите фамилию" tabindex="2" required>
+          <input id="last-name" type="text" name="last-name" placeholder="Укажите фамилию" tabindex="2" required>
           <label for="patronymic">Отчество:<sup>*</sup></label>
-          <input id="patronymic" type="text" name="patronymic" value="" placeholder="Ну и отчество тоже" tabindex="3" required>
+          <input id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже" tabindex="3" required>
         </div>
         <div class="type-application">
           <fieldset>
