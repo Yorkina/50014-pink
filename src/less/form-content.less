@@ -1170,7 +1170,19 @@
     }
   }
 }
-
+.popup-overlay {
+  display: none;
+  &--show {
+  display: block;
+  background-color:rgba(0,0,0, 0.7);;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  }
+}
 .failure-popup {
   position: fixed;
   width: 80%;
@@ -1182,7 +1194,7 @@
   right: 0px;
   bottom: 180px;
   margin: 0 auto;
-  display: block;
+  display: none;
   background-color: @background-color--light;
   box-shadow: 0px 0px 12px #d8d8d8;
   @media @screen-tablet {
@@ -1251,7 +1263,7 @@
 }
 
 .failure-popup--hidden {
-  display: none;
+  display: block;
 }
 
 .request-popup {
@@ -1265,7 +1277,7 @@
   right: 0px;
   bottom: 50px;
   margin: 0 auto;
-  display: block;
+  display: none;
   background-color: @background-color--slider;
   box-shadow: 0px 10px 20px #d9d8d8;
   @media @screen-tablet {
@@ -1337,5 +1349,5 @@
 }
 
 .request-popup--hidden {
-  display: none;
+  display: block;
 }
