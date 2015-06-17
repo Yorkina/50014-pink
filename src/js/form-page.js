@@ -25,16 +25,18 @@ function requestAjax(data, fn) {
     test.open("post", "http://simonenko.su/academy/echo?" + time, true);
 
     test.addEventListener("readystatechange", function() {
+        var overlay = document.querySelector(".popup-overlay");
+        var request = document.querySelector(".request-popup");
+        var failure = document.querySelector(".failure-popup");
         if (test.readyState == 4) {
             if (test.status == 200) { 
                 
                 fn(test.responseText);
                 localStorage.clear();
 //ОТКРЫТИЕ ПОПАПОВ//
-                var overlay = document.querySelector(".popup-overlay");
                 console.log(overlay);
-                var request = document.querySelector(".request-popup");
                 var btn = request.querySelector(".request-popup__button");
+
                 overlay.classList.add("popup-overlay--show");
                 request.classList.add("request-popup--hidden");
                 btn.addEventListener("click", function(event) {
@@ -43,13 +45,14 @@ function requestAjax(data, fn) {
                     overlay.classList.remove("popup-overlay--show");
                 });
             } else {
-                var failure = document.querySelector(".failure-popup");
                 var button = failure.querySelector(".failure-popup__button");
 
+                overlay.classList.add("popup-overlay--show");
                 failure.classList.add("failure-popup--hidden");
                 button.addEventListener("click", function(event) {
                     event.preventDefault();
                     failure.classList.remove("failure-popup--hidden");
+                    overlay.classList.remove("popup-overlay--show");
                 });
             }
         }
