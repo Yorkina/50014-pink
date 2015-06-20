@@ -22,7 +22,8 @@ for (var i = 0; i < linkNav.length; i++) {
       if (roll != scroll + position) {
         requestAnimationFrame(step)
       } else {
-        location.hash = false; //hash;
+        //location.hash = hash;
+        false; 
       }
     }
   }, false);

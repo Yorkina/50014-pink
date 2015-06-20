@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Pink</title>
   <link href="../dest/css/style.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic" rel="stylesheet">
@@ -39,7 +40,7 @@
     </div>
   </div>
   <div class="content">
-    <div class="content__promo-slogan" id="nav-info">
+    <div class="content__promo-slogan">
       <img class="content__triangle" src="./img/svg/triangle-white.svg">
       <div class="center-wrapper">
         <h2>Устали от серости мегаполиса?</h2>
@@ -47,7 +48,7 @@
       </div>
     </div>
     <div class="center-wrapper">
-      <div class="content__promo-info" id="nav-ability">
+      <div class="content__promo-info" id="nav-info">
         <div class="content__promo-info-block">
           <header>Поднимает настроение</header>
           <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
@@ -61,7 +62,7 @@
           <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
         </div>
       </div>
-      <div class="content__promo-effect">
+      <div class="content__promo-effect" id="nav-ability">
         <div class="content__promo-effect-block">
           <header>Эффект на 24 часа!</header>
           <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
@@ -69,32 +70,42 @@
         </div>
       </div>
       <div class="review-slider" id="nav-comment">
+        <input type="radio" id="btn-1" name="r-toggle" checked>
+        <input type="radio" id="btn-2" name="r-toggle">
+        <input type="radio" id="btn-3" name="r-toggle">
+        <div class="toggle toggle__review-slider">
+            <label for="btn-1" class="toggle__btn toggle__btn--active"></label>
+            <label for="btn-2" class="toggle__btn"></label>
+            <label for="btn-3" class="toggle__btn"></label>
+        </div>
         <div class="review-slider__slides">
           <div class="review-slider__slide">
-            <div>25 лет, водитель трамвая</div>
-            <header>Николай Петров</header>
-            <p><span>"</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span>"</span></p>
+            <div class="review-slider__slide-wrapper">
+              <div class="review-slider__header">25 лет, водитель трамвая</div>
+              <header>Николай Петров</header>
+              <p><span>"</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span>"</span></p>
+            </div>
           </div>
           <div class="review-slider__slide">
-            <div>25 лет, водитель трамвая</div>
-            <header>Николай Петров2</header>
-            <p><span>"</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span>"</span></p>
+            <div class="review-slider__slide-wrapper">
+              <div class="review-slider__header">20 лет, ученик токаря</div>
+              <header>Сергей Ежов</header>
+              <p><span>"</span>Я никогда не думал, что приложение может быть настолько удобным! Я научился делать прикольные фотографии и набрал кучу друзей. Крайне всем рекомендую это отличное приложение!<span>"</span></p>
+            </div>
           </div>
           <div class="review-slider__slide">
-            <header>Николай Петров3</header>
-            <p><span>"</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span>"</span></p>
+            <div class="review-slider__slide-wrapper">
+              <div class="review-slider__header">30 лет, юрист</div>
+              <header>Андрей Козырев</header>
+              <p><span>"</span>Очень практичное приложение с огромным количеством функционала. Можно не думать больше про то, как провести время: фоткаешь, собираешь компанию, обсуждаешь важные моменты в работе...<span>"</span></p>
+            </div>
           </div>
         </div>
         <div class="review-slider__arrow">
-          <a class="review-slider__arrow--next" href=""></a>
-          <a class="review-slider__arrow--prev" href=""></a>
+          <a class="review-slider__arrow--next" href="" data-direction="right"></a>
+          <a class="review-slider__arrow--prev" href="" data-direction="left"></a>
         </div>
         <img  class="review-slider__triangle" src="./img/svg/triangle-white.svg">
-      </div>
-      <div class="toggle toggle__review-slider">
-        <a href="#" class="toggle__btn toggle__btn--active"></a>
-        <a href="#" class="toggle__btn"></a>
-        <a href="#" class="toggle__btn"></a>
       </div>
       <div class="price-slider" id="nav-price">
         <table class="price-slide">
@@ -179,6 +190,7 @@
   <script src="./js/icon__for-map.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/desktop-menu.js"></script>
+  <script src="./js/sliders.js"></script>
 </body>
 
 </html>

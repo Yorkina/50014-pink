@@ -1,7 +1,10 @@
 .content {
   position: relative;
   overflow: hidden;
-  margin-bottom: 0px;
+  margin-bottom: 45px;
+  @media @screen-desktop {
+    margin-bottom: 0px;
+  }
   &:before {
     .pseudo-absolute-elem ();
     width: 900px;
@@ -311,18 +314,21 @@
   width: 300%;
   height: 247px;
   padding-top: 52px;
-  overflow: hidden;
+  padding-bottom: 40px;
+  //overflow: hidden;
   margin-bottom: 115px;
   background-color: @background-color--light;
+  position: relative;
   @media @screen-tablet {
     padding-top: 60px;
     height: 240px;
     margin-bottom: 100px;
   }
   @media @screen-desktop {
+    width:100%;
     height: 340px;
     background-image: url("../img/svg/sprt.svg");
-    background-position: 13% -155%;
+    background-position: 50% -112%;
     background-repeat: no-repeat;
     background-size: 400px;
     padding-top: 0px;
@@ -333,7 +339,7 @@
     .pseudo-absolute-elem ();
     width: 900px;
     height: 470px;
-    top: 74%;
+    top: 110%;
     left: -20px;
     z-index: -1;
     background-color: @background-color--slider;
@@ -342,9 +348,11 @@
       transform: rotate(0deg);
       width: 1400px;
       top: 78%;
+      left:-250px;
     }
     @media @screen-desktop {
       width: 1900px;
+      top: 110%;
     }
   }
   &__triangle {
@@ -356,11 +364,15 @@
       height: 200px;
       z-index: -1;
       left: -20%;
-      top: 73%;
+      top: 60%;
     }
+     @media @screen-desktop {
+      top: 80%;
+     }
   }
   &__slides {
     position: relative;
+    outline:2px solid green;
     height: 280px;
     width: 33.3%;
     @media @screen-tablet {
@@ -369,24 +381,23 @@
     }
     @media @screen-desktop {
       padding-top: 110px;
-      display: flex;
       width: 100%;
     }
     input {
       display: none;
     }
-    input:checked + div {
-      z-index: 2;
-    }
+    //input:checked + div {
+      //z-index: 2;
+    //}
   }
   &__slide {
+    display: none;
     position: relative;
+    outline:2px solid red;
     height: 280px;
     z-index: 1;
     width: 100%;
     @media @screen-tablet {
-      display: flex;
-      flex-direction: column-reverse;
       height: 197px;
     }
     @media @screen-desktop {
@@ -396,8 +407,10 @@
       .headers-text-style();
       text-decoration: none;
       padding-bottom: 20px;
+      outline:2px solid red;
       @media @screen-tablet {
         flex-basis: 33px;
+        order:3;
         font-size: 2rem;
         line-height: 3rem;
         padding-bottom: 0px;
@@ -407,27 +420,15 @@
         font-size: 2.4rem;
       }
     }
-    div {
-      display: none;
-      @media @screen-tablet {
-        display: block;
-        flex-basis: 28px;
-        font-size: 1.4rem;
-        text-align: center;
-        line-height: 3rem;
-        font-weight: 400;
-      }
-      @media @screen-desktop {
-        font-size: 1.8rem;
-      }
-    }
     p {
       font-size: 1.4rem;
       font-weight: 400;
       text-align: center;
       line-height: 3rem; // line-height
-      margin: 0px 20px;
+      margin: 0 5%;
+      outline: 2px solid red;
       @media @screen-tablet {
+        order:1;
         font-size: 1.8rem;
         flex-basis: 125px;
         padding: 0px 20px 0px 20px;
@@ -441,6 +442,22 @@
       }
     }
   }
+  &__header {
+      display: none;
+      @media @screen-tablet {
+        display: block;
+        order:2;
+        outline:2px solid red;
+        flex-basis: 28px;
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 3rem;
+        font-weight: 400;
+      }
+      @media @screen-desktop {
+        font-size: 1.8rem;
+      }
+    }
   &__arrow {
     position: relative;
   }
@@ -492,6 +509,21 @@
       background-size: 400px;
     }
   }
+}
+.review-slider__slide-wrapper {
+    @media @screen-tablet {
+    display: flex;
+    flex-direction: column;
+    }
+  }
+#btn-1:checked ~ .review-slider__slides .review-slider__slide:nth-child(1) { 
+    display: block;
+}
+#btn-2:checked ~ .review-slider__slides .review-slider__slide:nth-child(2) { 
+    display: block;
+}
+#btn-3:checked ~ .review-slider__slides .review-slider__slide:nth-child(3) { 
+    display: block;
 }
 
 .price-slider {
@@ -549,8 +581,9 @@
         width: 95px;
       }
     }
-    input {
+    input[type="radio"] {
       display: none;
+      position:absolute;
     }
   }
   td {
@@ -829,11 +862,12 @@
 
 .toggle {
   &__review-slider {
-    position: relative;
-    top: -112px;
-    margin-bottom: 21px;
+    position: absolute;
+    top: 95%;
+    width:33.3%;
     text-align: center;
     background-color: #ffffff;
+    z-index:2000;
     @media @screen-tablet {
       margin-bottom: 0px;
     }
@@ -854,8 +888,6 @@
     height: 6px;
     width: 6px;
     margin-right: 11px;
-  }
-  &__btn {
     border: 3px solid @background-color--light;
     background: #b5b9be;
     border-radius: 50%;
@@ -866,16 +898,27 @@
       opacity: 0.7;
     }
   }
-  &__btn--active {
+  label {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    margin-right: 11px;
+    border: 3px solid @background-color--light;
+    background: #b5b9be;
+    border-radius: 50%;
+    &:hover {
+      background-color: #7e868f;
+    }
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}
+#btn-1:checked ~ .toggle label[for="btn-1"],
+#btn-2:checked ~ .toggle label[for="btn-2"],
+#btn-3:checked ~ .toggle label[for="btn-3"] { 
     cursor: pointer;
     border: 3px solid @background-color--dark;
     background: @background-color--light;
     border-radius: 50%;
-    &:hover {
-      background-color: @background-color--light;
-    }
-    &:active {
-      opacity: 1;
-    }
-  }
 }
