@@ -93,8 +93,8 @@
     @media @screen-tablet {
       background-image: url("../img/iphone-screen-tablet-3@1x.png"), url("../img/iphone-screen-tablet-2@1x.png"), url("../img/iphone-screen-tablet-1@1x.png");
       background-repeat: no-repeat, no-repeat, no-repeat;
-      background-position: 3% 0%;
-      padding-bottom: 17px;
+      background-position: 3% 65%;
+      padding-bottom: 22px;
       margin: 0px 31px;
       padding-top: 60px;
       background-size: 268px;
@@ -332,14 +332,14 @@
     background-repeat: no-repeat;
     background-size: 400px;
     padding-top: 0px;
-    margin-top: 95px;
-    margin-bottom: 157px;
+    margin-top: 120px;
+    margin-bottom: 120px;
   }
   &:before {
     .pseudo-absolute-elem ();
     width: 900px;
     height: 470px;
-    top: 110%;
+    top: 115%;
     left: -20px;
     z-index: -1;
     background-color: @background-color--slider;
@@ -355,6 +355,9 @@
       top: 110%;
     }
   }
+  input[type="radio"] {
+    display: none;
+  }
   &__triangle {
     display: none;
     @media @screen-tablet {
@@ -367,12 +370,11 @@
       top: 60%;
     }
      @media @screen-desktop {
-      top: 80%;
+      top: 82%;
      }
   }
   &__slides {
     position: relative;
-    outline:2px solid green;
     height: 280px;
     width: 33.3%;
     @media @screen-tablet {
@@ -383,17 +385,10 @@
       padding-top: 110px;
       width: 100%;
     }
-    input {
-      display: none;
-    }
-    //input:checked + div {
-      //z-index: 2;
-    //}
   }
   &__slide {
     display: none;
     position: relative;
-    outline:2px solid red;
     height: 280px;
     z-index: 1;
     width: 100%;
@@ -407,10 +402,9 @@
       .headers-text-style();
       text-decoration: none;
       padding-bottom: 20px;
-      outline:2px solid red;
       @media @screen-tablet {
-        flex-basis: 33px;
-        order:3;
+        flex-basis: 30px;
+        order:2;
         font-size: 2rem;
         line-height: 3rem;
         padding-bottom: 0px;
@@ -426,11 +420,10 @@
       text-align: center;
       line-height: 3rem; // line-height
       margin: 0 5%;
-      outline: 2px solid red;
       @media @screen-tablet {
         order:1;
         font-size: 1.8rem;
-        flex-basis: 125px;
+        flex-basis: 140px;
         padding: 0px 20px 0px 20px;
       }
       @media @screen-desktop {
@@ -446,9 +439,8 @@
       display: none;
       @media @screen-tablet {
         display: block;
-        order:2;
-        outline:2px solid red;
-        flex-basis: 28px;
+        order:3;
+        flex-basis: 30px;
         font-size: 1.4rem;
         text-align: center;
         line-height: 3rem;
@@ -539,19 +531,38 @@
   @media @screen-desktop {
     height: 375px;
   }
+  input[type="radio"] {
+    display: none;
+    position:absolute;
+  }
+}
+.price-slide-wrapper {
+  width: 300%;
+  position: relative;
+  height: 275px;
+  overflow: hidden;
+  margin: 0 auto;
+  @media @screen-tablet {
+    height: 293px;
+    width:100%;
+  }
+  @media @screen-desktop {
+    width:100%;
+    height: 375px;
+  }
 }
 
 .price-slide {
-  width: 100%;
+  width: 90%;
   position: absolute;
   height: 120px;
-  transform: translateX(-259px);
+  display: inline-table;
   background-color: @background-color--light;
   border-collapse: collapse;
+  margin: 0 auto;
   @media @screen-tablet {
-    width: 67%;
-    transform: translateX(0px);
-    margin-left: 43px;
+    display: table;
+    margin-left: 35px;
     margin-bottom: 88px;
     border-radius: 10px;
   }
@@ -578,12 +589,8 @@
         background-color: @background-color--slider;
         color: @background-color--slider;
         display: block;
-        width: 95px;
+        width: 85px;
       }
-    }
-    input[type="radio"] {
-      display: none;
-      position:absolute;
     }
   }
   td {
@@ -648,7 +655,7 @@
     span {
       .big-headers-text-style ();
       display: block;
-      width: 100px;
+      text-align: center;
       padding-bottom: 22px;
       @media @screen-tablet {
         font-size: 1.8rem;
@@ -687,8 +694,6 @@
       }
     }
   }
-  /////И ТУТ НАЧИНАЕТСЯ ЖЕСТЬ =) И сердцу тревожно в груди, 
-  /////И Ленин такой молодой, и юный октябрь впереди..
   &__pink-filter {
     td {
       &:after {
@@ -859,11 +864,41 @@
     }
   }
 }
+#button-1:checked ~ .price-slide-wrapper .price-slide { 
+    left: 2%;
+    transition: 1s;
+    @media @screen-tablet {
+      left:0;
+    }
+    @media @screen-desktop {
+      left:0;
+    }
+}
+#button-2:checked ~ .price-slide-wrapper .price-slide { 
+    left: -28%;
+    transition: 1s;
+    @media @screen-tablet {
+      left:0;
+    }
+    @media @screen-desktop {
+      left:0;
+    }
+}
+#button-3:checked ~ .price-slide-wrapper .price-slide{ 
+    left: -58%;
+    transition: 1s;
+    @media @screen-tablet {
+      left:0;
+    }
+    @media @screen-desktop {
+      left:0;
+    }
+}
 
 .toggle {
   &__review-slider {
     position: absolute;
-    top: 95%;
+    top: 90%;
     width:33.3%;
     text-align: center;
     background-color: #ffffff;
@@ -917,6 +952,14 @@
 #btn-1:checked ~ .toggle label[for="btn-1"],
 #btn-2:checked ~ .toggle label[for="btn-2"],
 #btn-3:checked ~ .toggle label[for="btn-3"] { 
+    cursor: pointer;
+    border: 3px solid @background-color--dark;
+    background: @background-color--light;
+    border-radius: 50%;
+}
+#button-1:checked ~ .toggle label[for="button-1"],
+#button-2:checked ~ .toggle label[for="button-2"],
+#button-3:checked ~ .toggle label[for="button-3"] { 
     cursor: pointer;
     border: 3px solid @background-color--dark;
     background: @background-color--light;
